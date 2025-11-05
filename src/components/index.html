@@ -1,0 +1,3524 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Kinetic Slider - Advanced Windy Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* demo css */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 15px;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            --color-text: #aaa;
+            --color-bg: #000;
+            --color-link: #ddd;
+            --color-link-hover: #fff;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+
+        /* Page Loader */
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .loading::before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+        }
+
+        .loading::after {
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin: -30px 0 0 -30px;
+            border-radius: 50%;
+            opacity: 0.4;
+            background: var(--color-link);
+            animation: loaderAnim 0.7s linear infinite alternate forwards;
+        }
+
+        @keyframes loaderAnim {
+            to {
+                opacity: 1;
+                transform: scale3d(0.5, 0.5, 1);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-link);
+            outline: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--color-link-hover);
+            outline: none;
+        }
+
+        .message {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .frame {
+            padding: 3rem 5vw;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .frame__title {
+            font-size: 1rem;
+            margin: 0 0 1rem;
+            font-weight: normal;
+        }
+
+        .frame__links {
+            display: inline;
+        }
+
+        .frame__links a:not(:last-child),
+        .frame__demos a:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        .frame__demos {
+            margin: 1rem 0;
+        }
+
+        .frame__demo--current,
+        .frame__demo--current:hover {
+            color: var(--color-text);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: calc(100vh - 13rem);
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 53em) {
+            .message {
+                display: none;
+            }
+            .frame {
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                display: grid;
+                align-content: space-between;
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                padding: 3rem;
+                pointer-events: none;
+                grid-template-columns: 75% 25%;
+                grid-template-rows: auto auto auto;
+                grid-template-areas: 'title links'
+                                    '... ...'
+                                    '... demos';
+            }
+            .frame__title-wrap {
+                grid-area: title;
+                display: flex;
+            }
+            .frame__title {
+                margin: 0;
+            }
+            .frame__tagline {
+                position: relative;
+                margin: 0 0 0 1rem;
+                padding: 0 0 0 1rem;
+                opacity: 0.5;
+            }
+            .frame__demos {
+                margin: 0;
+                grid-area: demos;
+                justify-self: end;
+            }
+            .frame__links {
+                grid-area: links;
+                padding: 0;
+                justify-self: end;
+            }
+            .frame a {
+                pointer-events: auto;
+            }
+            .content {
+                height: 100vh;
+                justify-content: center;
+            }
+        }
+
+        /* plugin css */
+        .rgbKineticSlider {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: var(--color-link-hover);
+            text-decoration: none;
+            position: absolute;
+            top: 50vh;
+            z-index: 1;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: var(--color-link-hover);
+            outline: none;
+        }
+
+        nav span {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-link-hover);
+            display: block;
+            margin-top: 7px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover span {
+            width: 0;
+        }
+
+        nav a.next {
+            right: 10vw;
+        }
+
+        nav a.prev {
+            left: 10vw;
+        }
+
+        .notice {
+            text-decoration: none;
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            z-index: 1;
+            color: var(--color-link);
+        }
+
+        @media screen and (max-width: 53em) {
+            nav a {
+                top: auto;
+                bottom: 3rem;
+            }
+            .notice {
+                bottom: auto;
+                top: 2rem;
+                left: 3rem;
+            }
+        }
+
+        /* Custom styles for the kinetic slider */
+        .kinetic-slider-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .kinetic-slider-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 125px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 3px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .kinetic-slider-subtitle {
+            position: absolute;
+            top: calc(50% + 90px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Roboto', sans-serif;
+            font-size: 21px;
+            color: white;
+            letter-spacing: 2px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .kinetic-slider-title.active,
+        .kinetic-slider-subtitle.active {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 53em) {
+            .kinetic-slider-title {
+                font-size: 60px;
+            }
+            .kinetic-slider-subtitle {
+                font-size: 16px;
+                top: calc(50% + 60px);
+            }
+        }
+
+        /* Wind particle effect */
+        .wind-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            pointer-events: none;
+            z-index: 5;
+            opacity: 0;
+        }
+
+        /* Wind direction indicator */
+        .wind-direction {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 14px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="loading">
+    <div class="wind-direction">Wind Direction: Right →</div>
+    
+    <main>
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+            <div class="frame__title-wrap">
+                <h1 class="frame__title">rgbKineticSlider</h1>
+                <p class="frame__tagline">Advanced Windy Effect</p>
+            </div>
+            <div class="frame__links">
+                <a href="https://github.com/hmongouachon/rgbKineticSlider">View this project on GitHub</a>
+            </div>
+            <div class="frame__demos">
+                <a href="https://codepen.io/hmongouachon/pen/QWbLpzW" class="frame__demo frame__demo--current">demo 1</a>
+                <a href="https://codepen.io/hmongouachon/pen/jOPNBdP" class="frame__demo">demo 2</a>
+                <a href="https://codepen.io/hmongouachon/pen/eYNOvxB" class="frame__demo">demo 3</a>
+            </div>
+        </div>
+        <div class="content">
+            <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+            <div class="kinetic-slider-content"></div>
+            <nav>
+                <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+                <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+            </nav>
+            <span class="notice">Swipe left... or right</span>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        // Custom RGB Kinetic Slider with Advanced Windy Effect
+        class CustomRGBKineticSlider {
+            constructor(options) {
+                this.options = options;
+                this.currentIndex = 0;
+                this.isAnimating = false;
+                this.canvas = null;
+                this.ctx = null;
+                this.images = [];
+                this.titles = [];
+                this.loadedImages = 0;
+                this.mouseX = 0;
+                this.mouseY = 0;
+                this.lastMouseX = 0;
+                this.lastMouseY = 0;
+                this.mouseVelocity = { x: 0, y: 0 };
+                this.windEffect = true;
+                this.windDirection = 1; // 1 for right, -1 for left
+                this.windStrength = 0;
+                this.particles = [];
+                this.waveOffset = 0;
+                this.init();
+            }
+
+            init() {
+                this.createCanvas();
+                this.preloadImages();
+                this.setupEventListeners();
+                this.createWindParticles();
+            }
+
+            createCanvas() {
+                this.canvas = document.createElement('canvas');
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                this.canvas.style.position = 'absolute';
+                this.canvas.style.top = '0';
+                this.canvas.style.left = '0';
+                this.canvas.style.width = '100%';
+                this.canvas.style.height = '100%';
+                
+                const container = document.getElementById('rgbKineticSlider');
+                container.appendChild(this.canvas);
+                
+                this.ctx = this.canvas.getContext('2d');
+            }
+
+            preloadImages() {
+                const contentContainer = document.querySelector('.kinetic-slider-content');
+                
+                this.options.slideImages.forEach((imageUrl, index) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        this.loadedImages++;
+                        if (this.loadedImages === this.options.slideImages.length) {
+                            this.allImagesLoaded();
+                        }
+                    };
+                    img.src = imageUrl;
+                    this.images.push(img);
+
+                    // Create title elements
+                    if (this.options.textsDisplay && this.options.itemsTitles[index]) {
+                        const title = document.createElement('h2');
+                        title.className = 'kinetic-slider-title';
+                        title.textContent = this.options.itemsTitles[index][0];
+                        if (index === 0) title.classList.add('active');
+                        contentContainer.appendChild(title);
+                        this.titles.push(title);
+                    }
+
+                    // Create subtitle elements
+                    if (this.options.textsSubTitleDisplay && this.options.itemsTitles[index]) {
+                        const subtitle = document.createElement('p');
+                        subtitle.className = 'kinetic-slider-subtitle';
+                        subtitle.textContent = this.options.itemsTitles[index][1];
+                        if (index === 0) subtitle.classList.add('active');
+                        contentContainer.appendChild(subtitle);
+                        this.titles.push(subtitle);
+                    }
+                });
+            }
+
+            allImagesLoaded() {
+                this.drawCurrentImage();
+                document.body.classList.remove('loading');
+                
+                // Start animation loop
+                this.animate();
+            }
+
+            drawCurrentImage() {
+                const img = this.images[this.currentIndex];
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Calculate dimensions to maintain aspect ratio and cover the canvas
+                const imgRatio = img.width / img.height;
+                const canvasRatio = this.canvas.width / this.canvas.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (imgRatio > canvasRatio) {
+                    // Image is wider than canvas
+                    drawHeight = this.canvas.height;
+                    drawWidth = drawHeight * imgRatio;
+                    offsetX = (this.canvas.width - drawWidth) / 2;
+                    offsetY = 0;
+                } else {
+                    // Image is taller than canvas
+                    drawWidth = this.canvas.width;
+                    drawHeight = drawWidth / imgRatio;
+                    offsetX = 0;
+                    offsetY = (this.canvas.height - drawHeight) / 2;
+                }
+                
+                this.ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+            }
+
+            animate() {
+                // Apply windy effect if enabled
+                if (this.windEffect) {
+                    this.applyAdvancedWindEffect();
+                    this.updateWindParticles();
+                }
+                
+                // Increment wave offset for continuous animation
+                this.waveOffset += 0.02;
+                
+                requestAnimationFrame(() => this.animate());
+            }
+
+            applyAdvancedWindEffect() {
+                const img = this.images[this.currentIndex];
+                const intensity = this.options.cursorScaleIntensity || 0.65;
+                
+                // Calculate dimensions to maintain aspect ratio and cover the canvas
+                const imgRatio = img.width / img.height;
+                const canvasRatio = this.canvas.width / this.canvas.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (imgRatio > canvasRatio) {
+                    drawHeight = this.canvas.height;
+                    drawWidth = drawHeight * imgRatio;
+                    offsetX = (this.canvas.width - drawWidth) / 2;
+                    offsetY = 0;
+                } else {
+                    drawWidth = this.canvas.width;
+                    drawHeight = drawWidth / imgRatio;
+                    offsetX = 0;
+                    offsetY = (this.canvas.height - drawHeight) / 2;
+                }
+                
+                // Clear and redraw with windy effect
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Calculate mouse velocity for dynamic effect
+                const velocity = Math.sqrt(this.mouseVelocity.x * this.mouseVelocity.x + this.mouseVelocity.y * this.mouseVelocity.y);
+                
+                // Update wind strength based on mouse velocity
+                this.windStrength = Math.min(velocity / 20, 1.5);
+                
+                // Apply advanced wind effect with multiple layers
+                for (let i = 0; i < 4; i++) {
+                    const layerOffset = i * 0.5;
+                    const layerIntensity = intensity * (1 - i * 0.15);
+                    
+                    this.drawAdvancedWindLayer(
+                        img, 
+                        offsetX, 
+                        offsetY, 
+                        drawWidth, 
+                        drawHeight, 
+                        layerIntensity,
+                        layerOffset
+                    );
+                }
+                
+                // Apply RGB effect to text if enabled
+                if (this.options.textsRgbEffect) {
+                    this.applyTextRGBEffect();
+                }
+            }
+
+            drawAdvancedWindLayer(img, offsetX, offsetY, drawWidth, drawHeight, intensity, layerOffset) {
+                // Create a more complex wind distortion effect
+                const stripCount = 20;
+                const stripWidth = drawWidth / stripCount;
+                
+                for (let i = 0; i < stripCount; i++) {
+                    const stripX = i * stripWidth;
+                    
+                    // Calculate wind displacement with multiple sine waves
+                    const time = this.waveOffset + layerOffset;
+                    const windFrequency = 0.05 + (i / stripCount) * 0.1;
+                    
+                    // Base displacement from wind
+                    const baseDisplacement = Math.sin(time + stripX * windFrequency) * 25 * intensity * this.windStrength;
+                    
+                    // Add mouse influence
+                    const mouseInfluenceX = (this.mouseX - this.canvas.width/2) * 0.0005 * intensity;
+                    const mouseInfluenceY = (this.mouseY - this.canvas.height/2) * 0.0005 * intensity;
+                    
+                    // Add directional wind effect
+                    const directionalWind = this.windDirection * 15 * intensity * this.windStrength;
+                    
+                    // Combine effects with more complex formula
+                    const displacementX = baseDisplacement + directionalWind + mouseInfluenceX * 80;
+                    const displacementY = Math.sin(time * 1.3 + stripX * windFrequency * 1.7) * 8 * intensity + mouseInfluenceY * 40;
+                    
+                    // Add perspective effect - strips further away are more distorted
+                    const perspective = 1 + (i / stripCount) * 0.3;
+                    
+                    // Draw the strip with displacement and perspective
+                    this.ctx.drawImage(
+                        img,
+                        stripX / drawWidth * img.width, // source x
+                        0, // source y
+                        stripWidth / drawWidth * img.width, // source width
+                        img.height, // source height
+                        offsetX + stripX + displacementX * perspective, // destination x
+                        offsetY + displacementY, // destination y
+                        stripWidth, // destination width
+                        drawHeight // destination height
+                    );
+                }
+            }
+
+            createWindParticles() {
+                // Create wind particle elements
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'wind-particle';
+                    particle.style.left = `${Math.random() * 100}%`;
+                    particle.style.top = `${Math.random() * 100}%`;
+                    particle.style.opacity = '0';
+                    document.body.appendChild(particle);
+                    
+                    this.particles.push({
+                        element: particle,
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        speed: 0.5 + Math.random() * 2,
+                        size: 2 + Math.random() * 4,
+                        opacity: 0,
+                        life: 0
+                    });
+                }
+            }
+
+            updateWindParticles() {
+                this.particles.forEach(particle => {
+                    // Update particle position based on wind direction and strength
+                    particle.x += (this.windDirection * particle.speed * this.windStrength * 10);
+                    particle.life += 0.01;
+                    
+                    // Reset particle if it goes off screen
+                    if (particle.x > window.innerWidth + 50 || particle.x < -50) {
+                        particle.x = this.windDirection > 0 ? -50 : window.innerWidth + 50;
+                        particle.y = Math.random() * window.innerHeight;
+                        particle.life = 0;
+                    }
+                    
+                    // Calculate opacity based on life and wind strength
+                    particle.opacity = Math.sin(particle.life * Math.PI) * 0.7 * this.windStrength;
+                    
+                    // Update particle element
+                    particle.element.style.left = `${particle.x}px`;
+                    particle.element.style.top = `${particle.y}px`;
+                    particle.element.style.opacity = particle.opacity;
+                    particle.element.style.width = `${particle.size}px`;
+                    particle.element.style.height = `${particle.size}px`;
+                });
+            }
+
+            applyTextRGBEffect() {
+                const titles = document.querySelectorAll('.kinetic-slider-title.active, .kinetic-slider-subtitle.active');
+                const intensity = this.options.textsRgbIntensity || 0.03;
+                
+                titles.forEach(title => {
+                    const r = Math.floor(255 * intensity);
+                    const g = Math.floor(255 * intensity * 0.7);
+                    const b = Math.floor(255 * intensity * 0.3);
+                    
+                    // Apply RGB shift based on mouse position and wind
+                    const shiftX = (this.mouseX / this.canvas.width - 0.5) * 8 + this.windDirection * 2;
+                    const shiftY = (this.mouseY / this.canvas.height - 0.5) * 4;
+                    
+                    title.style.textShadow = `
+                        ${1 + shiftX}px ${1 + shiftY}px 0 rgba(${r}, 0, 0, 0.8),
+                        ${-1 - shiftX}px ${2 + shiftY}px 0 rgba(0, ${g}, 0, 0.6),
+                        ${2 + shiftX}px ${-1 - shiftY}px 0 rgba(0, 0, ${b}, 0.4)
+                    `;
+                });
+            }
+
+            nextSlide() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                
+                // Apply transition effect
+                this.applyTransitionEffect('next', () => {
+                    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                    this.updateTitles();
+                    this.drawCurrentImage();
+                    this.isAnimating = false;
+                });
+            }
+
+            prevSlide() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                
+                // Apply transition effect
+                this.applyTransitionEffect('prev', () => {
+                    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+                    this.updateTitles();
+                    this.drawCurrentImage();
+                    this.isAnimating = false;
+                });
+            }
+
+            applyTransitionEffect(direction, callback) {
+                const duration = this.options.slideTransitionDuration || 1;
+                
+                // Hide current titles
+                document.querySelectorAll('.kinetic-slider-title.active, .kinetic-slider-subtitle.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Change wind direction based on slide direction
+                this.windDirection = direction === 'next' ? 1 : -1;
+                document.querySelector('.wind-direction').textContent = 
+                    `Wind Direction: ${this.windDirection > 0 ? 'Right →' : '← Left'}`;
+                
+                // Apply scale animation with wind direction
+                gsap.to(this.canvas, {
+                    x: this.windDirection * 50,
+                    duration: duration * 0.3,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        callback();
+                        gsap.to(this.canvas, {
+                            x: 0,
+                            duration: duration * 0.7,
+                            ease: "power2.in"
+                        });
+                        
+                        // Show new titles after a delay
+                        setTimeout(() => {
+                            this.updateTitles();
+                        }, duration * 500);
+                    }
+                });
+            }
+
+            updateTitles() {
+                // Hide all titles
+                document.querySelectorAll('.kinetic-slider-title, .kinetic-slider-subtitle').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Show current titles
+                setTimeout(() => {
+                    const titles = document.querySelectorAll('.kinetic-slider-title, .kinetic-slider-subtitle');
+                    const startIndex = this.currentIndex * 2; // Each slide has a title and subtitle
+                    if (titles[startIndex]) titles[startIndex].classList.add('active');
+                    if (titles[startIndex + 1]) titles[startIndex + 1].classList.add('active');
+                }, 300);
+            }
+
+            setupEventListeners() {
+                // Navigation buttons
+                document.querySelector('.main-nav.next').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.nextSlide();
+                });
+                
+                document.querySelector('.main-nav.prev').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.prevSlide();
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                });
+                
+                // Mouse move for cursor effect
+                document.addEventListener('mousemove', (e) => {
+                    // Update mouse position
+                    this.lastMouseX = this.mouseX;
+                    this.lastMouseY = this.mouseY;
+                    this.mouseX = e.clientX;
+                    this.mouseY = e.clientY;
+                    
+                    // Calculate mouse velocity
+                    this.mouseVelocity.x = this.mouseX - this.lastMouseX;
+                    this.mouseVelocity.y = this.mouseY - this.lastMouseY;
+                });
+                
+                // Swipe support for touch devices
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                document.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, false);
+                
+                document.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    this.handleSwipe();
+                }, false);
+                
+                // Mouse wheel navigation
+                document.addEventListener('wheel', (e) => {
+                    if (e.deltaY > 0) this.nextSlide();
+                    else if (e.deltaY < 0) this.prevSlide();
+                });
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                    this.drawCurrentImage();
+                    
+                    // Update particle positions
+                    this.particles.forEach(particle => {
+                        if (particle.x > window.innerWidth || particle.y > window.innerHeight) {
+                            particle.x = Math.random() * window.innerWidth;
+                            particle.y = Math.random() * window.innerHeight;
+                        }
+                    });
+                });
+            }
+
+            handleSwipe() {
+                const minSwipeDistance = this.options.swipeDistance || window.innerWidth * 0.4;
+                const swipeDistance = touchEndX - touchStartX;
+                
+                if (Math.abs(swipeDistance) < minSwipeDistance) return;
+                
+                if (swipeDistance > 0) {
+                    this.prevSlide();
+                } else {
+                    this.nextSlide();
+                }
+            }
+        }
+
+        // Initialize the slider when the page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            // Images setup
+            const images = [
+                "https://images.unsplash.com/photo-1523643391907-41e69459a06f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+                "https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80",
+                "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+            ];
+
+            // Content setup
+            const texts = [
+                ["Earth", "Surface gravity: 9.807 m/s²"],
+                ["Mars", "Surface gravity: 3.711 m/s²"],
+                ["Venus", "Surface gravity: 8.87 m/s²"],
+            ];
+
+            // Initialize the custom slider with all the provided options
+            const slider = new CustomRGBKineticSlider({
+                slideImages: images,
+                itemsTitles: texts,
+                backgroundDisplacementSprite: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2081&q=80',
+                cursorDisplacementSprite: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2081&q=80',
+                cursorImgEffect: true,
+                cursorTextEffect: false,
+                cursorScaleIntensity: 0.65,
+                cursorMomentum: 0.14,
+                swipe: true,
+                swipeDistance: window.innerWidth * 0.4,
+                swipeScaleIntensity: 2,
+                slideTransitionDuration: 1,
+                transitionScaleIntensity: 30,
+                transitionScaleAmplitude: 160,
+                nav: true,
+                navElement: '.main-nav',
+                imagesRgbEffect: false,
+                imagesRgbIntensity: 0.9,
+                navImagesRgbIntensity: 80,
+                textsDisplay: true,
+                textsSubTitleDisplay: true,
+                textsTiltEffect: true,
+                googleFonts: ['Playfair Display:700', 'Roboto:400'],
+                buttonMode: false,
+                textsRgbEffect: true,
+                textsRgbIntensity: 0.03,
+                navTextsRgbIntensity: 15,
+                textTitleColor: 'white',
+                textTitleSize: 125,
+                mobileTextTitleSize: 125,
+                textTitleLetterspacing: 3,
+                textSubTitleColor: 'white',
+                textSubTitleSize: 21,
+                mobileTextSubTitleSize: 21,
+                textSubTitleLetterspacing: 2,
+                textSubTitleOffsetTop: 90,
+                mobileTextSubTitleOffsetTop: 90
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Kinetic Slider - Windy Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* demo css */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 15px;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            --color-text: #aaa;
+            --color-bg: #000;
+            --color-link: #ddd;
+            --color-link-hover: #fff;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+
+        /* Page Loader */
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .loading::before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+        }
+
+        .loading::after {
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin: -30px 0 0 -30px;
+            border-radius: 50%;
+            opacity: 0.4;
+            background: var(--color-link);
+            animation: loaderAnim 0.7s linear infinite alternate forwards;
+        }
+
+        @keyframes loaderAnim {
+            to {
+                opacity: 1;
+                transform: scale3d(0.5, 0.5, 1);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-link);
+            outline: none;
+        }
+
+        a:hover,
+            a:focus {
+            color: var(--color-link-hover);
+            outline: none;
+        }
+
+        .message {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .frame {
+            padding: 3rem 5vw;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .frame__title {
+            font-size: 1rem;
+            margin: 0 0 1rem;
+            font-weight: normal;
+        }
+
+        .frame__links {
+            display: inline;
+        }
+
+        .frame__links a:not(:last-child),
+        .frame__demos a:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        .frame__demos {
+            margin: 1rem 0;
+        }
+
+        .frame__demo--current,
+        .frame__demo--current:hover {
+            color: var(--color-text);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: calc(100vh - 13rem);
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 53em) {
+            .message {
+                display: none;
+            }
+            .frame {
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                display: grid;
+                align-content: space-between;
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                padding: 3rem;
+                pointer-events: none;
+                grid-template-columns: 75% 25%;
+                grid-template-rows: auto auto auto;
+                grid-template-areas: 'title links'
+                                    '... ...'
+                                    '... demos';
+            }
+            .frame__title-wrap {
+                grid-area: title;
+                display: flex;
+            }
+            .frame__title {
+                margin: 0;
+            }
+            .frame__tagline {
+                position: relative;
+                margin: 0 0 0 1rem;
+                padding: 0 0 0 1rem;
+                opacity: 0.5;
+            }
+            .frame__demos {
+                margin: 0;
+                grid-area: demos;
+                justify-self: end;
+            }
+            .frame__links {
+                grid-area: links;
+                padding: 0;
+                justify-self: end;
+            }
+            .frame a {
+                pointer-events: auto;
+            }
+            .content {
+                height: 100vh;
+                justify-content: center;
+            }
+        }
+
+        /* plugin css */
+        .rgbKineticSlider {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: var(--color-link-hover);
+            text-decoration: none;
+            position: absolute;
+            top: 50vh;
+            z-index: 1;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: var(--color-link-hover);
+            outline: none;
+        }
+
+        nav span {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-link-hover);
+            display: block;
+            margin-top: 7px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover span {
+            width: 0;
+        }
+
+        nav a.next {
+            right: 10vw;
+        }
+
+        nav a.prev {
+            left: 10vw;
+        }
+
+        .notice {
+            text-decoration: none;
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            z-index: 1;
+            color: var(--color-link);
+        }
+
+        @media screen and (max-width: 53em) {
+            nav a {
+                top: auto;
+                bottom: 3rem;
+            }
+            .notice {
+                bottom: auto;
+                top: 2rem;
+                left: 3rem;
+            }
+        }
+
+        /* Custom styles for the kinetic slider */
+        .kinetic-slider-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .kinetic-slider-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 125px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 3px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .kinetic-slider-subtitle {
+            position: absolute;
+            top: calc(50% + 90px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Roboto', sans-serif;
+            font-size: 21px;
+            color: white;
+            letter-spacing: 2px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .kinetic-slider-title.active,
+        .kinetic-slider-subtitle.active {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 53em) {
+            .kinetic-slider-title {
+                font-size: 60px;
+            }
+            .kinetic-slider-subtitle {
+                font-size: 16px;
+                top: calc(50% + 60px);
+            }
+        }
+
+        /* Wind effect cursor */
+        .wind-cursor {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            z-index: 10000;
+            mix-blend-mode: difference;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wind-cursor.visible {
+            opacity: 0.7;
+        }
+
+        .wind-cursor::before,
+        .wind-cursor::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .wind-cursor::before {
+            width: 100%;
+            height: 100%;
+            animation: pulse 2s infinite;
+        }
+
+        .wind-cursor::after {
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 20%;
+            animation: pulse 1.5s infinite reverse;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 0.4; }
+            100% { transform: scale(0.8); opacity: 0.7; }
+        }
+    </style>
+</head>
+<body class="loading">
+    <div class="wind-cursor"></div>
+    
+    <main>
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+            <div class="frame__title-wrap">
+                <h1 class="frame__title">rgbKineticSlider</h1>
+                <p class="frame__tagline">Windy Effect Demo</p>
+            </div>
+            <div class="frame__links">
+                <a href="https://github.com/hmongouachon/rgbKineticSlider">View this project on GitHub</a>
+            </div>
+            <div class="frame__demos">
+                <a href="https://codepen.io/hmongouachon/pen/QWbLpzW" class="frame__demo frame__demo--current">demo 1</a>
+                <a href="https://codepen.io/hmongouachon/pen/jOPNBdP" class="frame__demo">demo 2</a>
+                <a href="https://codepen.io/hmongouachon/pen/eYNOvxB" class="frame__demo">demo 3</a>
+            </div>
+        </div>
+        <div class="content">
+            <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+            <div class="kinetic-slider-content"></div>
+            <nav>
+                <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+                <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+            </nav>
+            <span class="notice">Swipe left... or right</span>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        // Custom RGB Kinetic Slider with Windy Effect
+        class CustomRGBKineticSlider {
+            constructor(options) {
+                this.options = options;
+                this.currentIndex = 0;
+                this.isAnimating = false;
+                this.canvas = null;
+                this.ctx = null;
+                this.images = [];
+                this.titles = [];
+                this.loadedImages = 0;
+                this.mouseX = 0;
+                this.mouseY = 0;
+                this.lastMouseX = 0;
+                this.lastMouseY = 0;
+                this.mouseVelocity = { x: 0, y: 0 };
+                this.windEffect = true;
+                this.waveOffset = 0;
+                this.init();
+            }
+
+            init() {
+                this.createCanvas();
+                this.preloadImages();
+                this.setupEventListeners();
+                this.createWindCursor();
+            }
+
+            createCanvas() {
+                this.canvas = document.createElement('canvas');
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                this.canvas.style.position = 'absolute';
+                this.canvas.style.top = '0';
+                this.canvas.style.left = '0';
+                this.canvas.style.width = '100%';
+                this.canvas.style.height = '100%';
+                
+                const container = document.getElementById('rgbKineticSlider');
+                container.appendChild(this.canvas);
+                
+                this.ctx = this.canvas.getContext('2d');
+            }
+
+            preloadImages() {
+                const contentContainer = document.querySelector('.kinetic-slider-content');
+                
+                this.options.slideImages.forEach((imageUrl, index) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        this.loadedImages++;
+                        if (this.loadedImages === this.options.slideImages.length) {
+                            this.allImagesLoaded();
+                        }
+                    };
+                    img.src = imageUrl;
+                    this.images.push(img);
+
+                    // Create title elements
+                    if (this.options.textsDisplay && this.options.itemsTitles[index]) {
+                        const title = document.createElement('h2');
+                        title.className = 'kinetic-slider-title';
+                        title.textContent = this.options.itemsTitles[index][0];
+                        if (index === 0) title.classList.add('active');
+                        contentContainer.appendChild(title);
+                        this.titles.push(title);
+                    }
+
+                    // Create subtitle elements
+                    if (this.options.textsSubTitleDisplay && this.options.itemsTitles[index]) {
+                        const subtitle = document.createElement('p');
+                        subtitle.className = 'kinetic-slider-subtitle';
+                        subtitle.textContent = this.options.itemsTitles[index][1];
+                        if (index === 0) subtitle.classList.add('active');
+                        contentContainer.appendChild(subtitle);
+                        this.titles.push(subtitle);
+                    }
+                });
+            }
+
+            allImagesLoaded() {
+                this.drawCurrentImage();
+                document.body.classList.remove('loading');
+                
+                // Start animation loop
+                this.animate();
+            }
+
+            drawCurrentImage() {
+                const img = this.images[this.currentIndex];
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Calculate dimensions to maintain aspect ratio and cover the canvas
+                const imgRatio = img.width / img.height;
+                const canvasRatio = this.canvas.width / this.canvas.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (imgRatio > canvasRatio) {
+                    // Image is wider than canvas
+                    drawHeight = this.canvas.height;
+                    drawWidth = drawHeight * imgRatio;
+                    offsetX = (this.canvas.width - drawWidth) / 2;
+                    offsetY = 0;
+                } else {
+                    // Image is taller than canvas
+                    drawWidth = this.canvas.width;
+                    drawHeight = drawWidth / imgRatio;
+                    offsetX = 0;
+                    offsetY = (this.canvas.height - drawHeight) / 2;
+                }
+                
+                this.ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+            }
+
+            animate() {
+                // Apply windy effect if enabled
+                if (this.windEffect) {
+                    this.applyWindyEffect();
+                }
+                
+                // Increment wave offset for continuous animation
+                this.waveOffset += 0.05;
+                
+                requestAnimationFrame(() => this.animate());
+            }
+
+            applyWindyEffect() {
+                const img = this.images[this.currentIndex];
+                const intensity = this.options.cursorScaleIntensity || 0.65;
+                
+                // Calculate dimensions to maintain aspect ratio and cover the canvas
+                const imgRatio = img.width / img.height;
+                const canvasRatio = this.canvas.width / this.canvas.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (imgRatio > canvasRatio) {
+                    drawHeight = this.canvas.height;
+                    drawWidth = drawHeight * imgRatio;
+                    offsetX = (this.canvas.width - drawWidth) / 2;
+                    offsetY = 0;
+                } else {
+                    drawWidth = this.canvas.width;
+                    drawHeight = drawWidth / imgRatio;
+                    offsetX = 0;
+                    offsetY = (this.canvas.height - drawHeight) / 2;
+                }
+                
+                // Clear and redraw with windy effect
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Calculate mouse velocity for dynamic effect
+                const velocity = Math.sqrt(this.mouseVelocity.x * this.mouseVelocity.x + this.mouseVelocity.y * this.mouseVelocity.y);
+                const velocityFactor = Math.min(velocity / 10, 2);
+                
+                // Apply windy wave effect based on mouse position and velocity
+                const waveIntensity = intensity * (0.5 + velocityFactor * 0.5);
+                
+                // Create multiple wave layers for a more complex effect
+                for (let i = 0; i < 3; i++) {
+                    const layerOffset = i * 0.7;
+                    const layerIntensity = waveIntensity * (1 - i * 0.2);
+                    
+                    this.drawWindyLayer(
+                        img, 
+                        offsetX, 
+                        offsetY, 
+                        drawWidth, 
+                        drawHeight, 
+                        layerIntensity,
+                        layerOffset
+                    );
+                }
+                
+                // Apply RGB effect to text if enabled
+                if (this.options.textsRgbEffect) {
+                    this.applyTextRGBEffect();
+                }
+            }
+
+            drawWindyLayer(img, offsetX, offsetY, drawWidth, drawHeight, intensity, layerOffset) {
+                // Create a wavy distortion effect
+                const waveCount = 8;
+                const segmentWidth = drawWidth / waveCount;
+                
+                for (let i = 0; i < waveCount; i++) {
+                    const segmentX = i * segmentWidth;
+                    
+                    // Calculate wave displacement
+                    const time = this.waveOffset + layerOffset;
+                    const waveX = segmentX;
+                    const waveFrequency = 0.1 + (i / waveCount) * 0.2;
+                    
+                    // Base displacement on sine waves
+                    const baseDisplacement = Math.sin(time + waveX * waveFrequency) * 15 * intensity;
+                    
+                    // Add mouse influence
+                    const mouseInfluenceX = (this.mouseX - this.canvas.width/2) * 0.002 * intensity;
+                    const mouseInfluenceY = (this.mouseY - this.canvas.height/2) * 0.002 * intensity;
+                    
+                    // Combine effects
+                    const displacementX = baseDisplacement + mouseInfluenceX * 50;
+                    const displacementY = baseDisplacement * 0.3 + mouseInfluenceY * 30;
+                    
+                    // Draw the segment with displacement
+                    this.ctx.drawImage(
+                        img,
+                        segmentX / drawWidth * img.width, // source x
+                        0, // source y
+                        segmentWidth / drawWidth * img.width, // source width
+                        img.height, // source height
+                        offsetX + segmentX + displacementX, // destination x
+                        offsetY + displacementY, // destination y
+                        segmentWidth, // destination width
+                        drawHeight // destination height
+                    );
+                }
+            }
+
+            applyTextRGBEffect() {
+                const titles = document.querySelectorAll('.kinetic-slider-title.active, .kinetic-slider-subtitle.active');
+                const intensity = this.options.textsRgbIntensity || 0.03;
+                
+                titles.forEach(title => {
+                    const r = Math.floor(255 * intensity);
+                    const g = Math.floor(255 * intensity * 0.7);
+                    const b = Math.floor(255 * intensity * 0.3);
+                    
+                    // Apply RGB shift based on mouse position
+                    const shiftX = (this.mouseX / this.canvas.width - 0.5) * 10;
+                    const shiftY = (this.mouseY / this.canvas.height - 0.5) * 5;
+                    
+                    title.style.textShadow = `
+                        ${1 + shiftX}px ${1 + shiftY}px 0 rgba(${r}, 0, 0, 0.8),
+                        ${-1 - shiftX}px ${2 + shiftY}px 0 rgba(0, ${g}, 0, 0.6),
+                        ${2 + shiftX}px ${-1 - shiftY}px 0 rgba(0, 0, ${b}, 0.4)
+                    `;
+                });
+            }
+
+            nextSlide() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                
+                // Apply transition effect
+                this.applyTransitionEffect('next', () => {
+                    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                    this.updateTitles();
+                    this.drawCurrentImage();
+                    this.isAnimating = false;
+                });
+            }
+
+            prevSlide() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                
+                // Apply transition effect
+                this.applyTransitionEffect('prev', () => {
+                    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+                    this.updateTitles();
+                    this.drawCurrentImage();
+                    this.isAnimating = false;
+                });
+            }
+
+            applyTransitionEffect(direction, callback) {
+                const duration = this.options.slideTransitionDuration || 1;
+                const intensity = this.options.transitionScaleIntensity || 30;
+                const amplitude = this.options.transitionScaleAmplitude || 160;
+                
+                // Hide current titles
+                document.querySelectorAll('.kinetic-slider-title.active, .kinetic-slider-subtitle.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Apply scale animation
+                gsap.to(this.canvas, {
+                    scaleX: 1.1,
+                    scaleY: 1.1,
+                    duration: duration * 0.5,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        callback();
+                        gsap.to(this.canvas, {
+                            scaleX: 1,
+                            scaleY: 1,
+                            duration: duration * 0.5,
+                            ease: "power2.in"
+                        });
+                        
+                        // Show new titles after a delay
+                        setTimeout(() => {
+                            this.updateTitles();
+                        }, duration * 500);
+                    }
+                });
+            }
+
+            updateTitles() {
+                // Hide all titles
+                document.querySelectorAll('.kinetic-slider-title, .kinetic-slider-subtitle').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Show current titles
+                setTimeout(() => {
+                    const titles = document.querySelectorAll('.kinetic-slider-title, .kinetic-slider-subtitle');
+                    const startIndex = this.currentIndex * 2; // Each slide has a title and subtitle
+                    if (titles[startIndex]) titles[startIndex].classList.add('active');
+                    if (titles[startIndex + 1]) titles[startIndex + 1].classList.add('active');
+                }, 300);
+            }
+
+            createWindCursor() {
+                // The wind cursor is already in the HTML, we just need to position it
+                this.windCursor = document.querySelector('.wind-cursor');
+            }
+
+            setupEventListeners() {
+                // Navigation buttons
+                document.querySelector('.main-nav.next').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.nextSlide();
+                });
+                
+                document.querySelector('.main-nav.prev').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.prevSlide();
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                });
+                
+                // Mouse move for cursor effect
+                document.addEventListener('mousemove', (e) => {
+                    // Update mouse position
+                    this.lastMouseX = this.mouseX;
+                    this.lastMouseY = this.mouseY;
+                    this.mouseX = e.clientX;
+                    this.mouseY = e.clientY;
+                    
+                    // Calculate mouse velocity
+                    this.mouseVelocity.x = this.mouseX - this.lastMouseX;
+                    this.mouseVelocity.y = this.mouseY - this.lastMouseY;
+                    
+                    // Update wind cursor position
+                    if (this.windCursor) {
+                        this.windCursor.style.left = (this.mouseX - 20) + 'px';
+                        this.windCursor.style.top = (this.mouseY - 20) + 'px';
+                        this.windCursor.classList.add('visible');
+                    }
+                });
+                
+                // Hide wind cursor when mouse leaves window
+                document.addEventListener('mouseleave', () => {
+                    if (this.windCursor) {
+                        this.windCursor.classList.remove('visible');
+                    }
+                });
+                
+                // Show wind cursor when mouse enters window
+                document.addEventListener('mouseenter', () => {
+                    if (this.windCursor) {
+                        this.windCursor.classList.add('visible');
+                    }
+                });
+                
+                // Swipe support for touch devices
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                document.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, false);
+                
+                document.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    this.handleSwipe();
+                }, false);
+                
+                // Mouse wheel navigation
+                document.addEventListener('wheel', (e) => {
+                    if (e.deltaY > 0) this.nextSlide();
+                    else if (e.deltaY < 0) this.prevSlide();
+                });
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                    this.drawCurrentImage();
+                });
+            }
+
+            handleSwipe() {
+                const minSwipeDistance = this.options.swipeDistance || window.innerWidth * 0.4;
+                const swipeDistance = touchEndX - touchStartX;
+                
+                if (Math.abs(swipeDistance) < minSwipeDistance) return;
+                
+                if (swipeDistance > 0) {
+                    this.prevSlide();
+                } else {
+                    this.nextSlide();
+                }
+            }
+        }
+
+        // Initialize the slider when the page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            // Images setup
+            const images = [
+                "https://images.unsplash.com/photo-1523643391907-41e69459a06f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+                "https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80",
+                "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+            ];
+
+            // Content setup
+            const texts = [
+                ["Earth", "Surface gravity: 9.807 m/s²"],
+                ["Mars", "Surface gravity: 3.711 m/s²"],
+                ["Venus", "Surface gravity: 8.87 m/s²"],
+            ];
+
+            // Initialize the custom slider with all the provided options
+            const slider = new CustomRGBKineticSlider({
+                slideImages: images,
+                itemsTitles: texts,
+                backgroundDisplacementSprite: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2081&q=80',
+                cursorDisplacementSprite: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2081&q=80',
+                cursorImgEffect: true,
+                cursorTextEffect: false,
+                cursorScaleIntensity: 0.65,
+                cursorMomentum: 0.14,
+                swipe: true,
+                swipeDistance: window.innerWidth * 0.4,
+                swipeScaleIntensity: 2,
+                slideTransitionDuration: 1,
+                transitionScaleIntensity: 30,
+                transitionScaleAmplitude: 160,
+                nav: true,
+                navElement: '.main-nav',
+                imagesRgbEffect: false,
+                imagesRgbIntensity: 0.9,
+                navImagesRgbIntensity: 80,
+                textsDisplay: true,
+                textsSubTitleDisplay: true,
+                textsTiltEffect: true,
+                googleFonts: ['Playfair Display:700', 'Roboto:400'],
+                buttonMode: false,
+                textsRgbEffect: true,
+                textsRgbIntensity: 0.03,
+                navTextsRgbIntensity: 15,
+                textTitleColor: 'white',
+                textTitleSize: 125,
+                mobileTextTitleSize: 125,
+                textTitleLetterspacing: 3,
+                textSubTitleColor: 'white',
+                textSubTitleSize: 21,
+                mobileTextSubTitleSize: 21,
+                textSubTitleLetterspacing: 2,
+                textSubTitleOffsetTop: 90,
+                mobileTextSubTitleOffsetTop: 90
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D RGB Kinetic Slider - Advanced Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* demo css */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 15px;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            --color-text: #aaa;
+            --color-bg: #000;
+            --color-link: #ddd;
+            --color-link-hover: #fff;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+
+        /* Page Loader */
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: fixed;
+            z-index: 10000;
+        }
+
+        .loading::before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+        }
+
+        .loading::after {
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin: -30px 0 0 -30px;
+            border-radius: 50%;
+            opacity: 0.4;
+            background: var(--color-link);
+            animation: loaderAnim 0.7s linear infinite alternate forwards;
+        }
+
+        @keyframes loaderAnim {
+            to {
+                opacity: 1;
+                transform: scale3d(0.5, 0.5, 1);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-link);
+            outline: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--color-link-hover);
+            outline: none;
+        }
+
+        .message {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 1rem;
+            text-align: center;
+            display: none;
+        }
+
+        .frame {
+            padding: 3rem 5vw;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .frame__title {
+            font-size: 1rem;
+            margin: 0 0 1rem;
+            font-weight: normal;
+        }
+
+        .frame__links {
+            display: inline;
+        }
+
+        .frame__links a:not(:last-child),
+        .frame__demos a:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        .frame__demos {
+            margin: 1rem 0;
+        }
+
+        .frame__demo--current,
+        .frame__demo--current:hover {
+            color: var(--color-text);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 53em) {
+            .frame {
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                display: grid;
+                align-content: space-between;
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                padding: 3rem;
+                pointer-events: none;
+                grid-template-columns: 75% 25%;
+                grid-template-rows: auto auto auto;
+                grid-template-areas: 'title links'
+                                    '... ...'
+                                    '... demos';
+            }
+            .frame__title-wrap {
+                grid-area: title;
+                display: flex;
+            }
+            .frame__title {
+                margin: 0;
+            }
+            .frame__tagline {
+                position: relative;
+                margin: 0 0 0 1rem;
+                padding: 0 0 0 1rem;
+                opacity: 0.5;
+            }
+            .frame__demos {
+                margin: 0;
+                grid-area: demos;
+                justify-self: end;
+            }
+            .frame__links {
+                grid-area: links;
+                padding: 0;
+                justify-self: end;
+            }
+            .frame a {
+                pointer-events: auto;
+            }
+        }
+
+        /* plugin css */
+        .rgbKineticSlider {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            position: absolute;
+            display: block;
+            z-index: 1;
+        }
+
+        /* Three.js Canvas */
+        #threeCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        nav a {
+            color: var(--color-link-hover);
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            font-size: 16px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: var(--color-link-hover);
+            outline: none;
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        nav span {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-link-hover);
+            display: block;
+            margin-top: 7px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover span {
+            width: 0;
+        }
+
+        nav a.next {
+            right: 5vw;
+        }
+
+        nav a.prev {
+            left: 5vw;
+        }
+
+        .notice {
+            text-decoration: none;
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            color: var(--color-link);
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        @media screen and (max-width: 53em) {
+            nav a {
+                top: auto;
+                bottom: 2rem;
+            }
+            .notice {
+                bottom: 6rem;
+            }
+        }
+
+        /* Custom styles for the kinetic slider */
+        .kinetic-slider-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .kinetic-slider-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 125px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 3px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 11;
+        }
+
+        .kinetic-slider-subtitle {
+            position: absolute;
+            top: calc(50% + 90px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Roboto', sans-serif;
+            font-size: 21px;
+            color: white;
+            letter-spacing: 2px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            z-index: 11;
+        }
+
+        .kinetic-slider-title.active,
+        .kinetic-slider-subtitle.active {
+            opacity: 1;
+        }
+
+        /* Floating particles */
+        .floating-particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        /* Energy orb styles */
+        .energy-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 4;
+            filter: blur(10px);
+            opacity: 0.7;
+        }
+
+        @media screen and (max-width: 53em) {
+            .kinetic-slider-title {
+                font-size: 60px;
+            }
+            .kinetic-slider-subtitle {
+                font-size: 16px;
+                top: calc(50% + 60px);
+            }
+        }
+
+        /* Animation debug */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 1000;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body class="loading">
+    <main>
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+            <div class="frame__title-wrap">
+                <h1 class="frame__title">3D RGB Kinetic Slider</h1>
+                <p class="frame__tagline">Advanced Animation</p>
+            </div>
+            <div class="frame__links">
+                <a href="https://github.com/hmongouachon/rgbKineticSlider">View this project on GitHub</a>
+            </div>
+            <div class="frame__demos">
+                <a href="#" class="frame__demo frame__demo--current">3D Mode Active</a>
+            </div>
+        </div>
+        <div class="content">
+            <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+            <canvas id="threeCanvas"></canvas>
+            <div class="kinetic-slider-content"></div>
+            <nav>
+                <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+                <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+            </nav>
+            <span class="notice">🌀 3D Particle System Active | Move Mouse to Interact</span>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Advanced 3D Animation System
+        class Advanced3DAnimation {
+            constructor() {
+                this.scene = null;
+                this.camera = null;
+                this.renderer = null;
+                this.particles = null;
+                this.particleSystem = null;
+                this.clock = new THREE.Clock();
+                this.mouseX = 0;
+                this.mouseY = 0;
+                this.targetX = 0;
+                this.targetY = 0;
+                this.windowHalfX = window.innerWidth / 2;
+                this.windowHalfY = window.innerHeight / 2;
+                this.particleCount = 50000;
+                this.init();
+            }
+
+            init() {
+                this.createScene();
+                this.createParticles();
+                this.createAdditionalEffects();
+                this.animate();
+                this.setupEventListeners();
+            }
+
+            createScene() {
+                // Scene
+                this.scene = new THREE.Scene();
+                
+                // Camera
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+                this.camera.position.z = 100;
+
+                // Renderer
+                this.renderer = new THREE.WebGLRenderer({
+                    canvas: document.getElementById('threeCanvas'),
+                    alpha: true,
+                    antialias: true
+                });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setClearColor(0x000000, 0);
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            }
+
+            createParticles() {
+                const particles = new THREE.BufferGeometry();
+                const positions = new Float32Array(this.particleCount * 3);
+                const colors = new Float32Array(this.particleCount * 3);
+                const sizes = new Float32Array(this.particleCount);
+
+                const color = new THREE.Color();
+
+                for (let i = 0; i < this.particleCount; i++) {
+                    // positions
+                    positions[i * 3] = (Math.random() - 0.5) * 2000;
+                    positions[i * 3 + 1] = (Math.random() - 0.5) * 2000;
+                    positions[i * 3 + 2] = (Math.random() - 0.5) * 2000;
+
+                    // colors
+                    const hue = (i / this.particleCount) * 360;
+                    color.setHSL(hue / 360, 0.8, 0.6);
+                    colors[i * 3] = color.r;
+                    colors[i * 3 + 1] = color.g;
+                    colors[i * 3 + 2] = color.b;
+
+                    // sizes
+                    sizes[i] = Math.random() * 3 + 1;
+                }
+
+                particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+                particles.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+                const particleMaterial = new THREE.PointsMaterial({
+                    size: 2,
+                    vertexColors: true,
+                    transparent: true,
+                    opacity: 0.8,
+                    sizeAttenuation: true
+                });
+
+                this.particleSystem = new THREE.Points(particles, particleMaterial);
+                this.scene.add(this.particleSystem);
+            }
+
+            createAdditionalEffects() {
+                // Create glowing orbs
+                this.createGlowingOrbs();
+                
+                // Create light sources
+                this.createLights();
+                
+                // Create floating geometries
+                this.createFloatingGeometries();
+            }
+
+            createGlowingOrbs() {
+                const orbGeometry = new THREE.SphereGeometry(10, 32, 32);
+                const orbMaterial = new THREE.MeshBasicMaterial({
+                    color: 0x00ffff,
+                    transparent: true,
+                    opacity: 0.3
+                });
+
+                this.orb1 = new THREE.Mesh(orbGeometry, orbMaterial);
+                this.orb1.position.set(50, 30, 50);
+                this.scene.add(this.orb1);
+
+                this.orb2 = new THREE.Mesh(orbGeometry, orbMaterial);
+                this.orb2.position.set(-50, -30, -50);
+                this.orb2.material.color.setHex(0xff00ff);
+                this.scene.add(this.orb2);
+            }
+
+            createLights() {
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
+                this.scene.add(ambientLight);
+
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+                directionalLight.position.set(1, 1, 1);
+                this.scene.add(directionalLight);
+
+                const pointLight = new THREE.PointLight(0x00ff00, 1, 100);
+                pointLight.position.set(0, 0, 50);
+                this.scene.add(pointLight);
+            }
+
+            createFloatingGeometries() {
+                // Create various floating 3D objects
+                const geometries = [
+                    new THREE.TorusGeometry(15, 5, 16, 100),
+                    new THREE.OctahedronGeometry(12, 0),
+                    new THREE.ConeGeometry(10, 20, 32),
+                    new THREE.TetrahedronGeometry(12)
+                ];
+
+                this.floatingObjects = [];
+
+                geometries.forEach((geometry, index) => {
+                    const material = new THREE.MeshPhongMaterial({
+                        color: new THREE.Color().setHSL(index * 0.25, 0.8, 0.6),
+                        transparent: true,
+                        opacity: 0.3,
+                        wireframe: true
+                    });
+
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.position.set(
+                        (Math.random() - 0.5) * 100,
+                        (Math.random() - 0.5) * 100,
+                        (Math.random() - 0.5) * 50
+                    );
+                    mesh.rotation.set(
+                        Math.random() * Math.PI,
+                        Math.random() * Math.PI,
+                        Math.random() * Math.PI
+                    );
+
+                    this.scene.add(mesh);
+                    this.floatingObjects.push(mesh);
+                });
+            }
+
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                this.render();
+            }
+
+            render() {
+                const time = this.clock.getElapsedTime();
+
+                // Animate particles
+                if (this.particleSystem) {
+                    this.particleSystem.rotation.x = time * 0.05;
+                    this.particleSystem.rotation.y = time * 0.1;
+
+                    const positions = this.particleSystem.geometry.attributes.position.array;
+                    
+                    for (let i = 0; i < this.particleCount; i++) {
+                        const i3 = i * 3;
+                        
+                        // Create wave-like motion
+                        positions[i3] += Math.sin(time + i) * 0.1;
+                        positions[i3 + 1] += Math.cos(time + i) * 0.1;
+                        positions[i3 + 2] += Math.sin(time * 0.5 + i) * 0.05;
+                    }
+                    
+                    this.particleSystem.geometry.attributes.position.needsUpdate = true;
+                }
+
+                // Animate orbs
+                if (this.orb1 && this.orb2) {
+                    this.orb1.position.x = Math.sin(time) * 60;
+                    this.orb1.position.y = Math.cos(time * 1.3) * 40;
+                    this.orb1.position.z = Math.sin(time * 0.7) * 30;
+
+                    this.orb2.position.x = Math.cos(time * 0.8) * 70;
+                    this.orb2.position.y = Math.sin(time * 1.1) * 50;
+                    this.orb2.position.z = Math.cos(time) * 40;
+                }
+
+                // Animate floating objects
+                this.floatingObjects.forEach((obj, index) => {
+                    obj.rotation.x = time * 0.2 * (index + 1);
+                    obj.rotation.y = time * 0.3 * (index + 1);
+                    obj.rotation.z = time * 0.1 * (index + 1);
+
+                    obj.position.y = Math.sin(time * 0.5 + index) * 10;
+                    obj.position.x = Math.cos(time * 0.3 + index) * 15;
+                });
+
+                // Camera movement based on mouse
+                this.camera.position.x += (this.targetX - this.camera.position.x) * 0.05;
+                this.camera.position.y += (-this.targetY - this.camera.position.y) * 0.05;
+                this.camera.lookAt(this.scene.position);
+
+                this.renderer.render(this.scene, this.camera);
+            }
+
+            onSlideChange(slideIndex) {
+                // Change particle behavior based on slide
+                const hue = (slideIndex * 120) % 360;
+                
+                if (this.particleSystem) {
+                    const colors = this.particleSystem.geometry.attributes.color.array;
+                    const color = new THREE.Color();
+                    
+                    for (let i = 0; i < this.particleCount; i++) {
+                        const individualHue = (hue + (i / this.particleCount) * 60) % 360;
+                        color.setHSL(individualHue / 360, 0.8, 0.6);
+                        colors[i * 3] = color.r;
+                        colors[i * 3 + 1] = color.g;
+                        colors[i * 3 + 2] = color.b;
+                    }
+                    
+                    this.particleSystem.geometry.attributes.color.needsUpdate = true;
+                }
+
+                // Pulse effect on slide change
+                this.createPulseEffect(slideIndex);
+            }
+
+            createPulseEffect(slideIndex) {
+                // Create a shockwave effect
+                const pulseGeometry = new THREE.SphereGeometry(1, 32, 32);
+                const pulseMaterial = new THREE.MeshBasicMaterial({
+                    color: new THREE.Color().setHSL((slideIndex * 120) / 360, 0.8, 0.6),
+                    transparent: true,
+                    opacity: 0.8,
+                    wireframe: true
+                });
+
+                const pulse = new THREE.Mesh(pulseGeometry, pulseMaterial);
+                this.scene.add(pulse);
+
+                gsap.to(pulse.scale, {
+                    x: 100,
+                    y: 100,
+                    z: 100,
+                    duration: 2,
+                    ease: "power2.out"
+                });
+
+                gsap.to(pulse.material, {
+                    opacity: 0,
+                    duration: 2,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        this.scene.remove(pulse);
+                    }
+                });
+            }
+
+            setupEventListeners() {
+                document.addEventListener('mousemove', (e) => {
+                    this.mouseX = e.clientX - this.windowHalfX;
+                    this.mouseY = e.clientY - this.windowHalfY;
+                    
+                    this.targetX = this.mouseX * 0.001;
+                    this.targetY = this.mouseY * 0.001;
+                });
+
+                window.addEventListener('resize', () => {
+                    this.camera.aspect = window.innerWidth / window.innerHeight;
+                    this.camera.updateProjectionMatrix();
+                    this.renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            }
+        }
+
+        // Enhanced Custom RGB Kinetic Slider with 3D Integration
+        class CustomRGBKineticSlider {
+            constructor(options) {
+                this.options = options;
+                this.currentIndex = 0;
+                this.isAnimating = false;
+                this.canvas = null;
+                this.ctx = null;
+                this.images = [];
+                this.titles = [];
+                this.subtitles = [];
+                this.loadedImages = 0;
+                this.mouseX = window.innerWidth / 2;
+                this.mouseY = window.innerHeight / 2;
+                this.cursorEffect = true;
+                this.threeAnimation = null;
+                this.floatingParticles = [];
+                this.energyOrbs = [];
+                this.init();
+            }
+
+            init() {
+                this.createCanvas();
+                this.preloadImages();
+                this.setupEventListeners();
+                this.create2DParticleSystem();
+                this.init3DAnimation();
+            }
+
+            createCanvas() {
+                this.canvas = document.createElement('canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.updateCanvasSize();
+                
+                this.canvas.style.position = 'absolute';
+                this.canvas.style.top = '0';
+                this.canvas.style.left = '0';
+                this.canvas.style.width = '100%';
+                this.canvas.style.height = '100%';
+                this.canvas.style.zIndex = '1';
+                
+                const container = document.getElementById('rgbKineticSlider');
+                if (container) {
+                    container.appendChild(this.canvas);
+                }
+            }
+
+            updateCanvasSize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+
+            init3DAnimation() {
+                this.threeAnimation = new Advanced3DAnimation();
+            }
+
+            create2DParticleSystem() {
+                // Create 2D floating particles
+                for (let i = 0; i < 50; i++) {
+                    this.createFloatingParticle();
+                }
+
+                // Create energy orbs
+                for (let i = 0; i < 5; i++) {
+                    this.createEnergyOrb();
+                }
+            }
+
+            createFloatingParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'floating-particle';
+                
+                const size = Math.random() * 4 + 1;
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const hue = Math.random() * 360;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.top = `${top}%`;
+                particle.style.background = `hsl(${hue}, 70%, 60%)`;
+                particle.style.opacity = Math.random() * 0.6 + 0.2;
+                particle.style.boxShadow = `0 0 ${size * 2}px hsl(${hue}, 100%, 50%)`;
+                
+                document.querySelector('.content').appendChild(particle);
+                
+                this.floatingParticles.push({
+                    element: particle,
+                    x: left,
+                    y: top,
+                    speedX: (Math.random() - 0.5) * 0.5,
+                    speedY: (Math.random() - 0.5) * 0.5,
+                    size: size,
+                    hue: hue
+                });
+            }
+
+            createEnergyOrb() {
+                const orb = document.createElement('div');
+                orb.className = 'energy-orb';
+                
+                const size = Math.random() * 100 + 50;
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const hue = Math.random() * 360;
+                
+                orb.style.width = `${size}px`;
+                orb.style.height = `${size}px`;
+                orb.style.left = `${left}%`;
+                orb.style.top = `${top}%`;
+                orb.style.background = `radial-gradient(circle, hsl(${hue}, 100%, 60%) 0%, transparent 70%)`;
+                
+                document.querySelector('.content').appendChild(orb);
+                
+                this.energyOrbs.push({
+                    element: orb,
+                    x: left,
+                    y: top,
+                    size: size,
+                    hue: hue,
+                    speedX: (Math.random() - 0.5) * 0.2,
+                    speedY: (Math.random() - 0.5) * 0.2
+                });
+            }
+
+            update2DParticles() {
+                // Update floating particles
+                this.floatingParticles.forEach(particle => {
+                    particle.x += particle.speedX;
+                    particle.y += particle.speedY;
+                    
+                    // Bounce off edges
+                    if (particle.x <= 0 || particle.x >= 100) particle.speedX *= -1;
+                    if (particle.y <= 0 || particle.y >= 100) particle.speedY *= -1;
+                    
+                    // Apply mouse influence
+                    const mouseInfluenceX = (this.mouseX / window.innerWidth - 0.5) * 2;
+                    const mouseInfluenceY = (this.mouseY / window.innerHeight - 0.5) * 2;
+                    
+                    particle.x += mouseInfluenceX * 0.1;
+                    particle.y += mouseInfluenceY * 0.1;
+                    
+                    particle.element.style.left = `${particle.x}%`;
+                    particle.element.style.top = `${particle.y}%`;
+                    
+                    // Pulsing effect
+                    const scale = 1 + Math.sin(Date.now() * 0.005 + particle.x) * 0.3;
+                    particle.element.style.transform = `scale(${scale})`;
+                });
+
+                // Update energy orbs
+                this.energyOrbs.forEach(orb => {
+                    orb.x += orb.speedX;
+                    orb.y += orb.speedY;
+                    
+                    // Bounce off edges
+                    if (orb.x <= -10 || orb.x >= 110) orb.speedX *= -1;
+                    if (orb.y <= -10 || orb.y >= 110) orb.speedY *= -1;
+                    
+                    orb.element.style.left = `${orb.x}%`;
+                    orb.element.style.top = `${orb.y}%`;
+                    
+                    // Color cycling
+                    orb.hue = (orb.hue + 0.5) % 360;
+                    orb.element.style.background = `radial-gradient(circle, hsl(${orb.hue}, 100%, 60%) 0%, transparent 70%)`;
+                });
+            }
+
+            preloadImages() {
+                const contentContainer = document.querySelector('.kinetic-slider-content');
+                if (!contentContainer) return;
+
+                contentContainer.innerHTML = '';
+                this.titles = [];
+                this.subtitles = [];
+                
+                this.options.slideImages.forEach((imageUrl, index) => {
+                    const img = new Image();
+                    img.crossOrigin = "anonymous";
+                    img.onload = () => {
+                        this.loadedImages++;
+                        if (this.loadedImages === this.options.slideImages.length) {
+                            this.allImagesLoaded();
+                        }
+                    };
+                    img.onerror = () => {
+                        console.error(`Failed to load image: ${imageUrl}`);
+                        this.loadedImages++;
+                        if (this.loadedImages === this.options.slideImages.length) {
+                            this.allImagesLoaded();
+                        }
+                    };
+                    img.src = imageUrl;
+                    this.images.push(img);
+
+                    // Create title elements
+                    if (this.options.textsDisplay && this.options.itemsTitles && this.options.itemsTitles[index]) {
+                        const title = document.createElement('h2');
+                        title.className = 'kinetic-slider-title';
+                        title.textContent = this.options.itemsTitles[index][0];
+                        if (index === 0) title.classList.add('active');
+                        contentContainer.appendChild(title);
+                        this.titles.push(title);
+                    }
+
+                    // Create subtitle elements
+                    if (this.options.textsSubTitleDisplay && this.options.itemsTitles && this.options.itemsTitles[index]) {
+                        const subtitle = document.createElement('p');
+                        subtitle.className = 'kinetic-slider-subtitle';
+                        subtitle.textContent = this.options.itemsTitles[index][1];
+                        if (index === 0) subtitle.classList.add('active');
+                        contentContainer.appendChild(subtitle);
+                        this.subtitles.push(subtitle);
+                    }
+                });
+            }
+
+            allImagesLoaded() {
+                this.drawCurrentImage();
+                document.body.classList.remove('loading');
+                this.animate();
+            }
+
+            drawCurrentImage() {
+                if (this.images.length === 0 || this.currentIndex >= this.images.length) return;
+
+                const img = this.images[this.currentIndex];
+                if (!img.complete) return;
+
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                const imgRatio = img.width / img.height;
+                const canvasRatio = this.canvas.width / this.canvas.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (imgRatio > canvasRatio) {
+                    drawHeight = this.canvas.height;
+                    drawWidth = drawHeight * imgRatio;
+                    offsetX = (this.canvas.width - drawWidth) / 2;
+                    offsetY = 0;
+                } else {
+                    drawWidth = this.canvas.width;
+                    drawHeight = drawWidth / imgRatio;
+                    offsetX = 0;
+                    offsetY = (this.canvas.height - drawHeight) / 2;
+                }
+                
+                this.ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+            }
+
+            animate() {
+                if (this.cursorEffect && this.options.cursorImgEffect && this.images.length > 0) {
+                    this.applyCursorEffect();
+                }
+                
+                this.update2DParticles();
+                requestAnimationFrame(() => this.animate());
+            }
+
+            applyCursorEffect() {
+                const img = this.images[this.currentIndex];
+                if (!img) return;
+
+                const intensity = this.options.cursorScaleIntensity || 0.65;
+                
+                const imgRatio = img.width / img.height;
+                const canvasRatio = this.canvas.width / this.canvas.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (imgRatio > canvasRatio) {
+                    drawHeight = this.canvas.height;
+                    drawWidth = drawHeight * imgRatio;
+                    offsetX = (this.canvas.width - drawWidth) / 2;
+                    offsetY = 0;
+                } else {
+                    drawWidth = this.canvas.width;
+                    drawHeight = drawWidth / imgRatio;
+                    offsetX = 0;
+                    offsetY = (this.canvas.height - drawHeight) / 2;
+                }
+                
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                const displacementX = (this.mouseX - this.canvas.width/2) * intensity * 0.01;
+                const displacementY = (this.mouseY - this.canvas.height/2) * intensity * 0.01;
+                
+                this.ctx.drawImage(
+                    img, 
+                    offsetX + displacementX, 
+                    offsetY + displacementY, 
+                    drawWidth, 
+                    drawHeight
+                );
+                
+                if (this.options.textsRgbEffect) {
+                    this.applyTextRGBEffect();
+                }
+            }
+
+            applyTextRGBEffect() {
+                const activeTitles = document.querySelectorAll('.kinetic-slider-title.active, .kinetic-slider-subtitle.active');
+                const intensity = this.options.textsRgbIntensity || 0.03;
+                
+                activeTitles.forEach(title => {
+                    const r = Math.floor(255 * intensity);
+                    const g = Math.floor(255 * intensity * 0.7);
+                    const b = Math.floor(255 * intensity * 0.3);
+                    
+                    const shiftX = (this.mouseX / this.canvas.width - 0.5) * 10;
+                    const shiftY = (this.mouseY / this.canvas.height - 0.5) * 5;
+                    
+                    title.style.textShadow = `
+                        ${1 + shiftX}px ${1 + shiftY}px 0 rgba(${r}, 0, 0, 0.8),
+                        ${-1 - shiftX}px ${2 + shiftY}px 0 rgba(0, ${g}, 0, 0.6),
+                        ${2 + shiftX}px ${-1 - shiftY}px 0 rgba(0, 0, ${b}, 0.4)
+                    `;
+                });
+            }
+
+            nextSlide() {
+                if (this.isAnimating || this.images.length === 0) return;
+                
+                this.isAnimating = true;
+                this.applyTransitionEffect('next', () => {
+                    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                    this.updateTitles();
+                    this.drawCurrentImage();
+                    if (this.threeAnimation) {
+                        this.threeAnimation.onSlideChange(this.currentIndex);
+                    }
+                    this.isAnimating = false;
+                });
+            }
+
+            prevSlide() {
+                if (this.isAnimating || this.images.length === 0) return;
+                
+                this.isAnimating = true;
+                this.applyTransitionEffect('prev', () => {
+                    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+                    this.updateTitles();
+                    this.drawCurrentImage();
+                    if (this.threeAnimation) {
+                        this.threeAnimation.onSlideChange(this.currentIndex);
+                    }
+                    this.isAnimating = false;
+                });
+            }
+
+            applyTransitionEffect(direction, callback) {
+                const duration = this.options.slideTransitionDuration || 1;
+                
+                document.querySelectorAll('.kinetic-slider-title.active, .kinetic-slider-subtitle.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Enhanced transition with multiple effects
+                gsap.to(this.canvas, {
+                    scaleX: 1.2,
+                    scaleY: 1.2,
+                    rotationY: direction === 'next' ? 30 : -30,
+                    duration: duration * 0.5,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        callback();
+                        gsap.to(this.canvas, {
+                            scaleX: 1,
+                            scaleY: 1,
+                            rotationY: 0,
+                            duration: duration * 0.5,
+                            ease: "power2.in"
+                        });
+                        
+                        setTimeout(() => {
+                            this.updateTitles();
+                        }, duration * 500);
+                    }
+                });
+
+                // Additional particle burst effect
+                this.createTransitionParticles(direction);
+            }
+
+            createTransitionParticles(direction) {
+                // Create burst of particles during transition
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        this.createTransitionParticle(direction);
+                    }, i * 20);
+                }
+            }
+
+            createTransitionParticle(direction) {
+                const particle = document.createElement('div');
+                particle.className = 'floating-particle';
+                particle.style.position = 'absolute';
+                particle.style.zIndex = '5';
+                
+                const size = Math.random() * 8 + 2;
+                const startX = direction === 'next' ? -50 : window.innerWidth + 50;
+                const startY = Math.random() * window.innerHeight;
+                const hue = Math.random() * 360;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${startX}px`;
+                particle.style.top = `${startY}px`;
+                particle.style.background = `hsl(${hue}, 100%, 60%)`;
+                particle.style.boxShadow = `0 0 ${size * 3}px hsl(${hue}, 100%, 50%)`;
+                
+                document.querySelector('.content').appendChild(particle);
+                
+                const endX = direction === 'next' ? window.innerWidth + 50 : -50;
+                
+                gsap.to(particle, {
+                    x: endX - startX,
+                    y: (Math.random() - 0.5) * 200,
+                    rotation: 360,
+                    duration: 1,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        particle.remove();
+                    }
+                });
+            }
+
+            updateTitles() {
+                document.querySelectorAll('.kinetic-slider-title, .kinetic-slider-subtitle').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                setTimeout(() => {
+                    if (this.titles[this.currentIndex]) {
+                        this.titles[this.currentIndex].classList.add('active');
+                    }
+                    if (this.subtitles[this.currentIndex]) {
+                        this.subtitles[this.currentIndex].classList.add('active');
+                    }
+                }, 300);
+            }
+
+            setupEventListeners() {
+                const nextBtn = document.querySelector('.main-nav.next');
+                const prevBtn = document.querySelector('.main-nav.prev');
+                
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.nextSlide();
+                    });
+                }
+                
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.prevSlide();
+                    });
+                }
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                });
+                
+                document.addEventListener('mousemove', (e) => {
+                    this.mouseX = e.clientX;
+                    this.mouseY = e.clientY;
+                });
+                
+                let touchStartX = 0;
+                
+                document.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, false);
+                
+                document.addEventListener('touchend', (e) => {
+                    const touchEndX = e.changedTouches[0].screenX;
+                    this.handleSwipe(touchStartX, touchEndX);
+                }, false);
+                
+                document.addEventListener('wheel', (e) => {
+                    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                        if (e.deltaY > 0) this.nextSlide();
+                        else if (e.deltaY < 0) this.prevSlide();
+                    }
+                });
+                
+                window.addEventListener('resize', () => {
+                    this.updateCanvasSize();
+                    this.drawCurrentImage();
+                });
+            }
+
+            handleSwipe(startX, endX) {
+                const minSwipeDistance = this.options.swipeDistance || window.innerWidth * 0.2;
+                const swipeDistance = endX - startX;
+                
+                if (Math.abs(swipeDistance) < minSwipeDistance) return;
+                
+                if (swipeDistance > 0) {
+                    this.prevSlide();
+                } else {
+                    this.nextSlide();
+                }
+            }
+        }
+
+        // Initialize the enhanced slider
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Initializing 3D Kinetic Slider...');
+            
+            const images = [
+                "https://images.unsplash.com/photo-1523643391907-41e69459a06f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+                "https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80",
+                "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+            ];
+
+            const texts = [
+                ["Earth", "Surface gravity: 9.807 m/s²"],
+                ["Mars", "Surface gravity: 3.711 m/s²"],
+                ["Venus", "Surface gravity: 8.87 m/s²"],
+            ];
+
+            const slider = new CustomRGBKineticSlider({
+                slideImages: images,
+                itemsTitles: texts,
+                cursorImgEffect: true,
+                cursorScaleIntensity: 0.8,
+                swipe: true,
+                swipeDistance: window.innerWidth * 0.2,
+                slideTransitionDuration: 1.2,
+                textsDisplay: true,
+                textsSubTitleDisplay: true,
+                textsRgbEffect: true,
+                textsRgbIntensity: 0.05,
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rgbKineticSlider – Demo 1</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <!-- TweenMax (for transitions) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <!-- rgbKineticSlider -->
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.min.js"></script>
+
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    :root {
+      font-size: 15px;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      --color-text: #aaa;
+      --color-bg: #fff;
+      --color-link: #ddd;
+      --color-link-hover: #fff;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .js .loading::before,
+    .js .loading::after {
+      content: '';
+      position: fixed;
+      z-index: 1000;
+    }
+
+    .js .loading::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-bg);
+    }
+
+    .js .loading::after {
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      margin: -30px 0 0 -30px;
+      border-radius: 50%;
+      opacity: 0.4;
+      background: var(--color-link);
+      animation: loaderAnim 0.7s linear infinite alternate forwards;
+    }
+
+    @keyframes loaderAnim {
+      to {
+        opacity: 1;
+        transform: scale3d(0.5, 0.5, 1);
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color-link);
+      outline: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--color-link-hover);
+      outline: none;
+    }
+
+    .message {
+      background: var(--color-text);
+      color: var(--color-bg);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .frame {
+      padding: 3rem 5vw;
+      text-align: center;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .frame__title {
+      font-size: 1rem;
+      margin: 0 0 1rem;
+      font-weight: normal;
+    }
+
+    .frame__links {
+      display: inline;
+    }
+
+    .frame__links a:not(:last-child),
+    .frame__demos a:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    .frame__demos {
+      margin: 1rem 0;
+    }
+
+    .frame__demo--current,
+    .frame__demo--current:hover {
+      color: var(--color-text);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - 13rem);
+      position: relative;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 53em) {
+      .message {
+        display: none;
+      }
+      .frame {
+        position: fixed;
+        text-align: left;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        display: grid;
+        align-content: space-between;
+        width: 100%;
+        max-width: none;
+        height: 100vh;
+        padding: 3rem;
+        pointer-events: none;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 'title links'
+                            '... ...'
+                            '... demos';
+      }
+      .frame__title-wrap {
+        grid-area: title;
+        display: flex;
+      }
+      .frame__title {
+        margin: 0;
+      }
+      .frame__tagline {
+        position: relative;
+        margin: 0 0 0 1rem;
+        padding: 0 0 0 1rem;
+        opacity: 0.5;
+      }
+      .frame__demos {
+        margin: 0;
+        grid-area: demos;
+        justify-self: end;
+      }
+      .frame__links {
+        grid-area: links;
+        padding: 0;
+        justify-self: end;
+      }
+      .frame a {
+        pointer-events: auto;
+      }
+      .content {
+        height: 100vh;
+        justify-content: center;
+      }
+    }
+
+    .rgbKineticSlider {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    canvas {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+    }
+
+    nav a {
+      color: var(--color-link-hover);
+      text-decoration: none;
+      position: absolute;
+      top: 50vh;
+      z-index: 1;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--color-link-hover);
+      outline: none;
+    }
+
+    nav span {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-link-hover);
+      display: block;
+      margin-top: 7px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover span {
+      width: 0;
+    }
+
+    nav a.next {
+      right: 10vw;
+    }
+
+    nav a.prev {
+      left: 10vw;
+    }
+
+    .notice {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      z-index: 1;
+      color: var(--color-link);
+    }
+
+    @media screen and (max-width: 53em) {
+      nav a {
+        top: auto;
+        bottom: 3rem;
+      }
+      .notice {
+        bottom: auto;
+        top: 2rem;
+        left: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="demo-1 loading">
+  <main>
+    <div class="message">Some message for mobile (if needed).</div>
+    <div class="frame">
+      <div class="frame__title-wrap">
+        <h1 class="frame__title">rgbKineticSlider</h1>
+        <p class="frame__tagline">Demo 1</p>
+      </div>
+      <div class="frame__links">
+        <a href="https://github.com/hmongouachon/rgbKineticSlider">View this project on GitHub</a>
+      </div>
+      <div class="frame__demos">
+        <a href="#" class="frame__demo frame__demo--current">demo 1</a>
+        <a href="https://codepen.io/hmongouachon/pen/jOPNBdP" class="frame__demo">demo 2</a>
+        <a href="https://codepen.io/hmongouachon/pen/eYNOvxB" class="frame__demo">demo 3</a>
+      </div>
+    </div>
+    <div class="content">
+      <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+      <nav>
+        <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+        <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+      </nav>
+      <span class="notice">Swipe left... or right</span>
+    </div>
+  </main>
+
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1523643391907-41e69459a06f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80",
+      "https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&auto=format&fit=crop&w=2074&q=80",
+      "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+    ];
+
+    const texts = [
+      ["Earth", "Surface gravity‎: ‎9.807 m/s²"],
+      ["Mars", "Surface gravity‎: ‎3.711 m/s²"],
+      ["Venus", "Surface gravity‎: ‎8.87 m/s²"],
+    ];
+
+    const slider = new rgbKineticSlider({
+      slideImages: images,
+      itemsTitles: texts,
+      backgroundDisplacementSprite: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&auto=format&fit=crop&w=2081&q=80',
+      cursorDisplacementSprite: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&auto=format&fit=crop&w=2081&q=80',
+      cursorImgEffect: true,
+      cursorTextEffect: false,
+      cursorScaleIntensity: 0.65,
+      cursorMomentum: 0.14,
+      swipe: true,
+      swipeDistance: window.innerWidth * 0.4,
+      swipeScaleIntensity: 2,
+      slideTransitionDuration: 1,
+      transitionScaleIntensity: 30,
+      transitionScaleAmplitude: 160,
+      nav: true,
+      navElement: '.main-nav',
+      imagesRgbEffect: false,
+      imagesRgbIntensity: 0.9,
+      navImagesRgbIntensity: 80,
+      textsDisplay: true,
+      textsSubTitleDisplay: true,
+      textsTiltEffect: true,
+      googleFonts: ['Playfair Display:700', 'Roboto:400'],
+      buttonMode: false,
+      textsRgbEffect: true,
+      textsRgbIntensity: 0.03,
+      navTextsRgbIntensity: 15,
+      textTitleColor: 'white',
+      textTitleSize: 125,
+      mobileTextTitleSize: 125,
+      textTitleLetterspacing: 3,
+      textSubTitleColor: 'white',
+      textSubTitleSize: 21,
+      mobileTextSubTitleSize: 21,
+      textSubTitleLetterspacing: 2,
+      textSubTitleOffsetTop: 90,
+      mobileTextSubTitleOffsetTop: 90,
+    });
+  </script>
+</body>
+</html>
