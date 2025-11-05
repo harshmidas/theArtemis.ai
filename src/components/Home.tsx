@@ -12155,10 +12155,10 @@ const Home: React.FC = () => {
         0, 0, moonRadius * 0.4,
         0, 0, moonRadius * 2.0
       );
-      moonGlow.addColorStop(0, "rgba(255,255,250,0.15)");
-      moonGlow.addColorStop(0.5, "rgba(255,255,245,0.08)");
-      moonGlow.addColorStop(0.8, "rgba(250,245,240,0.03)");
-      moonGlow.addColorStop(1, "rgba(245,240,235,0)");
+      // moonGlow.addColorStop(0, "rgba(255,255,250,0.15)");
+      // moonGlow.addColorStop(0.5, "rgba(255,255,245,0.08)");
+      // moonGlow.addColorStop(0.8, "rgba(250,245,240,0.03)");
+      // moonGlow.addColorStop(1, "rgba(245,240,235,0)");
 
       ctx.fillStyle = moonGlow;
       ctx.beginPath();
@@ -12170,9 +12170,9 @@ const Home: React.FC = () => {
         -moonRadius * 0.3, -moonRadius * 0.3, 0,
         0, 0, moonRadius
       );
-      moonBase.addColorStop(0, "rgba(250,250,248,0.95)");
-      moonBase.addColorStop(0.5, "rgba(245,245,243,0.90)");
-      moonBase.addColorStop(1, "rgba(240,240,238,0.85)");
+      // moonBase.addColorStop(0, "rgba(250,250,248,0.95)");
+      // moonBase.addColorStop(0.5, "rgba(245,245,243,0.90)");
+      // moonBase.addColorStop(1, "rgba(240,240,238,0.85)");
 
       ctx.fillStyle = moonBase;
       ctx.beginPath();
@@ -12190,8 +12190,8 @@ const Home: React.FC = () => {
           x, y, 0,
           x, y, moonRadius * 0.2
         );
-        textureGradient.addColorStop(0, "rgba(240,240,240,0.03)");
-        textureGradient.addColorStop(1, "rgba(240,240,240,0)");
+        // textureGradient.addColorStop(0, "rgba(240,240,240,0.03)");
+        // textureGradient.addColorStop(1, "rgba(240,240,240,0)");
         
         ctx.fillStyle = textureGradient;
         ctx.beginPath();
@@ -12210,8 +12210,8 @@ const Home: React.FC = () => {
           waveX, waveY, 0,
           waveX, waveY, moonRadius * 0.15
         );
-        waveGradient.addColorStop(0, "rgba(245,245,245,0.02)");
-        waveGradient.addColorStop(1, "rgba(245,245,245,0)");
+        // waveGradient.addColorStop(0, "rgba(245,245,245,0.02)");
+        // waveGradient.addColorStop(1, "rgba(245,245,245,0)");
         
         ctx.fillStyle = waveGradient;
         ctx.beginPath();
@@ -12224,9 +12224,9 @@ const Home: React.FC = () => {
         -moonRadius * 0.3, -moonRadius * 0.3, 0,
         -moonRadius * 0.3, -moonRadius * 0.3, moonRadius * 0.5
       );
-      shineGradient.addColorStop(0, "rgba(255,255,255,0.3)");
-      shineGradient.addColorStop(0.5, "rgba(255,255,255,0.12)");
-      shineGradient.addColorStop(1, "rgba(255,255,255,0)");
+      // shineGradient.addColorStop(0, "rgba(255,255,255,0.3)");
+      // shineGradient.addColorStop(0.5, "rgba(255,255,255,0.12)");
+      // shineGradient.addColorStop(1, "rgba(255,255,255,0)");
 
       ctx.fillStyle = shineGradient;
       ctx.beginPath();
@@ -14111,10 +14111,12 @@ const Home: React.FC = () => {
         }
 
         .auto-slider-container {
+        top:10;
           position: relative;
           max-width: 100%;
           overflow: hidden;
           margin-top: 40px;
+          
          
         }
 
@@ -14142,8 +14144,10 @@ const Home: React.FC = () => {
         .auto-slider-track {
           display: flex;
           gap: 32px;
-          animation: autoScroll 30s linear infinite;
+          animation: autoScroll 6s linear infinite;
           width: max-content;
+          margin-top: 40px;
+        
         }
 
         @keyframes autoScroll {
