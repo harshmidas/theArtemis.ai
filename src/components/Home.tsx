@@ -12062,7 +12062,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import * as THREE from "three";
-import './app.css';
+import './Home.css';
 // Font loading
 if (typeof window !== 'undefined') {
   const link = document.createElement('link');
