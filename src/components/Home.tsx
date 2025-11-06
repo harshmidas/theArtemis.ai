@@ -13125,7 +13125,7 @@ const Home: React.FC = () => {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   <div>
-                    <div className="stat-inline-number">500+</div>
+                    <div className="stat-inline-numbe ">500+</div>
                     <div className="stat-inline-label">Active Agencies</div>
                   </div>
                 </div>
@@ -13137,7 +13137,7 @@ const Home: React.FC = () => {
                     <polyline points="17 11 19 13 23 9"></polyline>
                   </svg>
                   <div>
-                    <div className="stat-inline-number">10K+</div>
+                    <div className="stat-inline-numbe">10K+</div>
                     <div className="stat-inline-label">Candidates Placed</div>
                   </div>
                 </div>
@@ -13147,7 +13147,7 @@ const Home: React.FC = () => {
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                   <div>
-                    <div className="stat-inline-number">99.9%</div>
+                    <div className="stat-inline-numbe">99.9%</div>
                     <div className="stat-inline-label">Platform Uptime</div>
                   </div>
                 </div>
