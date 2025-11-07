@@ -13787,38 +13787,6 @@ const resumeAutoScroll = () => {
 };
 
 // Update your existing handleChallengeScroll function to handle auto-scroll reset
-// const enhancedHandleChallengeScroll = (direction:any) => {
-//   const container = challengeSliderRef.current;
-//   if (!container) return;
-
-//   const slideCard = container.querySelector('.feature-slide-card');
-//   if (!slideCard) return;
-//   const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
-//   const scrollAmount = slideWidth * 2; // Scroll 2 cards at a time
-//   const maxScroll = container.scrollWidth - container.clientWidth;
-
-//   let newScrollPos;
-  
-//   if (direction === 'right') {
-//     newScrollPos = container.scrollLeft + scrollAmount;
-    
-//     // If we're at the end, reset to start without animation
-//     if (container.scrollLeft >= maxScroll - 10) {
-//       container.scrollTo({ left: 0, behavior: 'instant' });
-//       return;
-//     }
-//   } else {
-//     newScrollPos = container.scrollLeft - scrollAmount;
-    
-//     // If we're at the start, reset to end without animation
-//     if (container.scrollLeft <= 10) {
-//       container.scrollTo({ left: maxScroll, behavior: 'instant' });
-//       return;
-//     }
-//   }
-
-//   container.scrollTo({ left: newScrollPos, behavior: 'smooth' });
-// };
 
 // Start auto-scroll on component mount and clean up on unmount
 useEffect(() => {
