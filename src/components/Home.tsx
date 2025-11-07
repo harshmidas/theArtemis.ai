@@ -217,7 +217,7 @@
 
 //     const asteroidBelt = new THREE.Group();
 //     const asteroidCount = 300;
-    
+
 //     for (let i = 0; i < asteroidCount; i++) {
 //       const asteroidSize = 0.05 + Math.random() * 0.15;
 //       const asteroidGeometry = new THREE.DodecahedronGeometry(asteroidSize, 0);
@@ -647,27 +647,27 @@
 //         </p>
 //         <div className="products-slider-container">
 //           <div className="products-3d-slider">
-//             <div 
-//               className="products-carousel" 
-//               style={{ 
-//                 transform: `translateX(-${currentProduct * 100}%)` 
+//             <div
+//               className="products-carousel"
+//               style={{
+//                 transform: `translateX(-${currentProduct * 100}%)`
 //               }}
 //             >
 //               {products.map((product, index) => (
-//                 <div 
-//                   key={index} 
+//                 <div
+//                   key={index}
 //                   className="product-card-3d"
 //                   style={{
-//                     transform: currentProduct === index 
-//                       ? 'perspective(1000px) rotateY(0deg) scale(1)' 
+//                     transform: currentProduct === index
+//                       ? 'perspective(1000px) rotateY(0deg) scale(1)'
 //                       : currentProduct === index - 1 || (currentProduct === 0 && index === products.length - 1)
 //                       ? 'perspective(1000px) rotateY(45deg) scale(0.85) translateX(30%)'
 //                       : 'perspective(1000px) rotateY(-45deg) scale(0.85) translateX(-30%)'
 //                   }}
 //                 >
 //                   <div className="product-image-container">
-//                     <img 
-//                       src={product.image} 
+//                     <img
+//                       src={product.image}
 //                       alt={product.title}
 //                       onError={(e) => {
 //                         const target = e.target as HTMLImageElement;
@@ -689,8 +689,8 @@
 //             </div>
 //           </div>
 //           <div className="product-controls">
-//             <button 
-//               className="product-nav-btn prev" 
+//             <button
+//               className="product-nav-btn prev"
 //               onClick={() => setCurrentProduct((prev) => (prev - 1 + products.length) % products.length)}
 //               aria-label="Previous product"
 //             >
@@ -706,8 +706,8 @@
 //                 />
 //               ))}
 //             </div>
-//             <button 
-//               className="product-nav-btn next" 
+//             <button
+//               className="product-nav-btn next"
 //               onClick={() => setCurrentProduct((prev) => (prev + 1) % products.length)}
 //               aria-label="Next product"
 //             >
@@ -757,15 +757,15 @@
 //         <p className="section-subtitle">
 //           Building the future of recruitment technology with innovation, integrity, and intelligence.
 //         </p>
-        
+
 //         <div className="about-hero">
 //           <div className="about-hero-content">
 //             <h3>Redefining Staffing Excellence</h3>
 //             <p>
-//               Artemis is more than an Applicant Tracking System—it's a complete ecosystem designed 
-//               to revolutionize how staffing agencies operate. Built on cutting-edge AI technology 
-//               and decades of industry expertise, we deliver solutions that are both powerful and 
-//               intuitive, enabling teams to focus on what matters most: connecting great talent 
+//               Artemis is more than an Applicant Tracking System—it's a complete ecosystem designed
+//               to revolutionize how staffing agencies operate. Built on cutting-edge AI technology
+//               and decades of industry expertise, we deliver solutions that are both powerful and
+//               intuitive, enabling teams to focus on what matters most: connecting great talent
 //               with exceptional opportunities.
 //             </p>
 //           </div>
@@ -776,9 +776,9 @@
 //             <div className="about-icon">🎯</div>
 //             <h3>Our Mission</h3>
 //             <p>
-//               To democratize enterprise-grade recruitment technology, making sophisticated 
-//               ATS capabilities accessible to staffing agencies of all sizes. We believe that 
-//               powerful tools shouldn't come with complexity or prohibitive costs—they should 
+//               To democratize enterprise-grade recruitment technology, making sophisticated
+//               ATS capabilities accessible to staffing agencies of all sizes. We believe that
+//               powerful tools shouldn't come with complexity or prohibitive costs—they should
 //               empower teams to work smarter, faster, and more effectively.
 //             </p>
 //           </div>
@@ -787,9 +787,9 @@
 //             <div className="about-icon">👁️</div>
 //             <h3>Our Vision</h3>
 //             <p>
-//               To become the global standard for intelligent staffing solutions, where every 
-//               recruiter has access to AI-powered tools that eliminate repetitive tasks, 
-//               surface the best candidates instantly, and provide actionable insights that 
+//               To become the global standard for intelligent staffing solutions, where every
+//               recruiter has access to AI-powered tools that eliminate repetitive tasks,
+//               surface the best candidates instantly, and provide actionable insights that
 //               drive better hiring decisions.
 //             </p>
 //           </div>
@@ -1073,13 +1073,13 @@
 //         }
 
 //         @keyframes goldenTwinkle {
-//           0%, 100% { 
-//             opacity: 0.4; 
+//           0%, 100% {
+//             opacity: 0.4;
 //             transform: scale(1) rotate(0deg);
 //             box-shadow: 0 0 8px #ffd700, 0 0 16px #ffd700;
 //           }
-//           50% { 
-//             opacity: 1; 
+//           50% {
+//             opacity: 1;
 //             transform: scale(1.4) rotate(180deg);
 //             box-shadow: 0 0 12px #ffd700, 0 0 24px #ffd700, 0 0 36px #ffd700;
 //           }
@@ -1372,10 +1372,10 @@
 //         }
 
 //         @keyframes productFloat {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: translateY(0) rotateX(0deg);
 //           }
-//           50% { 
+//           50% {
 //             transform: translateY(-15px) rotateX(2deg);
 //           }
 //         }
@@ -1515,13 +1515,13 @@
 //         }
 
 //         @keyframes card3DFloat {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0);
 //           }
-//           33% { 
+//           33% {
 //             transform: perspective(1000px) rotateY(2deg) rotateX(1deg) translateY(-8px);
 //           }
-//           66% { 
+//           66% {
 //             transform: perspective(1000px) rotateY(-2deg) rotateX(-1deg) translateY(-4px);
 //           }
 //         }
@@ -1616,16 +1616,16 @@
 //         }
 
 //         @keyframes card3DRotate {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 //           }
-//           25% { 
+//           25% {
 //             transform: perspective(1000px) rotateY(3deg) rotateX(2deg);
 //           }
-//           50% { 
+//           50% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 //           }
-//           75% { 
+//           75% {
 //             transform: perspective(1000px) rotateY(-3deg) rotateX(-2deg);
 //           }
 //         }
@@ -2232,21 +2232,6 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from "react";
 // import * as THREE from "three";
 
@@ -2436,15 +2421,15 @@
 
 //     const asteroidBelt = new THREE.Group();
 //     const asteroidCount = 500;
-    
+
 //     for (let i = 0; i < asteroidCount; i++) {
 //       const asteroidSize = 0.06 + Math.random() * 0.18;
 //       const asteroidGeometry = new THREE.DodecahedronGeometry(asteroidSize, 0);
-      
+
 //       const hue = 0.08 + Math.random() * 0.05;
 //       const saturation = 0.25 + Math.random() * 0.15;
 //       const lightness = 0.25 + Math.random() * 0.2;
-      
+
 //       const asteroidMaterial = new THREE.MeshStandardMaterial({
 //         color: new THREE.Color().setHSL(hue, saturation, lightness),
 //         metalness: 0.15,
@@ -2849,15 +2834,15 @@
 //         <p className="section-subtitle">
 //           Building the future of recruitment technology with innovation, integrity, and intelligence.
 //         </p>
-        
+
 //         <div className="about-hero">
 //           <div className="about-hero-content">
 //             <h3>Redefining Staffing Excellence</h3>
 //             <p>
-//               Artemis is more than an Applicant Tracking System—it's a complete ecosystem designed 
-//               to revolutionize how staffing agencies operate. Built on cutting-edge AI technology 
-//               and decades of industry expertise, we deliver solutions that are both powerful and 
-//               intuitive, enabling teams to focus on what matters most: connecting great talent 
+//               Artemis is more than an Applicant Tracking System—it's a complete ecosystem designed
+//               to revolutionize how staffing agencies operate. Built on cutting-edge AI technology
+//               and decades of industry expertise, we deliver solutions that are both powerful and
+//               intuitive, enabling teams to focus on what matters most: connecting great talent
 //               with exceptional opportunities.
 //             </p>
 //           </div>
@@ -2868,9 +2853,9 @@
 //             <div className="about-icon">🎯</div>
 //             <h3>Our Mission</h3>
 //             <p>
-//               To democratize enterprise-grade recruitment technology, making sophisticated 
-//               ATS capabilities accessible to staffing agencies of all sizes. We believe that 
-//               powerful tools shouldn't come with complexity or prohibitive costs—they should 
+//               To democratize enterprise-grade recruitment technology, making sophisticated
+//               ATS capabilities accessible to staffing agencies of all sizes. We believe that
+//               powerful tools shouldn't come with complexity or prohibitive costs—they should
 //               empower teams to work smarter, faster, and more effectively.
 //             </p>
 //           </div>
@@ -2879,9 +2864,9 @@
 //             <div className="about-icon">👁️</div>
 //             <h3>Our Vision</h3>
 //             <p>
-//               To become the global standard for intelligent staffing solutions, where every 
-//               recruiter has access to AI-powered tools that eliminate repetitive tasks, 
-//               surface the best candidates instantly, and provide actionable insights that 
+//               To become the global standard for intelligent staffing solutions, where every
+//               recruiter has access to AI-powered tools that eliminate repetitive tasks,
+//               surface the best candidates instantly, and provide actionable insights that
 //               drive better hiring decisions.
 //             </p>
 //           </div>
@@ -3181,13 +3166,13 @@
 //         }
 
 //         @keyframes goldenTwinkle {
-//           0%, 100% { 
-//             opacity: 0.3; 
+//           0%, 100% {
+//             opacity: 0.3;
 //             transform: scale(1) rotate(0deg);
 //             box-shadow: 0 0 4px #ffd700, 0 0 8px #ffd700;
 //           }
-//           50% { 
-//             opacity: 0.8; 
+//           50% {
+//             opacity: 0.8;
 //             transform: scale(1.2) rotate(180deg);
 //             box-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700;
 //           }
@@ -3466,13 +3451,13 @@
 //         }
 
 //         @keyframes card3DFloat {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0);
 //           }
-//           33% { 
+//           33% {
 //             transform: perspective(1000px) rotateY(2deg) rotateX(1deg) translateY(-8px);
 //           }
-//           66% { 
+//           66% {
 //             transform: perspective(1000px) rotateY(-2deg) rotateX(-1deg) translateY(-4px);
 //           }
 //         }
@@ -3567,16 +3552,16 @@
 //         }
 
 //         @keyframes card3DRotate {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 //           }
-//           25% { 
+//           25% {
 //             transform: perspective(1000px) rotateY(3deg) rotateX(2deg);
 //           }
-//           50% { 
+//           50% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 //           }
-//           75% { 
+//           75% {
 //             transform: perspective(1000px) rotateY(-3deg) rotateX(-2deg);
 //           }
 //         }
@@ -4161,83 +4146,6 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from "react";
 // import * as THREE from "three";
 
@@ -4342,14 +4250,14 @@
 
 //     const drawMoon = (): void => {
 //       const scrollProgress = Math.min(scrollY / 2000, 1);
-      
+
 //       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
 //       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
 //       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
-      
+
 //       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
 //       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
-      
+
 //       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
 //       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
 
@@ -4389,14 +4297,14 @@
 //         const radius = moonRadius * 0.6;
 //         const x = Math.cos(angle) * radius;
 //         const y = Math.sin(angle) * radius;
-        
+
 //         const textureGradient = ctx.createRadialGradient(
 //           x, y, 0,
 //           x, y, moonRadius * 0.25
 //         );
 //         textureGradient.addColorStop(0, "rgba(255,255,255,0.08)");
 //         textureGradient.addColorStop(1, "rgba(255,255,255,0)");
-        
+
 //         ctx.fillStyle = textureGradient;
 //         ctx.beginPath();
 //         ctx.arc(x, y, moonRadius * 0.25, 0, Math.PI * 2);
@@ -4408,14 +4316,14 @@
 //         const waveRadius = moonRadius * 0.7;
 //         const waveX = Math.cos(waveAngle) * waveRadius;
 //         const waveY = Math.sin(waveAngle) * waveRadius;
-        
+
 //         const waveGradient = ctx.createRadialGradient(
 //           waveX, waveY, 0,
 //           waveX, waveY, moonRadius * 0.2
 //         );
 //         waveGradient.addColorStop(0, "rgba(255,255,255,0.06)");
 //         waveGradient.addColorStop(1, "rgba(255,255,255,0)");
-        
+
 //         ctx.fillStyle = waveGradient;
 //         ctx.beginPath();
 //         ctx.arc(waveX, waveY, moonRadius * 0.2, 0, Math.PI * 2);
@@ -4736,8 +4644,8 @@
 //     <div className="app">
 //       <div className="gradient-bg"></div>
 //       <div className="stars-container" ref={starsContainerRef}></div>
-//       <canvas 
-//         ref={moonCanvasRef} 
+//       <canvas
+//         ref={moonCanvasRef}
 //         style={{
 //           position: 'fixed',
 //           top: 0,
@@ -4890,15 +4798,15 @@
 //         <p className="section-subtitle">
 //           Building the future of recruitment technology with innovation, integrity, and intelligence.
 //         </p>
-        
+
 //         <div className="about-hero">
 //           <div className="about-hero-content">
 //             <h3>Redefining Staffing Excellence</h3>
 //             <p>
-//               Artemis is more than an Applicant Tracking System—it's a complete ecosystem designed 
-//               to revolutionize how staffing agencies operate. Built on cutting-edge AI technology 
-//               and decades of industry expertise, we deliver solutions that are both powerful and 
-//               intuitive, enabling teams to focus on what matters most: connecting great talent 
+//               Artemis is more than an Applicant Tracking System—it's a complete ecosystem designed
+//               to revolutionize how staffing agencies operate. Built on cutting-edge AI technology
+//               and decades of industry expertise, we deliver solutions that are both powerful and
+//               intuitive, enabling teams to focus on what matters most: connecting great talent
 //               with exceptional opportunities.
 //             </p>
 //           </div>
@@ -4909,9 +4817,9 @@
 //             <div className="about-icon">🎯</div>
 //             <h3>Our Mission</h3>
 //             <p>
-//               To democratize enterprise-grade recruitment technology, making sophisticated 
-//               ATS capabilities accessible to staffing agencies of all sizes. We believe that 
-//               powerful tools shouldn't come with complexity or prohibitive costs—they should 
+//               To democratize enterprise-grade recruitment technology, making sophisticated
+//               ATS capabilities accessible to staffing agencies of all sizes. We believe that
+//               powerful tools shouldn't come with complexity or prohibitive costs—they should
 //               empower teams to work smarter, faster, and more effectively.
 //             </p>
 //           </div>
@@ -4920,9 +4828,9 @@
 //             <div className="about-icon">👁️</div>
 //             <h3>Our Vision</h3>
 //             <p>
-//               To become the global standard for intelligent staffing solutions, where every 
-//               recruiter has access to AI-powered tools that eliminate repetitive tasks, 
-//               surface the best candidates instantly, and provide actionable insights that 
+//               To become the global standard for intelligent staffing solutions, where every
+//               recruiter has access to AI-powered tools that eliminate repetitive tasks,
+//               surface the best candidates instantly, and provide actionable insights that
 //               drive better hiring decisions.
 //             </p>
 //           </div>
@@ -5222,13 +5130,13 @@
 //         }
 
 //         @keyframes goldenTwinkle {
-//           0%, 100% { 
-//             opacity: 0.3; 
+//           0%, 100% {
+//             opacity: 0.3;
 //             transform: scale(1) rotate(0deg);
 //             box-shadow: 0 0 4px #ffd700, 0 0 8px #ffd700;
 //           }
-//           50% { 
-//             opacity: 0.8; 
+//           50% {
+//             opacity: 0.8;
 //             transform: scale(1.2) rotate(180deg);
 //             box-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700;
 //           }
@@ -5507,13 +5415,13 @@
 //         }
 
 //         @keyframes card3DFloat {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0);
 //           }
-//           33% { 
+//           33% {
 //             transform: perspective(1000px) rotateY(2deg) rotateX(1deg) translateY(-8px);
 //           }
-//           66% { 
+//           66% {
 //             transform: perspective(1000px) rotateY(-2deg) rotateX(-1deg) translateY(-4px);
 //           }
 //         }
@@ -5608,16 +5516,16 @@
 //         }
 
 //         @keyframes card3DRotate {
-//           0%, 100% { 
+//           0%, 100% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 //           }
-//           25% { 
+//           25% {
 //             transform: perspective(1000px) rotateY(3deg) rotateX(2deg);
 //           }
-//           50% { 
+//           50% {
 //             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 //           }
-//           75% { 
+//           75% {
 //             transform: perspective(1000px) rotateY(-3deg) rotateX(-2deg);
 //           }
 //         }
@@ -6202,19 +6110,6 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from "react";
 // import * as THREE from "three";
 
@@ -6290,14 +6185,14 @@
 
 //     const drawMoon = (): void => {
 //       const scrollProgress = Math.min(scrollY / 2000, 1);
-      
+
 //       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
 //       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
 //       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
-      
+
 //       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
 //       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
-      
+
 //       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
 //       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
 
@@ -6337,14 +6232,14 @@
 //         const radius = moonRadius * 0.6;
 //         const x = Math.cos(angle) * radius;
 //         const y = Math.sin(angle) * radius;
-        
+
 //         const textureGradient = ctx.createRadialGradient(
 //           x, y, 0,
 //           x, y, moonRadius * 0.25
 //         );
 //         textureGradient.addColorStop(0, "rgba(255,255,255,0.08)");
 //         textureGradient.addColorStop(1, "rgba(255,255,255,0)");
-        
+
 //         ctx.fillStyle = textureGradient;
 //         ctx.beginPath();
 //         ctx.arc(x, y, moonRadius * 0.25, 0, Math.PI * 2);
@@ -6356,14 +6251,14 @@
 //         const waveRadius = moonRadius * 0.7;
 //         const waveX = Math.cos(waveAngle) * waveRadius;
 //         const waveY = Math.sin(waveAngle) * waveRadius;
-        
+
 //         const waveGradient = ctx.createRadialGradient(
 //           waveX, waveY, 0,
 //           waveX, waveY, moonRadius * 0.2
 //         );
 //         waveGradient.addColorStop(0, "rgba(255,255,255,0.06)");
 //         waveGradient.addColorStop(1, "rgba(255,255,255,0)");
-        
+
 //         ctx.fillStyle = waveGradient;
 //         ctx.beginPath();
 //         ctx.arc(waveX, waveY, moonRadius * 0.2, 0, Math.PI * 2);
@@ -6677,8 +6572,8 @@
 //     <div className="app">
 //       <div className="gradient-bg"></div>
 //       <div className="stars-container" ref={starsContainerRef}></div>
-//       <canvas 
-//         ref={moonCanvasRef} 
+//       <canvas
+//         ref={moonCanvasRef}
 //         style={{
 //           position: 'fixed',
 //           top: 0,
@@ -6698,7 +6593,7 @@
 //             <div className="logo-icon"></div>
 //             <div className="logo-text">Artemis</div>
 //           </div>
-          
+
 //           <div
 //             className={`menu-toggle ${menuOpen ? "active" : ""}`}
 //             onClick={() => setMenuOpen(!menuOpen)}
@@ -6707,7 +6602,7 @@
 //             <span></span>
 //             <span></span>
 //           </div>
-          
+
 //           <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
 //             <div className="nav-links-group">
 //               <a href="#home" onClick={handleScrollTo("#home")} className="nav-link">
@@ -6746,8 +6641,8 @@
 //           <div className="hero-badge">AI-powered ATS for Healthcare Staffing</div>
 //           <h1 className="hero-title">Recruit faster with clarity, not clutter.</h1>
 //           <p className="hero-description">
-//             Streamlined workflows, intelligent automation, and minimalist design 
-//             that empowers healthcare staffing teams to focus on what matters most: 
+//             Streamlined workflows, intelligent automation, and minimalist design
+//             that empowers healthcare staffing teams to focus on what matters most:
 //             connecting great talent with exceptional opportunities.
 //           </p>
 //           <div className="hero-cta-group">
@@ -6778,40 +6673,40 @@
 //               Healthcare staffing agencies face overwhelming complexity in their daily operations
 //             </p>
 //           </div>
-          
+
 //           <div className="challenge-grid">
 //             <div className="challenge-card">
 //               <div className="challenge-icon">⏱️</div>
 //               <h3>Time-Consuming Manual Work</h3>
 //               <p>
-//                 Hours spent on resume parsing, data entry, and candidate tracking that 
+//                 Hours spent on resume parsing, data entry, and candidate tracking that
 //                 could be automated, pulling recruiters away from relationship building.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon">🔍</div>
 //               <h3>Difficulty Finding Qualified Talent</h3>
 //               <p>
-//                 Traditional search methods make it nearly impossible to quickly identify 
+//                 Traditional search methods make it nearly impossible to quickly identify
 //                 candidates with the right skills, certifications, and availability.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon">🔗</div>
 //               <h3>Disconnected Systems</h3>
 //               <p>
-//                 VMS platforms, ATS software, and communication tools operating in silos, 
+//                 VMS platforms, ATS software, and communication tools operating in silos,
 //                 creating data gaps and workflow friction.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon">📋</div>
 //               <h3>Compliance & Credentialing Complexity</h3>
 //               <p>
-//                 Tracking licenses, certifications, and compliance documentation across 
+//                 Tracking licenses, certifications, and compliance documentation across
 //                 dozens or hundreds of healthcare professionals is error-prone and stressful.
 //               </p>
 //             </div>
@@ -6828,13 +6723,13 @@
 //               Designed for recruiters. Powered by AI. Built for speed and simplicity.
 //             </p>
 //           </div>
-          
+
 //           <div className="features-grid">
 //             <div className="feature-card">
 //               <div className="feature-icon-box">🔎</div>
 //               <h3 className="feature-title">AI-Powered Candidate Search</h3>
 //               <p className="feature-description">
-//                 Find the perfect match instantly with intelligent search that understands 
+//                 Find the perfect match instantly with intelligent search that understands
 //                 skills, experience, certifications, and availability patterns.
 //               </p>
 //               <ul className="feature-list">
@@ -6843,12 +6738,12 @@
 //                 <li>Real-time availability tracking</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="feature-card">
 //               <div className="feature-icon-box">⚡</div>
 //               <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
 //               <p className="feature-description">
-//                 Seamlessly integrate with major VMS platforms. Jobs flow automatically 
+//                 Seamlessly integrate with major VMS platforms. Jobs flow automatically
 //                 into Artemis, eliminating manual data entry.
 //               </p>
 //               <ul className="feature-list">
@@ -6857,12 +6752,12 @@
 //                 <li>Multi-VMS support</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="feature-card">
 //               <div className="feature-icon-box">✅</div>
 //               <h3 className="feature-title">Built-In Skills Checklists</h3>
 //               <p className="feature-description">
-//                 Interactive checklists that capture candidate qualifications with precision, 
+//                 Interactive checklists that capture candidate qualifications with precision,
 //                 convert to PDFs, and distribute to stakeholders instantly.
 //               </p>
 //               <ul className="feature-list">
@@ -6871,12 +6766,12 @@
 //                 <li>Automated distribution</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="feature-card">
 //               <div className="feature-icon-box">📊</div>
 //               <h3 className="feature-title">Smart Onboarding Dashboards</h3>
 //               <p className="feature-description">
-//                 Visual pipelines that show exactly where every candidate stands, 
+//                 Visual pipelines that show exactly where every candidate stands,
 //                 with automated reminders and next-step recommendations.
 //               </p>
 //               <ul className="feature-list">
@@ -6885,12 +6780,12 @@
 //                 <li>Real-time status updates</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="feature-card">
 //               <div className="feature-icon-box">🎯</div>
 //               <h3 className="feature-title">Candidate Pipeline Management</h3>
 //               <p className="feature-description">
-//                 Design dynamic, stage-based workflows that adapt to your process. 
+//                 Design dynamic, stage-based workflows that adapt to your process.
 //                 Never lose track of a candidate again.
 //               </p>
 //               <ul className="feature-list">
@@ -6899,12 +6794,12 @@
 //                 <li>Advanced filtering</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="feature-card">
 //               <div className="feature-icon-box">📝</div>
 //               <h3 className="feature-title">Right-to-Represent Automation</h3>
 //               <p className="feature-description">
-//                 Send RTR forms instantly, track signatures, and maintain compliance 
+//                 Send RTR forms instantly, track signatures, and maintain compliance
 //                 documentation—all within a single, streamlined workflow.
 //               </p>
 //               <ul className="feature-list">
@@ -6926,17 +6821,17 @@
 //               Built specifically for healthcare staffing agencies of all sizes
 //             </p>
 //           </div>
-          
+
 //           <div className="serve-content">
 //             <div className="serve-text-block">
 //               <h3>Healthcare Staffing Agencies</h3>
 //               <p>
-//                 Whether you place travel nurses, allied health professionals, locum tenens physicians, 
-//                 or per diem staff, Artemis adapts to your unique workflows. From boutique agencies 
-//                 placing 10 candidates per month to enterprise operations managing thousands of placements, 
+//                 Whether you place travel nurses, allied health professionals, locum tenens physicians,
+//                 or per diem staff, Artemis adapts to your unique workflows. From boutique agencies
+//                 placing 10 candidates per month to enterprise operations managing thousands of placements,
 //                 our platform scales with your business.
 //               </p>
-              
+
 //               <div className="serve-stats">
 //                 <div className="stat-item">
 //                   <div className="stat-number">500+</div>
@@ -6952,7 +6847,7 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             <div className="serve-image-placeholder">
 //               <div className="placeholder-content">
 //                 <div className="placeholder-icon">🏥</div>
@@ -6972,7 +6867,7 @@
 //               Custom plans designed around your agency's unique needs
 //             </p>
 //           </div>
-          
+
 //           <div className="pricing-content">
 //             <div className="pricing-card">
 //               <h3>What's Included</h3>
@@ -6989,15 +6884,15 @@
 //                 <li>✓ Enterprise-grade security</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="pricing-card highlighted">
 //               <h3>Why Custom Pricing?</h3>
 //               <p>
-//                 Every staffing agency operates differently. Your pricing should reflect your 
+//                 Every staffing agency operates differently. Your pricing should reflect your
 //                 agency's size, placement volume, integration needs, and growth trajectory.
 //               </p>
 //               <p>
-//                 We work with you to create a plan that makes sense for your business—no 
+//                 We work with you to create a plan that makes sense for your business—no
 //                 hidden fees, no surprise charges, no complicated tier systems.
 //               </p>
 //               <a href="#demo" className="pricing-cta" onClick={handleScrollTo("#demo")}>
@@ -7017,13 +6912,13 @@
 //               Seamless connections to the tools you already use
 //             </p>
 //           </div>
-          
+
 //           <div className="integrations-content">
 //             <div className="integration-card primary">
 //               <div className="integration-icon">🔗</div>
 //               <h3>VMS Integrations</h3>
 //               <p>
-//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization. 
+//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization.
 //                 New opportunities appear in Artemis instantly, ready for candidate matching.
 //               </p>
 //               <div className="integration-logos">
@@ -7033,7 +6928,7 @@
 //                 <div className="logo-placeholder">+ More</div>
 //               </div>
 //             </div>
-            
+
 //             <div className="integration-card">
 //               <div className="integration-icon">🚀</div>
 //               <h3>Coming Soon</h3>
@@ -7061,36 +6956,36 @@
 //               Expert guidance to transform your healthcare staffing operations
 //             </p>
 //           </div>
-          
+
 //           <div className="resources-grid">
 //             <div className="resource-category-card">
 //               <div className="category-icon">💡</div>
 //               <h3>Practical Tips for Recruiters</h3>
 //               <p>
-//                 Time-saving strategies, workflow optimizations, and proven techniques 
+//                 Time-saving strategies, workflow optimizations, and proven techniques
 //                 to increase placement velocity and candidate satisfaction.
 //               </p>
 //             </div>
-            
+
 //             <div className="resource-category-card">
 //               <div className="category-icon">🤖</div>
 //               <h3>Technology in Healthcare Staffing</h3>
 //               <p>
-//                 Explore how AI, automation, and modern ATS platforms are reshaping 
+//                 Explore how AI, automation, and modern ATS platforms are reshaping
 //                 the healthcare staffing landscape.
 //               </p>
 //             </div>
-            
+
 //             <div className="resource-category-card">
 //               <div className="category-icon">📈</div>
 //               <h3>Industry Trends & Market Insights</h3>
 //               <p>
-//                 Stay ahead with analysis of healthcare labor markets, regulatory changes, 
+//                 Stay ahead with analysis of healthcare labor markets, regulatory changes,
 //                 and emerging opportunities.
 //               </p>
 //             </div>
 //           </div>
-          
+
 //           <div className="newsletter-section">
 //             <h3>Stay Updated</h3>
 //             <p>Get the latest insights delivered to your inbox</p>
@@ -7108,7 +7003,7 @@
 //           <div className="vision-content">
 //             <h2>Experience Clarity in Every Click</h2>
 //             <p>
-//               Join hundreds of healthcare staffing agencies who have transformed their 
+//               Join hundreds of healthcare staffing agencies who have transformed their
 //               recruitment process with Artemis. Faster placements, happier teams, better outcomes.
 //             </p>
 //             <a
@@ -7131,7 +7026,7 @@
 //               See Artemis in action and discover how we can transform your staffing operations
 //             </p>
 //           </div>
-          
+
 //           <div className="demo-layout">
 //             <div className="demo-form-container">
 //               <form onSubmit={submitDemo} className="demo-form">
@@ -7161,7 +7056,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-row">
 //                   <div className="form-field">
 //                     <label htmlFor="email">Work Email</label>
@@ -7184,7 +7079,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-row">
 //                   <div className="form-field">
 //                     <label htmlFor="company">Company</label>
@@ -7211,7 +7106,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-field full-width">
 //                   <label htmlFor="source">How did you hear about us?</label>
 //                   <select
@@ -7230,13 +7125,13 @@
 //                     <option value="other">Other</option>
 //                   </select>
 //                 </div>
-                
+
 //                 <button type="submit" className="demo-submit-button">
 //                   Request Demo
 //                 </button>
 //               </form>
 //             </div>
-            
+
 //             <div className="demo-info-container">
 //               <h3>What to Expect</h3>
 //               <ul className="expectations-list">
@@ -7269,7 +7164,7 @@
 //                   </div>
 //                 </li>
 //               </ul>
-              
+
 //               <div className="social-proof">
 //                 <p className="proof-label">Trusted by leading agencies</p>
 //                 <div className="proof-stats">
@@ -7294,7 +7189,7 @@
 //               <a href="#" aria-label="Twitter">🐦</a>
 //             </div>
 //           </div>
-          
+
 //           <div className="footer-column">
 //             <h4>Quick Links</h4>
 //             <a href="#home" onClick={handleScrollTo("#home")}>Home</a>
@@ -7304,7 +7199,7 @@
 //             <a href="#integrations" onClick={handleScrollTo("#integrations")}>Integrations</a>
 //             <a href="#resources" onClick={handleScrollTo("#resources")}>Resources</a>
 //           </div>
-          
+
 //           <div className="footer-column">
 //             <h4>Contact</h4>
 //             <p>
@@ -7315,7 +7210,7 @@
 //             <p>📧 info@artemisats.com</p>
 //           </div>
 //         </div>
-        
+
 //         <div className="footer-bottom">
 //           <p>© {new Date().getFullYear()} Artemis. All rights reserved.</p>
 //         </div>
@@ -7391,13 +7286,13 @@
 //         }
 
 //         @keyframes goldenTwinkle {
-//           0%, 100% { 
-//             opacity: 0.3; 
+//           0%, 100% {
+//             opacity: 0.3;
 //             transform: scale(1) rotate(0deg);
 //             box-shadow: 0 0 4px #ffd700, 0 0 8px #ffd700;
 //           }
-//           50% { 
-//             opacity: 0.8; 
+//           50% {
+//             opacity: 0.8;
 //             transform: scale(1.2) rotate(180deg);
 //             box-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700;
 //           }
@@ -8529,55 +8424,6 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from "react";
 // import * as THREE from "three";
 
@@ -8653,14 +8499,14 @@
 
 //     const drawMoon = (): void => {
 //       const scrollProgress = Math.min(scrollY / 2000, 1);
-      
+
 //       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
 //       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
 //       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
-      
+
 //       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
 //       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
-      
+
 //       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
 //       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
 
@@ -8703,14 +8549,14 @@
 //         const radius = moonRadius * 0.6;
 //         const x = Math.cos(angle) * radius;
 //         const y = Math.sin(angle) * radius;
-        
+
 //         const textureGradient = ctx.createRadialGradient(
 //           x, y, 0,
 //           x, y, moonRadius * 0.2
 //         );
 //         textureGradient.addColorStop(0, "rgba(240,240,240,0.03)");
 //         textureGradient.addColorStop(1, "rgba(240,240,240,0)");
-        
+
 //         ctx.fillStyle = textureGradient;
 //         ctx.beginPath();
 //         ctx.arc(x, y, moonRadius * 0.2, 0, Math.PI * 2);
@@ -8723,14 +8569,14 @@
 //         const waveRadius = moonRadius * 0.7;
 //         const waveX = Math.cos(waveAngle) * waveRadius;
 //         const waveY = Math.sin(waveAngle) * waveRadius;
-        
+
 //         const waveGradient = ctx.createRadialGradient(
 //           waveX, waveY, 0,
 //           waveX, waveY, moonRadius * 0.15
 //         );
 //         waveGradient.addColorStop(0, "rgba(245,245,245,0.02)");
 //         waveGradient.addColorStop(1, "rgba(245,245,245,0)");
-        
+
 //         ctx.fillStyle = waveGradient;
 //         ctx.beginPath();
 //         ctx.arc(waveX, waveY, moonRadius * 0.15, 0, Math.PI * 2);
@@ -9045,8 +8891,8 @@
 //     <div className="app">
 //       <div className="gradient-bg"></div>
 //       <div className="stars-container" ref={starsContainerRef}></div>
-//       <canvas 
-//         ref={moonCanvasRef} 
+//       <canvas
+//         ref={moonCanvasRef}
 //         style={{
 //           position: 'fixed',
 //           top: 0,
@@ -9066,7 +8912,7 @@
 //             <div className="logo-icon"></div>
 //             <div className="logo-text">Artemis</div>
 //           </div>
-          
+
 //           <div
 //             className={`menu-toggle ${menuOpen ? "active" : ""}`}
 //             onClick={() => setMenuOpen(!menuOpen)}
@@ -9075,7 +8921,7 @@
 //             <span></span>
 //             <span></span>
 //           </div>
-          
+
 //           <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
 //             <div className="nav-links-group">
 //               <a href="#home" onClick={handleScrollTo("#home")} className="nav-link">
@@ -9114,8 +8960,8 @@
 //           <div className="hero-badge">AI-powered ATS for Healthcare Staffing</div>
 //           <h1 className="hero-title">Recruit faster with clarity, not clutter.</h1>
 //           <p className="hero-description">
-//             Streamlined workflows, intelligent automation, and minimalist design 
-//             that empowers healthcare staffing teams to focus on what matters most: 
+//             Streamlined workflows, intelligent automation, and minimalist design
+//             that empowers healthcare staffing teams to focus on what matters most:
 //             connecting great talent with exceptional opportunities.
 //           </p>
 //           <div className="hero-cta-group">
@@ -9146,7 +8992,7 @@
 //               Healthcare staffing agencies face overwhelming complexity in their daily operations
 //             </p>
 //           </div>
-          
+
 //           <div className="challenge-grid">
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
@@ -9157,11 +9003,11 @@
 //               </div>
 //               <h3>Time-Consuming Manual Work</h3>
 //               <p>
-//                 Hours spent on resume parsing, data entry, and candidate tracking that 
+//                 Hours spent on resume parsing, data entry, and candidate tracking that
 //                 could be automated, pulling recruiters away from relationship building.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
 //                 <svg className="challenge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9171,11 +9017,11 @@
 //               </div>
 //               <h3>Difficulty Finding Qualified Talent</h3>
 //               <p>
-//                 Traditional search methods make it nearly impossible to quickly identify 
+//                 Traditional search methods make it nearly impossible to quickly identify
 //                 candidates with the right skills, certifications, and availability.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
 //                 <svg className="challenge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9185,11 +9031,11 @@
 //               </div>
 //               <h3>Disconnected Systems</h3>
 //               <p>
-//                 VMS platforms, ATS software, and communication tools operating in silos, 
+//                 VMS platforms, ATS software, and communication tools operating in silos,
 //                 creating data gaps and workflow friction.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
 //                 <svg className="challenge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9201,7 +9047,7 @@
 //               </div>
 //               <h3>Compliance & Credentialing Complexity</h3>
 //               <p>
-//                 Tracking licenses, certifications, and compliance documentation across 
+//                 Tracking licenses, certifications, and compliance documentation across
 //                 dozens or hundreds of healthcare professionals is error-prone and stressful.
 //               </p>
 //             </div>
@@ -9218,7 +9064,7 @@
 //               Designed for recruiters. Powered by AI. Built for speed and simplicity.
 //             </p>
 //           </div>
-          
+
 //           {/* 3D Carousel Container */}
 //           <div className="carousel-3d-container">
 //             <div className="carousel-3d-wrapper">
@@ -9232,7 +9078,7 @@
 //                 </div>
 //                 <h3 className="feature-title">AI-Powered Candidate Search</h3>
 //                 <p className="feature-description">
-//                   Find the perfect match instantly with intelligent search that understands 
+//                   Find the perfect match instantly with intelligent search that understands
 //                   skills, experience, certifications, and availability patterns.
 //                 </p>
 //                 <ul className="feature-list">
@@ -9241,7 +9087,7 @@
 //                   <li>Real-time availability tracking</li>
 //                 </ul>
 //               </div>
-              
+
 //               <div className="feature-card-3d" style={{ '--card-index': 1 } as React.CSSProperties}>
 //                 <div className="feature-icon-box-pro">
 //                   <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9250,7 +9096,7 @@
 //                 </div>
 //                 <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
 //                 <p className="feature-description">
-//                   Seamlessly integrate with major VMS platforms. Jobs flow automatically 
+//                   Seamlessly integrate with major VMS platforms. Jobs flow automatically
 //                   into Artemis, eliminating manual data entry.
 //                 </p>
 //                 <ul className="feature-list">
@@ -9259,7 +9105,7 @@
 //                   <li>Multi-VMS support</li>
 //                 </ul>
 //               </div>
-              
+
 //               <div className="feature-card-3d" style={{ '--card-index': 2 } as React.CSSProperties}>
 //                 <div className="feature-icon-box-pro">
 //                   <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9269,7 +9115,7 @@
 //                 </div>
 //                 <h3 className="feature-title">Built-In Skills Checklists</h3>
 //                 <p className="feature-description">
-//                   Interactive checklists that capture candidate qualifications with precision, 
+//                   Interactive checklists that capture candidate qualifications with precision,
 //                   convert to PDFs, and distribute to stakeholders instantly.
 //                 </p>
 //                 <ul className="feature-list">
@@ -9278,7 +9124,7 @@
 //                   <li>Automated distribution</li>
 //                 </ul>
 //               </div>
-              
+
 //               <div className="feature-card-3d" style={{ '--card-index': 3 } as React.CSSProperties}>
 //                 <div className="feature-icon-box-pro">
 //                   <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9289,7 +9135,7 @@
 //                 </div>
 //                 <h3 className="feature-title">Smart Onboarding Dashboards</h3>
 //                 <p className="feature-description">
-//                   Visual pipelines that show exactly where every candidate stands, 
+//                   Visual pipelines that show exactly where every candidate stands,
 //                   with automated reminders and next-step recommendations.
 //                 </p>
 //                 <ul className="feature-list">
@@ -9298,7 +9144,7 @@
 //                   <li>Real-time status updates</li>
 //                 </ul>
 //               </div>
-              
+
 //               <div className="feature-card-3d" style={{ '--card-index': 4 } as React.CSSProperties}>
 //                 <div className="feature-icon-box-pro">
 //                   <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9309,7 +9155,7 @@
 //                 </div>
 //                 <h3 className="feature-title">Candidate Pipeline Management</h3>
 //                 <p className="feature-description">
-//                   Design dynamic, stage-based workflows that adapt to your process. 
+//                   Design dynamic, stage-based workflows that adapt to your process.
 //                   Never lose track of a candidate again.
 //                 </p>
 //                 <ul className="feature-list">
@@ -9318,7 +9164,7 @@
 //                   <li>Advanced filtering</li>
 //                 </ul>
 //               </div>
-              
+
 //               <div className="feature-card-3d" style={{ '--card-index': 5 } as React.CSSProperties}>
 //                 <div className="feature-icon-box-pro">
 //                   <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9329,7 +9175,7 @@
 //                 </div>
 //                 <h3 className="feature-title">Right-to-Represent Automation</h3>
 //                 <p className="feature-description">
-//                   Send RTR forms instantly, track signatures, and maintain compliance 
+//                   Send RTR forms instantly, track signatures, and maintain compliance
 //                   documentation—all within a single, streamlined workflow.
 //                 </p>
 //                 <ul className="feature-list">
@@ -9339,7 +9185,7 @@
 //                 </ul>
 //               </div>
 //             </div>
-            
+
 //             {/* Carousel Navigation */}
 //             <div className="carousel-nav">
 //               <button className="carousel-prev" onClick={() => {/* carousel prev logic */}}>
@@ -9349,8 +9195,8 @@
 //               </button>
 //               <div className="carousel-indicators">
 //                 {[0, 1, 2, 3, 4, 5].map((index) => (
-//                   <button 
-//                     key={index} 
+//                   <button
+//                     key={index}
 //                     className="carousel-dot"
 //                     aria-label={`Go to slide ${index + 1}`}
 //                   />
@@ -9373,28 +9219,28 @@
 //           <div className="about-hero">
 //             <h2 className="about-hero-title">Built to bring clarity back to recruiting</h2>
 //             <p className="about-hero-subtitle">
-//               Artemis combines cutting-edge AI technology with intuitive design to deliver 
+//               Artemis combines cutting-edge AI technology with intuitive design to deliver
 //               the most powerful yet simple ATS for healthcare staffing agencies.
 //             </p>
 //           </div>
-          
+
 //           {/* Story/Approach + Illustration */}
 //           <div className="about-story-grid">
 //             <div className="about-story-content">
 //               <h3>Our Approach</h3>
 //               <p>
-//                 Born from real-world staffing challenges, Artemis was designed by industry veterans 
-//                 who understand the unique pressures of healthcare recruitment. We've eliminated the 
-//                 bloat and complexity that plague traditional ATS platforms, focusing instead on the 
+//                 Born from real-world staffing challenges, Artemis was designed by industry veterans
+//                 who understand the unique pressures of healthcare recruitment. We've eliminated the
+//                 bloat and complexity that plague traditional ATS platforms, focusing instead on the
 //                 features that actually drive placements.
 //               </p>
 //               <p>
-//                 Every workflow, every interface element, and every automation has been carefully 
-//                 crafted to save you time while improving accuracy. Whether you're placing travel 
-//                 nurses, allied health professionals, or locum tenens physicians, Artemis adapts 
+//                 Every workflow, every interface element, and every automation has been carefully
+//                 crafted to save you time while improving accuracy. Whether you're placing travel
+//                 nurses, allied health professionals, or locum tenens physicians, Artemis adapts
 //                 to your process—not the other way around.
 //               </p>
-              
+
 //               <div className="about-stats-inline">
 //                 <div className="stat-inline-item">
 //                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9408,7 +9254,7 @@
 //                     <div className="stat-inline-label">Active Agencies</div>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="stat-inline-item">
 //                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
 //                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -9420,7 +9266,7 @@
 //                     <div className="stat-inline-label">Candidates Placed</div>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="stat-inline-item">
 //                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
 //                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -9432,7 +9278,7 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             <div className="about-illustration">
 //               <div className="illustration-card">
 //                 <svg className="illustration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -9446,7 +9292,7 @@
 //               </div>
 //             </div>
 //           </div>
-          
+
 //           {/* Mission, Vision, Values */}
 //           <div className="about-mvv-grid">
 //             <div className="mvv-card">
@@ -9458,12 +9304,12 @@
 //               </div>
 //               <h3>Our Mission</h3>
 //               <p>
-//                 To democratize enterprise-grade recruitment technology, making sophisticated 
-//                 ATS capabilities accessible to staffing agencies of all sizes. We believe powerful 
+//                 To democratize enterprise-grade recruitment technology, making sophisticated
+//                 ATS capabilities accessible to staffing agencies of all sizes. We believe powerful
 //                 tools shouldn't come with complexity or prohibitive costs.
 //               </p>
 //             </div>
-            
+
 //             <div className="mvv-card">
 //               <div className="mvv-icon-wrapper">
 //                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9473,12 +9319,12 @@
 //               </div>
 //               <h3>Our Vision</h3>
 //               <p>
-//                 To become the global standard for intelligent staffing solutions, where every 
-//                 recruiter has access to AI-powered tools that eliminate repetitive tasks and 
+//                 To become the global standard for intelligent staffing solutions, where every
+//                 recruiter has access to AI-powered tools that eliminate repetitive tasks and
 //                 provide actionable insights that drive better hiring decisions.
 //               </p>
 //             </div>
-            
+
 //             <div className="mvv-card">
 //               <div className="mvv-icon-wrapper">
 //                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9514,7 +9360,7 @@
 //               </ul>
 //             </div>
 //           </div>
-          
+
 //           {/* CTA Banner */}
 //           <div className="about-cta-banner">
 //             <h3>Ready to Transform Your Staffing Operations?</h3>
@@ -9535,7 +9381,7 @@
 //               Custom plans designed around your agency's unique needs
 //             </p>
 //           </div>
-          
+
 //           <div className="pricing-content">
 //             <div className="pricing-card">
 //               <h3>What's Included</h3>
@@ -9552,15 +9398,15 @@
 //                 <li>✓ Enterprise-grade security</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="pricing-card highlighted">
 //               <h3>Why Custom Pricing?</h3>
 //               <p>
-//                 Every staffing agency operates differently. Your pricing should reflect your 
+//                 Every staffing agency operates differently. Your pricing should reflect your
 //                 agency's size, placement volume, integration needs, and growth trajectory.
 //               </p>
 //               <p>
-//                 We work with you to create a plan that makes sense for your business—no 
+//                 We work with you to create a plan that makes sense for your business—no
 //                 hidden fees, no surprise charges, no complicated tier systems.
 //               </p>
 //               <a href="#demo" className="pricing-cta" onClick={handleScrollTo("#demo")}>
@@ -9580,7 +9426,7 @@
 //               Seamless connections to the tools you already use
 //             </p>
 //           </div>
-          
+
 //           <div className="integrations-content">
 //             <div className="integration-card primary">
 //               <div className="integration-icon-wrapper">
@@ -9594,7 +9440,7 @@
 //               </div>
 //               <h3>VMS Integrations</h3>
 //               <p>
-//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization. 
+//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization.
 //                 New opportunities appear in Artemis instantly, ready for candidate matching.
 //               </p>
 //               <div className="integration-logos">
@@ -9604,7 +9450,7 @@
 //                 <div className="logo-placeholder">+ More</div>
 //               </div>
 //             </div>
-            
+
 //             <div className="integration-card">
 //               <div className="integration-icon-wrapper">
 //                 <svg className="integration-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9638,7 +9484,7 @@
 //               Expert guidance to transform your healthcare staffing operations
 //             </p>
 //           </div>
-          
+
 //           <div className="resources-grid">
 //             <div className="resource-category-card">
 //               <div className="category-icon-wrapper">
@@ -9649,11 +9495,11 @@
 //               </div>
 //               <h3>Practical Tips for Recruiters</h3>
 //               <p>
-//                 Time-saving strategies, workflow optimizations, and proven techniques 
+//                 Time-saving strategies, workflow optimizations, and proven techniques
 //                 to increase placement velocity and candidate satisfaction.
 //               </p>
 //             </div>
-            
+
 //             <div className="resource-category-card">
 //               <div className="category-icon-wrapper">
 //                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9664,11 +9510,11 @@
 //               </div>
 //               <h3>Technology in Healthcare Staffing</h3>
 //               <p>
-//                 Explore how AI, automation, and modern ATS platforms are reshaping 
+//                 Explore how AI, automation, and modern ATS platforms are reshaping
 //                 the healthcare staffing landscape.
 //               </p>
 //             </div>
-            
+
 //             <div className="resource-category-card">
 //               <div className="category-icon-wrapper">
 //                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9678,12 +9524,12 @@
 //               </div>
 //               <h3>Industry Trends & Market Insights</h3>
 //               <p>
-//                 Stay ahead with analysis of healthcare labor markets, regulatory changes, 
+//                 Stay ahead with analysis of healthcare labor markets, regulatory changes,
 //                 and emerging opportunities.
 //               </p>
 //             </div>
 //           </div>
-          
+
 //           <div className="newsletter-section">
 //             <h3>Stay Updated</h3>
 //             <p>Get the latest insights delivered to your inbox</p>
@@ -9701,7 +9547,7 @@
 //           <div className="vision-content">
 //             <h2>Experience Clarity in Every Click</h2>
 //             <p>
-//               Join hundreds of healthcare staffing agencies who have transformed their 
+//               Join hundreds of healthcare staffing agencies who have transformed their
 //               recruitment process with Artemis. Faster placements, happier teams, better outcomes.
 //             </p>
 //             <a
@@ -9724,7 +9570,7 @@
 //               See Artemis in action and discover how we can transform your staffing operations
 //             </p>
 //           </div>
-          
+
 //           <div className="demo-layout">
 //             <div className="demo-form-container">
 //               <form onSubmit={submitDemo} className="demo-form">
@@ -9754,7 +9600,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-row">
 //                   <div className="form-field">
 //                     <label htmlFor="email">Work Email</label>
@@ -9777,7 +9623,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-row">
 //                   <div className="form-field">
 //                     <label htmlFor="company">Company</label>
@@ -9804,7 +9650,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-field full-width">
 //                   <label htmlFor="source">How did you hear about us?</label>
 //                   <select
@@ -9823,13 +9669,13 @@
 //                     <option value="other">Other</option>
 //                   </select>
 //                 </div>
-                
+
 //                 <button type="submit" className="demo-submit-button">
 //                   Request Demo
 //                 </button>
 //               </form>
 //             </div>
-            
+
 //             <div className="demo-info-container">
 //               <h3>What to Expect</h3>
 //               <ul className="expectations-list">
@@ -9882,7 +9728,7 @@
 //                   </div>
 //                 </li>
 //               </ul>
-              
+
 //               <div className="social-proof">
 //                 <p className="proof-label">Trusted by leading agencies</p>
 //                 <div className="proof-stats">
@@ -9907,7 +9753,7 @@
 //               <a href="#" aria-label="Twitter">🐦</a>
 //             </div>
 //           </div>
-          
+
 //           <div className="footer-column">
 //             <h4>Quick Links</h4>
 //             <a href="#home" onClick={handleScrollTo("#home")}>Home</a>
@@ -9917,7 +9763,7 @@
 //             <a href="#integrations" onClick={handleScrollTo("#integrations")}>Integrations</a>
 //             <a href="#resources" onClick={handleScrollTo("#resources")}>Resources</a>
 //           </div>
-          
+
 //           <div className="footer-column">
 //             <h4>Contact</h4>
 //             <p>
@@ -9928,7 +9774,7 @@
 //             <p>📧 info@artemisats.com</p>
 //           </div>
 //         </div>
-        
+
 //         <div className="footer-bottom">
 //           <p>© {new Date().getFullYear()} Artemis. All rights reserved.</p>
 //         </div>
@@ -10005,13 +9851,13 @@
 //         }
 
 //         @keyframes goldenTwinkle {
-//           0%, 100% { 
-//             opacity: 0.25; 
+//           0%, 100% {
+//             opacity: 0.25;
 //             transform: scale(1) rotate(0deg);
 //             box-shadow: 0 0 3px #ffd700, 0 0 6px #ffd700;
 //           }
-//           50% { 
-//             opacity: 0.6; 
+//           50% {
+//             opacity: 0.6;
 //             transform: scale(1.15) rotate(180deg);
 //             box-shadow: 0 0 4px #ffd700, 0 0 8px #ffd700;
 //           }
@@ -10419,7 +10265,7 @@
 //           padding: 26px 24px;
 //           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 //           transform-style: preserve-3d;
-//           box-shadow: 
+//           box-shadow:
 //             0 10px 40px rgba(0, 0, 0, 0.3),
 //             inset 0 1px 0 rgba(255, 255, 255, 0.1);
 //           transform: rotateY(calc(var(--card-index) * 60deg)) translateZ(440px);
@@ -10476,7 +10322,7 @@
 //         .feature-card-3d:hover {
 //           transform: rotateY(calc(var(--card-index) * 60deg)) translateZ(490px) scale(1.05);
 //           border-color: rgba(102, 126, 234, 0.6);
-//           box-shadow: 
+//           box-shadow:
 //             0 20px 60px rgba(102, 126, 234, 0.4),
 //             inset 0 1px 0 rgba(255, 255, 255, 0.2);
 //         }
@@ -10521,7 +10367,7 @@
 //           transform: scale(1.1);
 //           background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
 //           border-color: rgba(102, 126, 234, 0.7);
-//           box-shadow: 
+//           box-shadow:
 //             0 10px 30px rgba(102, 126, 234, 0.4),
 //             inset 0 2px 4px rgba(255, 255, 255, 0.1);
 //         }
@@ -12007,59 +11853,6 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from "react";
 // import * as THREE from "three";
 // import './Home.css';
@@ -12135,14 +11928,14 @@
 
 //     const drawMoon = (): void => {
 //       const scrollProgress = Math.min(scrollY / 2000, 1);
-      
+
 //       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
 //       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
 //       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
-      
+
 //       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
 //       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
-      
+
 //       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
 //       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
 
@@ -12185,14 +11978,14 @@
 //         const radius = moonRadius * 0.6;
 //         const x = Math.cos(angle) * radius;
 //         const y = Math.sin(angle) * radius;
-        
+
 //         const textureGradient = ctx.createRadialGradient(
 //           x, y, 0,
 //           x, y, moonRadius * 0.2
 //         );
 //         // textureGradient.addColorStop(0, "rgba(240,240,240,0.03)");
 //         // textureGradient.addColorStop(1, "rgba(240,240,240,0)");
-        
+
 //         ctx.fillStyle = textureGradient;
 //         ctx.beginPath();
 //         ctx.arc(x, y, moonRadius * 0.2, 0, Math.PI * 2);
@@ -12205,14 +11998,14 @@
 //         const waveRadius = moonRadius * 0.7;
 //         const waveX = Math.cos(waveAngle) * waveRadius;
 //         const waveY = Math.sin(waveAngle) * waveRadius;
-        
+
 //         const waveGradient = ctx.createRadialGradient(
 //           waveX, waveY, 0,
 //           waveX, waveY, moonRadius * 0.15
 //         );
 //         // waveGradient.addColorStop(0, "rgba(245,245,245,0.02)");
 //         // waveGradient.addColorStop(1, "rgba(245,245,245,0)");
-        
+
 //         ctx.fillStyle = waveGradient;
 //         ctx.beginPath();
 //         ctx.arc(waveX, waveY, moonRadius * 0.15, 0, Math.PI * 2);
@@ -12527,8 +12320,8 @@
 //     <div className="app">
 //       <div className="gradient-bg"></div>
 //       <div className="stars-container" ref={starsContainerRef}></div>
-//       <canvas 
-//         ref={moonCanvasRef} 
+//       <canvas
+//         ref={moonCanvasRef}
 //         style={{
 //           position: 'fixed',
 //           top: 0,
@@ -12554,14 +12347,14 @@
 //                   <circle cx="8" cy="20" r="3" fill="url(#logoGradient2)" opacity="0.8"/>
 //                   <path d="M12 14 Q18 20 12 26" stroke="url(#logoGradient1)" strokeWidth="2" fill="none"/>
 //                 </g>
-                
+
 //                 {/* Artemis Text */}
 //                 <g className="logo-text">
 //                   <text x="32" y="27" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="18" fill="url(#logoGradient3)" letterSpacing="1">
 //                     ARTEMIS
 //                   </text>
 //                 </g>
-                
+
 //                 {/* Gradients */}
 //                 <defs>
 //                   <linearGradient id="logoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -12581,7 +12374,7 @@
 //               </svg>
 //             </div>
 //           </div>
-          
+
 //           <div
 //             className={`menu-toggle ${menuOpen ? "active" : ""}`}
 //             onClick={() => setMenuOpen(!menuOpen)}
@@ -12590,7 +12383,7 @@
 //             <span></span>
 //             <span></span>
 //           </div>
-          
+
 //           <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
 //             <div className="nav-links-group">
 //               <a href="#home" onClick={handleScrollTo("#home")} className="nav-link">
@@ -12623,15 +12416,14 @@
 //         </div>
 //       </nav>
 
-  
 //  {/* Hero Section */}
 //       <section className="hero-section" id="home">
 //         <div className="hero-content-wrapper">
 //           <div className="hero-badge">AI-powered ATS for Healthcare Staffing</div>
 //           <h1 className="hero-title">Recruit faster with clarity, not clutter.</h1>
 //           <p className="hero-description">
-//             Streamlined workflows, intelligent automation, and minimalist design 
-//             that empowers healthcare staffing teams to focus on what matters most: 
+//             Streamlined workflows, intelligent automation, and minimalist design
+//             that empowers healthcare staffing teams to focus on what matters most:
 //             connecting great talent with exceptional opportunities.
 //           </p>
 //           <div className="hero-cta-group">
@@ -12662,7 +12454,7 @@
 //               Healthcare staffing agencies face overwhelming complexity in their daily operations
 //             </p>
 //           </div>
-          
+
 //           <div className="challenge-grid">
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
@@ -12673,11 +12465,11 @@
 //               </div>
 //               <h3>Time-Consuming Manual Work</h3>
 //               <p>
-//                 Hours spent on resume parsing, data entry, and candidate tracking that 
+//                 Hours spent on resume parsing, data entry, and candidate tracking that
 //                 could be automated, pulling recruiters away from relationship building.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
 //                 <svg className="challenge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12687,11 +12479,11 @@
 //               </div>
 //               <h3>Difficulty Finding Qualified Talent</h3>
 //               <p>
-//                 Traditional search methods make it nearly impossible to quickly identify 
+//                 Traditional search methods make it nearly impossible to quickly identify
 //                 candidates with the right skills, certifications, and availability.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
 //                 <svg className="challenge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12701,11 +12493,11 @@
 //               </div>
 //               <h3>Disconnected Systems</h3>
 //               <p>
-//                 VMS platforms, ATS software, and communication tools operating in silos, 
+//                 VMS platforms, ATS software, and communication tools operating in silos,
 //                 creating data gaps and workflow friction.
 //               </p>
 //             </div>
-            
+
 //             <div className="challenge-card">
 //               <div className="challenge-icon-wrapper">
 //                 <svg className="challenge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12717,7 +12509,7 @@
 //               </div>
 //               <h3>Compliance & Credentialing Complexity</h3>
 //               <p>
-//                 Tracking licenses, certifications, and compliance documentation across 
+//                 Tracking licenses, certifications, and compliance documentation across
 //                 dozens or hundreds of healthcare professionals is error-prone and stressful.
 //               </p>
 //             </div>
@@ -12734,7 +12526,7 @@
 //               Join hundreds of agencies achieving remarkable results with Artemis
 //             </p>
 //           </div>
-          
+
 //           <div className="auto-slider-container">
 //             <div className="auto-slider-track">
 //               {/* Slide 1 */}
@@ -12757,7 +12549,7 @@
 //                     </div>
 //                   </div>
 //                   <p className="success-quote">
-//                     "Artemis transformed our candidate submission process. What used to take 
+//                     "Artemis transformed our candidate submission process. What used to take
 //                     hours now takes minutes."
 //                   </p>
 //                 </div>
@@ -12784,7 +12576,7 @@
 //                     </div>
 //                   </div>
 //                   <p className="success-quote">
-//                     "The AI-powered matching helped us scale our placement volume without 
+//                     "The AI-powered matching helped us scale our placement volume without
 //                     adding headcount."
 //                   </p>
 //                 </div>
@@ -12811,7 +12603,7 @@
 //                     </div>
 //                   </div>
 //                   <p className="success-quote">
-//                     "ROI was immediate. Artemis paid for itself in the first quarter through 
+//                     "ROI was immediate. Artemis paid for itself in the first quarter through
 //                     efficiency gains alone."
 //                   </p>
 //                 </div>
@@ -12837,7 +12629,7 @@
 //                     </div>
 //                   </div>
 //                   <p className="success-quote">
-//                     "Our candidates love the smooth onboarding experience. It's a competitive 
+//                     "Our candidates love the smooth onboarding experience. It's a competitive
 //                     advantage for us."
 //                   </p>
 //                 </div>
@@ -12863,7 +12655,7 @@
 //                     </div>
 //                   </div>
 //                   <p className="success-quote">
-//                     "Artemis transformed our candidate submission process. What used to take 
+//                     "Artemis transformed our candidate submission process. What used to take
 //                     hours now takes minutes."
 //                   </p>
 //                 </div>
@@ -12918,7 +12710,7 @@
 //           </div>
 //           <h3 className="feature-title">AI-Powered Candidate Search</h3>
 //           <p className="feature-description">
-//             Find the perfect match instantly with intelligent search that understands 
+//             Find the perfect match instantly with intelligent search that understands
 //             skills, experience, certifications, and availability patterns.
 //           </p>
 //           <ul className="feature-list">
@@ -12927,7 +12719,7 @@
 //             <li>Real-time availability tracking</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12936,7 +12728,7 @@
 //           </div>
 //           <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
 //           <p className="feature-description">
-//             Seamlessly integrate with major VMS platforms. Jobs flow automatically 
+//             Seamlessly integrate with major VMS platforms. Jobs flow automatically
 //             into Artemis, eliminating manual data entry.
 //           </p>
 //           <ul className="feature-list">
@@ -12945,7 +12737,7 @@
 //             <li>Multi-VMS support</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12955,7 +12747,7 @@
 //           </div>
 //           <h3 className="feature-title">Built-In Skills Checklists</h3>
 //           <p className="feature-description">
-//             Interactive checklists that capture candidate qualifications with precision, 
+//             Interactive checklists that capture candidate qualifications with precision,
 //             convert to PDFs, and distribute to stakeholders instantly.
 //           </p>
 //           <ul className="feature-list">
@@ -12964,7 +12756,7 @@
 //             <li>Automated distribution</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12975,7 +12767,7 @@
 //           </div>
 //           <h3 className="feature-title">Smart Onboarding Dashboards</h3>
 //           <p className="feature-description">
-//             Visual pipelines that show exactly where every candidate stands, 
+//             Visual pipelines that show exactly where every candidate stands,
 //             with automated reminders and next-step recommendations.
 //           </p>
 //           <ul className="feature-list">
@@ -12984,7 +12776,7 @@
 //             <li>Real-time status updates</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -12995,7 +12787,7 @@
 //           </div>
 //           <h3 className="feature-title">Candidate Pipeline Management</h3>
 //           <p className="feature-description">
-//             Design dynamic, stage-based workflows that adapt to your process. 
+//             Design dynamic, stage-based workflows that adapt to your process.
 //             Never lose track of a candidate again.
 //           </p>
 //           <ul className="feature-list">
@@ -13004,7 +12796,7 @@
 //             <li>Advanced filtering</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13015,7 +12807,7 @@
 //           </div>
 //           <h3 className="feature-title">Right-to-Represent Automation</h3>
 //           <p className="feature-description">
-//             Send RTR forms instantly, track signatures, and maintain compliance 
+//             Send RTR forms instantly, track signatures, and maintain compliance
 //             documentation—all within a single, streamlined workflow.
 //           </p>
 //           <ul className="feature-list">
@@ -13036,7 +12828,7 @@
 //           </div>
 //           <h3 className="feature-title">AI-Powered Candidate Search</h3>
 //           <p className="feature-description">
-//             Find the perfect match instantly with intelligent search that understands 
+//             Find the perfect match instantly with intelligent search that understands
 //             skills, experience, certifications, and availability patterns.
 //           </p>
 //           <ul className="feature-list">
@@ -13045,7 +12837,7 @@
 //             <li>Real-time availability tracking</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13054,7 +12846,7 @@
 //           </div>
 //           <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
 //           <p className="feature-description">
-//             Seamlessly integrate with major VMS platforms. Jobs flow automatically 
+//             Seamlessly integrate with major VMS platforms. Jobs flow automatically
 //             into Artemis, eliminating manual data entry.
 //           </p>
 //           <ul className="feature-list">
@@ -13063,7 +12855,7 @@
 //             <li>Multi-VMS support</li>
 //           </ul>
 //         </div>
-        
+
 //         <div className="feature-slide-card">
 //           <div className="feature-icon-box-pro">
 //             <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13073,7 +12865,7 @@
 //           </div>
 //           <h3 className="feature-title">Built-In Skills Checklists</h3>
 //           <p className="feature-description">
-//             Interactive checklists that capture candidate qualifications with precision, 
+//             Interactive checklists that capture candidate qualifications with precision,
 //             convert to PDFs, and distribute to stakeholders instantly.
 //           </p>
 //           <ul className="feature-list">
@@ -13094,28 +12886,28 @@
 //           <div className="about-hero">
 //             <h2 className="about-hero-title">Built to bring clarity back to recruiting</h2>
 //             <p className="about-hero-subtitle">
-//               Artemis combines cutting-edge AI technology with intuitive design to deliver 
+//               Artemis combines cutting-edge AI technology with intuitive design to deliver
 //               the most powerful yet simple ATS for healthcare staffing agencies.
 //             </p>
 //           </div>
-          
+
 //           {/* Story/Approach + Illustration */}
 //           <div className="about-story-grid">
 //             <div className="about-story-content">
 //               <h3>Our Approach</h3>
 //               <p>
-//                 Born from real-world staffing challenges, Artemis was designed by industry veterans 
-//                 who understand the unique pressures of healthcare recruitment. We've eliminated the 
-//                 bloat and complexity that plague traditional ATS platforms, focusing instead on the 
+//                 Born from real-world staffing challenges, Artemis was designed by industry veterans
+//                 who understand the unique pressures of healthcare recruitment. We've eliminated the
+//                 bloat and complexity that plague traditional ATS platforms, focusing instead on the
 //                 features that actually drive placements.
 //               </p>
 //               <p>
-//                 Every workflow, every interface element, and every automation has been carefully 
-//                 crafted to save you time while improving accuracy. Whether you're placing travel 
-//                 nurses, allied health professionals, or locum tenens physicians, Artemis adapts 
+//                 Every workflow, every interface element, and every automation has been carefully
+//                 crafted to save you time while improving accuracy. Whether you're placing travel
+//                 nurses, allied health professionals, or locum tenens physicians, Artemis adapts
 //                 to your process—not the other way around.
 //               </p>
-              
+
 //               <div className="about-stats-inline">
 //                 <div className="stat-inline-item">
 //                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13129,7 +12921,7 @@
 //                     <div className="stat-inline-label">Active Agencies</div>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="stat-inline-item">
 //                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
 //                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -13141,7 +12933,7 @@
 //                     <div className="stat-inline-label">Candidates Placed</div>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="stat-inline-item">
 //                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
 //                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -13153,7 +12945,7 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             <div className="about-illustration">
 //               <div className="illustration-card">
 //                 <svg className="illustration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -13167,7 +12959,7 @@
 //               </div>
 //             </div>
 //           </div>
-          
+
 //           {/* Mission, Vision, Values */}
 //           <div className="about-mvv-grid">
 //             <div className="mvv-card">
@@ -13179,12 +12971,12 @@
 //               </div>
 //               <h3>Our Mission</h3>
 //               <p>
-//                 To democratize enterprise-grade recruitment technology, making sophisticated 
-//                 ATS capabilities accessible to staffing agencies of all sizes. We believe powerful 
+//                 To democratize enterprise-grade recruitment technology, making sophisticated
+//                 ATS capabilities accessible to staffing agencies of all sizes. We believe powerful
 //                 tools shouldn't come with complexity or prohibitive costs.
 //               </p>
 //             </div>
-            
+
 //             <div className="mvv-card">
 //               <div className="mvv-icon-wrapper">
 //                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13194,12 +12986,12 @@
 //               </div>
 //               <h3>Our Vision</h3>
 //               <p>
-//                 To become the global standard for intelligent staffing solutions, where every 
-//                 recruiter has access to AI-powered tools that eliminate repetitive tasks and 
+//                 To become the global standard for intelligent staffing solutions, where every
+//                 recruiter has access to AI-powered tools that eliminate repetitive tasks and
 //                 provide actionable insights that drive better hiring decisions.
 //               </p>
 //             </div>
-            
+
 //             <div className="mvv-card">
 //               <div className="mvv-icon-wrapper">
 //                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13235,7 +13027,7 @@
 //               </ul>
 //             </div>
 //           </div>
-          
+
 //           {/* CTA Banner */}
 //           <div className="about-cta-banner">
 //             <h3>Ready to Transform Your Staffing Operations?</h3>
@@ -13256,7 +13048,7 @@
 //               Custom plans designed around your agency's unique needs
 //             </p>
 //           </div>
-          
+
 //           <div className="pricing-content">
 //             <div className="pricing-card">
 //               <h3>What's Included</h3>
@@ -13273,15 +13065,15 @@
 //                 <li>✓ Enterprise-grade security</li>
 //               </ul>
 //             </div>
-            
+
 //             <div className="pricing-card highlighted">
 //               <h3>Why Custom Pricing?</h3>
 //               <p>
-//                 Every staffing agency operates differently. Your pricing should reflect your 
+//                 Every staffing agency operates differently. Your pricing should reflect your
 //                 agency's size, placement volume, integration needs, and growth trajectory.
 //               </p>
 //               <p>
-//                 We work with you to create a plan that makes sense for your business—no 
+//                 We work with you to create a plan that makes sense for your business—no
 //                 hidden fees, no surprise charges, no complicated tier systems.
 //               </p>
 //               <a href="#demo" className="pricing-cta" onClick={handleScrollTo("#demo")}>
@@ -13301,7 +13093,7 @@
 //               Seamless connections to the tools you already use
 //             </p>
 //           </div>
-          
+
 //           <div className="integrations-content">
 //             <div className="integration-card primary">
 //               <div className="integration-icon-wrapper">
@@ -13315,7 +13107,7 @@
 //               </div>
 //               <h3>VMS Integrations</h3>
 //               <p>
-//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization. 
+//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization.
 //                 New opportunities appear in Artemis instantly, ready for candidate matching.
 //               </p>
 //               <div className="integration-logos">
@@ -13325,7 +13117,7 @@
 //                 <div className="logo-placeholder">+ More</div>
 //               </div>
 //             </div>
-            
+
 //             <div className="integration-card">
 //               <div className="integration-icon-wrapper">
 //                 <svg className="integration-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13359,7 +13151,7 @@
 //               Expert guidance to transform your healthcare staffing operations
 //             </p>
 //           </div>
-          
+
 //           <div className="resources-grid">
 //             <div className="resource-category-card">
 //               <div className="category-icon-wrapper">
@@ -13370,11 +13162,11 @@
 //               </div>
 //               <h3>Practical Tips for Recruiters</h3>
 //               <p>
-//                 Time-saving strategies, workflow optimizations, and proven techniques 
+//                 Time-saving strategies, workflow optimizations, and proven techniques
 //                 to increase placement velocity and candidate satisfaction.
 //               </p>
 //             </div>
-            
+
 //             <div className="resource-category-card">
 //               <div className="category-icon-wrapper">
 //                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13385,11 +13177,11 @@
 //               </div>
 //               <h3>Technology in Healthcare Staffing</h3>
 //               <p>
-//                 Explore how AI, automation, and modern ATS platforms are reshaping 
+//                 Explore how AI, automation, and modern ATS platforms are reshaping
 //                 the healthcare staffing landscape.
 //               </p>
 //             </div>
-            
+
 //             <div className="resource-category-card">
 //               <div className="category-icon-wrapper">
 //                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -13399,12 +13191,12 @@
 //               </div>
 //               <h3>Industry Trends & Market Insights</h3>
 //               <p>
-//                 Stay ahead with analysis of healthcare labor markets, regulatory changes, 
+//                 Stay ahead with analysis of healthcare labor markets, regulatory changes,
 //                 and emerging opportunities.
 //               </p>
 //             </div>
 //           </div>
-          
+
 //           <div className="newsletter-section">
 //             <h3>Stay Updated</h3>
 //             <p>Get the latest insights delivered to your inbox</p>
@@ -13422,7 +13214,7 @@
 //           <div className="vision-content">
 //             <h2>Experience Clarity in Every Click</h2>
 //             <p>
-//               Join hundreds of healthcare staffing agencies who have transformed their 
+//               Join hundreds of healthcare staffing agencies who have transformed their
 //               recruitment process with Artemis. Faster placements, happier teams, better outcomes.
 //             </p>
 //             <a
@@ -13445,7 +13237,7 @@
 //               See Artemis in action and discover how we can transform your staffing operations
 //             </p>
 //           </div>
-          
+
 //           <div className="demo-layout">
 //             <div className="demo-form-container">
 //               <form onSubmit={submitDemo} className="demo-form">
@@ -13475,7 +13267,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-row">
 //                   <div className="form-field">
 //                     <label htmlFor="email">Work Email</label>
@@ -13498,7 +13290,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-row">
 //                   <div className="form-field">
 //                     <label htmlFor="company">Company</label>
@@ -13525,7 +13317,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="form-field full-width">
 //                   <label htmlFor="source">How did you hear about us?</label>
 //                   <select
@@ -13544,13 +13336,13 @@
 //                     <option value="other">Other</option>
 //                   </select>
 //                 </div>
-                
+
 //                 <button type="submit" className="demo-submit-button">
 //                   Request Demo
 //                 </button>
 //               </form>
 //             </div>
-            
+
 //             <div className="demo-info-container">
 //               <h3>What to Expect</h3>
 //               <ul className="expectations-list">
@@ -13603,7 +13395,7 @@
 //                   </div>
 //                 </li>
 //               </ul>
-              
+
 //               <div className="social-proof">
 //                 <p className="proof-label">Trusted by leading agencies</p>
 //                 <div className="proof-stats">
@@ -13628,7 +13420,7 @@
 //               <a href="#" aria-label="Twitter">🐦</a>
 //             </div>
 //           </div>
-          
+
 //           <div className="footer-column">
 //             <h4>Quick Links</h4>
 //             <a href="#home" onClick={handleScrollTo("#home")}>Home</a>
@@ -13638,7 +13430,7 @@
 //             <a href="#integrations" onClick={handleScrollTo("#integrations")}>Integrations</a>
 //             <a href="#resources" onClick={handleScrollTo("#resources")}>Resources</a>
 //           </div>
-          
+
 //           <div className="footer-column">
 //             <h4>Contact</h4>
 //             <p>
@@ -13649,13 +13441,2141 @@
 //             <p>📧 info@artemisats.com</p>
 //           </div>
 //         </div>
-        
+
 //         <div className="footer-bottom">
 //           <p>© {new Date().getFullYear()} Artemis. All rights reserved.</p>
 //         </div>
 //       </footer>
 
-    
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+// import React, { useState, useEffect, useRef } from "react";
+// import * as THREE from "three";
+// import './Home.css';
+
+// // Font loading
+// if (typeof window !== 'undefined') {
+//   const link = document.createElement('link');
+//   link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap';
+//   link.rel = 'stylesheet';
+//   document.head.appendChild(link);
+// }
+
+// interface FormData {
+//   firstName: string;
+//   lastName: string;
+//   phone: string;
+//   email: string;
+//   company: string;
+//   country: string;
+//   state: string;
+//   city: string;
+//   source: string;
+// }
+
+// interface Country {
+//   name: string;
+//   iso2: string;
+// }
+
+// interface State {
+//   name: string;
+//   iso2: string;
+// }
+
+// interface City {
+//   name: string;
+// }
+
+// const Home: React.FC = () => {
+//   const [form, setForm] = useState<FormData>({
+//     firstName: "",
+//     lastName: "",
+//     phone: "",
+//     email: "",
+//     company: "",
+//     country: "",
+//     state: "",
+//     city: "",
+//     source: "",
+//   });
+
+//   const [emailError, setEmailError] = useState<string>("");
+//   const [countries, setCountries] = useState<Country[]>([]);
+//   const [states, setStates] = useState<State[]>([]);
+//   const [cities, setCities] = useState<City[]>([]);
+//   const [loadingStates, setLoadingStates] = useState(false);
+//   const [loadingCities, setLoadingCities] = useState(false);
+
+//   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+//   // Slider refs for manual control
+//   const challengeSliderRef = useRef<HTMLDivElement>(null);
+//   const successSliderRef = useRef<HTMLDivElement>(null);
+//   const featureSliderRef = useRef<HTMLDivElement>(null);
+
+//   const canvasRef = useRef<HTMLDivElement>(null);
+//   const starsContainerRef = useRef<HTMLDivElement>(null);
+//   const moonCanvasRef = useRef<HTMLCanvasElement>(null);
+//   const sceneRef = useRef<THREE.Scene | null>(null);
+//   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
+//   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+//   const particlesMeshRef = useRef<THREE.Points | null>(null);
+
+//   // Real-time email validation
+//   const validateEmail = (email: string): boolean => {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+//     return emailRegex.test(email);
+//   };
+// const [isPaused, setIsPaused] = useState(false);
+// const autoScrollRef = useRef<number | null>(null);
+
+// // Auto scroll function
+// const startAutoScroll = () => {
+//   if (autoScrollRef.current) {
+//     clearInterval(autoScrollRef.current);
+//   }
+
+//   autoScrollRef.current = setInterval(() => {
+//     if (!isPaused) {
+//       handleChallengeScroll('right');
+//     }
+//   }, 3000); // Change slide every 3 seconds
+// };
+
+// // Pause and resume functions
+// const pauseAutoScroll = () => {
+//   setIsPaused(true);
+// };
+
+// const resumeAutoScroll = () => {
+//   setIsPaused(false);
+// };
+
+// // Update your existing handleChallengeScroll function to handle auto-scroll reset
+
+// // Start auto-scroll on component mount and clean up on unmount
+// useEffect(() => {
+//   startAutoScroll();
+
+//   return () => {
+//     if (autoScrollRef.current) {
+//       clearInterval(autoScrollRef.current);
+//     }
+//   };
+// }, []);
+
+// // Optional: Reset auto-scroll timer when manually navigating will be handled
+// // in the existing enhancedHandleChallengeScroll function
+
+//   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     const email = e.target.value;
+//     setForm({ ...form, email });
+
+//     if (email.length > 0 && !validateEmail(email)) {
+//       setEmailError("Please enter email in correct format (example@domain.com)");
+//     } else {
+//       setEmailError("");
+//     }
+//   };
+
+//   // Fetch countries on component mount
+//   useEffect(() => {
+//     fetchCountries();
+//   }, []);
+
+//   const fetchCountries = async () => {
+//     try {
+//       const response = await fetch('https://api.countrystatecity.in/v1/countries', {
+//         headers: {
+//           'X-CSCAPI-KEY': 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+//         }
+//       });
+//       const data = await response.json();
+//       setCountries(data);
+//     } catch (error) {
+//       console.error('Error fetching countries:', error);
+//     }
+//   };
+
+//   const fetchStates = async (countryCode: string) => {
+//     setLoadingStates(true);
+//     try {
+//       const response = await fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states`, {
+//         headers: {
+//           'X-CSCAPI-KEY': 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+//         }
+//       });
+//       const data = await response.json();
+//       setStates(data);
+//     } catch (error) {
+//       console.error('Error fetching states:', error);
+//     }
+//     setLoadingStates(false);
+//   };
+
+//   const fetchCities = async (countryCode: string, stateCode: string) => {
+//     setLoadingCities(true);
+//     try {
+//       const response = await fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states/${stateCode}/cities`, {
+//         headers: {
+//           'X-CSCAPI-KEY': 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+//         }
+//       });
+//       const data = await response.json();
+//       setCities(data);
+//     } catch (error) {
+//       console.error('Error fetching cities:', error);
+//     }
+//     setLoadingCities(false);
+//   };
+
+//   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+//     const countryCode = e.target.value;
+//     setForm({ ...form, country: countryCode, state: "", city: "" });
+//     setStates([]);
+//     setCities([]);
+//     if (countryCode) {
+//       fetchStates(countryCode);
+//     }
+//   };
+
+//   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+//     const stateCode = e.target.value;
+//     setForm({ ...form, state: stateCode, city: "" });
+//     setCities([]);
+//     if (stateCode && form.country) {
+//       fetchCities(form.country, stateCode);
+//     }
+//   };
+
+//   // Slider navigation functions with auto-scroll support
+//  const handleChallengeScroll = (direction: 'left' | 'right') => {
+//   if (!challengeSliderRef.current) return;
+
+//   const container = challengeSliderRef.current;
+//   const slideCard = container.querySelector('.feature-slide-card');
+//   if (!slideCard) return;
+
+//   const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
+//   const currentScroll = container.scrollLeft;
+//   const maxScroll = container.scrollWidth - container.clientWidth;
+
+//   let newScrollPos;
+
+//   if (direction === 'right') {
+//     newScrollPos = currentScroll + slideWidth;
+
+//     // If we're at the end of the original set, reset to start without animation
+//     if (currentScroll >= maxScroll - 10) {
+//       container.scrollTo({ left: 0, behavior: 'instant' });
+//       return;
+//     }
+//   } else {
+//     newScrollPos = currentScroll - slideWidth;
+
+//     // If we're at the start, reset to end without animation
+//     if (currentScroll <= 10) {
+//       container.scrollTo({ left: maxScroll, behavior: 'instant' });
+//       return;
+//     }
+//   }
+
+//   container.scrollTo({
+//     left: newScrollPos,
+//     behavior: 'smooth'
+//   });
+
+//   // Reset auto-scroll timer
+//   if (autoScrollRef.current) {
+//     clearInterval(autoScrollRef.current);
+//     startAutoScroll();
+//   }
+// };
+
+// const handleSuccessScroll = (direction: 'left' | 'right') => {
+//   if (!successSliderRef.current) return;
+
+//   const container = successSliderRef.current;
+//   const slideCard = container.querySelector('.success-slide');
+//   if (!slideCard) return;
+
+//   const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
+//   const currentScroll = container.scrollLeft;
+//   const maxScroll = container.scrollWidth - container.clientWidth;
+
+//   let newScrollPos;
+
+//   if (direction === 'right') {
+//     newScrollPos = currentScroll + slideWidth;
+
+//     // If we're at the end of the original set, reset to start without animation
+//     if (currentScroll >= maxScroll - 10) {
+//       container.scrollTo({ left: 0, behavior: 'instant' });
+//       return;
+//     }
+//   } else {
+//     newScrollPos = currentScroll - slideWidth;
+
+//     // If we're at the start, reset to end without animation
+//     if (currentScroll <= 10) {
+//       container.scrollTo({ left: maxScroll, behavior: 'instant' });
+//       return;
+//     }
+//   }
+
+//   container.scrollTo({
+//     left: newScrollPos,
+//     behavior: 'smooth'
+//   });
+// };
+
+// const handleFeatureScroll = (direction: 'left' | 'right') => {
+//   if (!featureSliderRef.current) return;
+
+//   const container = featureSliderRef.current;
+//   const slideCard = container.querySelector('.feature-slide-card');
+//   if (!slideCard) return;
+
+//   const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
+//   const currentScroll = container.scrollLeft;
+//   const maxScroll = container.scrollWidth - container.clientWidth;
+
+//   let newScrollPos;
+
+//   if (direction === 'right') {
+//     newScrollPos = currentScroll + slideWidth;
+
+//     // If we're at the end of the original set, reset to start without animation
+//     if (currentScroll >= maxScroll - 10) {
+//       container.scrollTo({ left: 0, behavior: 'instant' });
+//       return;
+//     }
+//   } else {
+//     newScrollPos = currentScroll - slideWidth;
+
+//     // If we're at the start, reset to end without animation
+//     if (currentScroll <= 10) {
+//       container.scrollTo({ left: maxScroll, behavior: 'instant' });
+//       return;
+//     }
+//   }
+
+//   container.scrollTo({
+//     left: newScrollPos,
+//     behavior: 'smooth'
+//   });
+// };
+//   // Canvas moon animation
+//   useEffect(() => {
+//     if (!moonCanvasRef.current) return;
+
+//     const canvas = moonCanvasRef.current;
+//     const ctx = canvas.getContext("2d");
+//     if (!ctx) return;
+
+//     let width = (canvas.width = window.innerWidth);
+//     let height = (canvas.height = window.innerHeight);
+//     let scrollY = 0;
+//     let rotationAngle = 0;
+
+//     const handleResize = (): void => {
+//       width = canvas.width = window.innerWidth;
+//       height = canvas.height = window.innerHeight;
+//     };
+
+//     const handleScroll = (): void => {
+//       scrollY = window.scrollY || window.pageYOffset;
+//     };
+
+//     window.addEventListener("resize", handleResize);
+//     window.addEventListener("scroll", handleScroll);
+
+//     let moonAngle = Math.PI * 0.2;
+//     const baseMoonRadius = 70;
+//     const baseOrbitRadiusX = width * 0.12;
+//     const baseOrbitRadiusY = width * 0.1;
+//     const baseMoonCenterX = width * 0.75;
+//     const baseMoonCenterY = height * 0.25;
+
+//     const drawMoon = (): void => {
+//       const scrollProgress = Math.min(scrollY / 2000, 1);
+
+//       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
+//       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
+//       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
+
+//       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
+//       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
+
+//       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
+//       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
+
+//       ctx.save();
+//       ctx.translate(moonX, moonY);
+//       ctx.rotate(rotationAngle);
+
+//       const moonGlow = ctx.createRadialGradient(
+//         0, 0, moonRadius * 0.4,
+//         0, 0, moonRadius * 2.0
+//       );
+
+//       ctx.fillStyle = moonGlow;
+//       ctx.beginPath();
+//       ctx.arc(0, 0, moonRadius * 2.0, 0, Math.PI * 2);
+//       ctx.fill();
+
+//       const moonBase = ctx.createRadialGradient(
+//         -moonRadius * 0.3, -moonRadius * 0.3, 0,
+//         0, 0, moonRadius
+//       );
+
+//       ctx.fillStyle = moonBase;
+//       ctx.beginPath();
+//       ctx.arc(0, 0, moonRadius, 0, Math.PI * 2);
+//       ctx.fill();
+
+//       for (let i = 0; i < 12; i++) {
+//         const angle = (i / 12) * Math.PI * 2;
+//         const radius = moonRadius * 0.6;
+//         const x = Math.cos(angle) * radius;
+//         const y = Math.sin(angle) * radius;
+
+//         const textureGradient = ctx.createRadialGradient(
+//           x, y, 0,
+//           x, y, moonRadius * 0.2
+//         );
+
+//         ctx.fillStyle = textureGradient;
+//         ctx.beginPath();
+//         ctx.arc(x, y, moonRadius * 0.2, 0, Math.PI * 2);
+//         ctx.fill();
+//       }
+
+//       for (let i = 0; i < 6; i++) {
+//         const waveAngle = (i / 6) * Math.PI * 2 + rotationAngle * 2;
+//         const waveRadius = moonRadius * 0.7;
+//         const waveX = Math.cos(waveAngle) * waveRadius;
+//         const waveY = Math.sin(waveAngle) * waveRadius;
+
+//         const waveGradient = ctx.createRadialGradient(
+//           waveX, waveY, 0,
+//           waveX, waveY, moonRadius * 0.15
+//         );
+
+//         ctx.fillStyle = waveGradient;
+//         ctx.beginPath();
+//         ctx.arc(waveX, waveY, moonRadius * 0.15, 0, Math.PI * 2);
+//         ctx.fill();
+//       }
+
+//       const shineGradient = ctx.createRadialGradient(
+//         -moonRadius * 0.3, -moonRadius * 0.3, 0,
+//         -moonRadius * 0.3, -moonRadius * 0.3, moonRadius * 0.5
+//       );
+
+//       ctx.fillStyle = shineGradient;
+//       ctx.beginPath();
+//       ctx.arc(-moonRadius * 0.3, -moonRadius * 0.3, moonRadius * 0.5, 0, Math.PI * 2);
+//       ctx.fill();
+
+//       ctx.restore();
+//     };
+
+//     const animate = (): void => {
+//       ctx.clearRect(0, 0, width, height);
+//       drawMoon();
+//       moonAngle += 0.0006;
+//       rotationAngle += 0.0003;
+//       requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => {
+//       window.removeEventListener("resize", handleResize);
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
+//   useEffect(() => {
+//     if (!starsContainerRef.current) return;
+
+//     for (let i = 0; i < 35; i++) {
+//       const star = document.createElement("div");
+//       star.className = "star";
+
+//       const size = Math.random() * 2.5 + 0.8;
+//       star.style.width = size + "px";
+//       star.style.height = size + "px";
+
+//       star.style.left = Math.random() * 100 + "%";
+//       star.style.top = Math.random() * 100 + "%";
+
+//       const isGolden = Math.random() > 0.96;
+//       if (isGolden) {
+//         star.style.backgroundColor = "#ffd700";
+//         star.style.boxShadow = "0 0 3px #ffd700, 0 0 6px #ffd700";
+//         star.style.animationDelay = Math.random() * 5 + "s";
+//         star.style.animationDuration = Math.random() * 4 + 3 + "s";
+//       } else {
+//         star.style.backgroundColor = "#ffffff";
+//         star.style.animationDelay = Math.random() * 3 + "s";
+//         star.style.animationDuration = Math.random() * 3 + 2 + "s";
+//       }
+
+//       starsContainerRef.current.appendChild(star);
+//     }
+//   }, []);
+
+//   useEffect(() => {
+//     if (!canvasRef.current) return;
+
+//     const scene = new THREE.Scene();
+//     sceneRef.current = scene;
+
+//     const camera = new THREE.PerspectiveCamera(
+//       75,
+//       window.innerWidth / window.innerHeight,
+//       0.1,
+//       1000
+//     );
+//     cameraRef.current = camera;
+
+//     const renderer = new THREE.WebGLRenderer({
+//       alpha: true,
+//       antialias: true,
+//     });
+//     rendererRef.current = renderer;
+
+//     renderer.setSize(window.innerWidth, window.innerHeight);
+//     renderer.setClearColor(0x000000, 0);
+//     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+//     canvasRef.current.appendChild(renderer.domElement);
+
+//     const particlesGeometry = new THREE.BufferGeometry();
+//     const particlesCount = 3000;
+//     const posArray = new Float32Array(particlesCount * 3);
+//     const colorsArray = new Float32Array(particlesCount * 3);
+//     const sizesArray = new Float32Array(particlesCount);
+
+//     for (let i = 0; i < particlesCount * 3; i++) {
+//       posArray[i] = (Math.random() - 0.5) * 50;
+
+//       const colorChoice = Math.random();
+//       if (colorChoice < 0.33) {
+//         colorsArray[i] = 0.4 + Math.random() * 0.6;
+//         if (i % 3 === 1) colorsArray[i] = 0.5 + Math.random() * 0.3;
+//         if (i % 3 === 2) colorsArray[i] = 0.8 + Math.random() * 0.2;
+//       } else if (colorChoice < 0.66) {
+//         colorsArray[i] = 0.7 + Math.random() * 0.3;
+//         if (i % 3 === 0) colorsArray[i] = 0.4 + Math.random() * 0.3;
+//         if (i % 3 === 2) colorsArray[i] = 0.6 + Math.random() * 0.4;
+//       } else {
+//         colorsArray[i] = 0.8 + Math.random() * 0.2;
+//         if (i % 3 === 0) colorsArray[i] = 0.9 + Math.random() * 0.1;
+//         if (i % 3 === 1) colorsArray[i] = 0.5 + Math.random() * 0.3;
+//       }
+//     }
+
+//     for (let i = 0; i < particlesCount; i++) {
+//       sizesArray[i] = Math.random() * 0.05;
+//     }
+
+//     particlesGeometry.setAttribute(
+//       "position",
+//       new THREE.BufferAttribute(posArray, 3)
+//     );
+//     particlesGeometry.setAttribute(
+//       "color",
+//       new THREE.BufferAttribute(colorsArray, 3)
+//     );
+//     particlesGeometry.setAttribute(
+//       "size",
+//       new THREE.BufferAttribute(sizesArray, 1)
+//     );
+
+//     const particlesMaterial = new THREE.PointsMaterial({
+//       size: 0.03,
+//       vertexColors: true,
+//       transparent: true,
+//       opacity: 0.8,
+//       sizeAttenuation: true,
+//     });
+
+//     const particlesMesh = new THREE.Points(
+//       particlesGeometry,
+//       particlesMaterial
+//     );
+//     particlesMeshRef.current = particlesMesh;
+//     scene.add(particlesMesh);
+
+//     const bluePlanetGroup = new THREE.Group();
+//     const bluePlanetGeometry = new THREE.SphereGeometry(1.2, 32, 32);
+//     const bluePlanetMaterial = new THREE.MeshStandardMaterial({
+//       color: 0x6b9fff,
+//       metalness: 0.3,
+//       roughness: 0.5,
+//       emissive: 0x4a7acc,
+//       emissiveIntensity: 0.1,
+//     });
+//     const bluePlanet = new THREE.Mesh(bluePlanetGeometry, bluePlanetMaterial);
+//     bluePlanetGroup.add(bluePlanet);
+//     bluePlanetGroup.position.set(35, 15, -40);
+//     scene.add(bluePlanetGroup);
+
+//     const orangePlanetGroup = new THREE.Group();
+//     const orangePlanetGeometry = new THREE.SphereGeometry(1.5, 32, 32);
+//     const orangePlanetMaterial = new THREE.MeshStandardMaterial({
+//       color: 0xffaa66,
+//       metalness: 0.2,
+//       roughness: 0.6,
+//       emissive: 0xcc6633,
+//       emissiveIntensity: 0.08,
+//     });
+//     const orangePlanet = new THREE.Mesh(orangePlanetGeometry, orangePlanetMaterial);
+//     orangePlanetGroup.add(orangePlanet);
+//     orangePlanetGroup.position.set(-30, -12, -45);
+//     scene.add(orangePlanetGroup);
+
+//     const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+//     scene.add(ambientLight);
+
+//     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+//     directionalLight.position.set(10, 10, 10);
+//     scene.add(directionalLight);
+
+//     const pointLight = new THREE.PointLight(0xffffff, 0.15, 50);
+//     pointLight.position.set(0, 0, 5);
+//     scene.add(pointLight);
+
+//     const hemisphereLight = new THREE.HemisphereLight(0x667eea, 0x764ba2, 0.2);
+//     scene.add(hemisphereLight);
+
+//     camera.position.set(0, 0, 20);
+
+//     let scrollY = 0;
+//     let mouseX = 0;
+//     let mouseY = 0;
+//     let time = 0;
+
+//     const handleScroll = (): void => {
+//       scrollY = window.scrollY || window.pageYOffset;
+//     };
+
+//     const handleMouseMove = (event: MouseEvent): void => {
+//       mouseX = (event.clientX - window.innerWidth / 2) / 100;
+//       mouseY = (event.clientY - window.innerHeight / 2) / 100;
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     document.addEventListener("mousemove", handleMouseMove);
+
+//     const animate = (): void => {
+//       requestAnimationFrame(animate);
+//       time += 0.01;
+
+//       if (particlesMeshRef.current) {
+//         particlesMeshRef.current.rotation.y += 0.0005;
+//         particlesMeshRef.current.rotation.x += 0.0003;
+
+//         const parallaxY = scrollY * 0.001;
+//         particlesMeshRef.current.position.y = -parallaxY * 2;
+//         particlesMeshRef.current.position.x = Math.sin(time * 0.5) * 0.5;
+//       }
+
+//       if (cameraRef.current) {
+//         cameraRef.current.position.x +=
+//           (mouseX - cameraRef.current.position.x) * 0.05;
+//         cameraRef.current.position.y +=
+//           (-mouseY - cameraRef.current.position.y) * 0.05;
+//         cameraRef.current.lookAt(scene.position);
+
+//         const baseZ = 20;
+//         cameraRef.current.position.z = baseZ;
+
+//         const scrollEffect = scrollY * 0.001;
+//         cameraRef.current.rotation.z = scrollEffect * 0.05;
+//       }
+
+//       pointLight.position.x = Math.sin(time) * 2.5;
+//       pointLight.position.y = Math.cos(time) * 2.5;
+
+//       if (rendererRef.current && sceneRef.current && cameraRef.current) {
+//         rendererRef.current.render(sceneRef.current, cameraRef.current);
+//       }
+//     };
+
+//     animate();
+
+//     const handleResize = (): void => {
+//       if (cameraRef.current) {
+//         cameraRef.current.aspect = window.innerWidth / window.innerHeight;
+//         cameraRef.current.updateProjectionMatrix();
+//       }
+//       if (rendererRef.current) {
+//         rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+//       }
+//     };
+
+//     window.addEventListener("resize", handleResize);
+
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//       document.removeEventListener("mousemove", handleMouseMove);
+//       window.removeEventListener("resize", handleResize);
+//       if (canvasRef.current && rendererRef.current?.domElement) {
+//         canvasRef.current.removeChild(rendererRef.current.domElement);
+//       }
+//     };
+//   }, []);
+
+//   const handleScrollTo =
+//     (selector: string) => (e: React.MouseEvent<HTMLAnchorElement>): void => {
+//       e.preventDefault();
+//       const el = document.querySelector(selector);
+//       if (el) {
+//         el.scrollIntoView({ behavior: "smooth", block: "start" });
+//         setMenuOpen(false);
+//       }
+//     };
+
+//   const submitDemo = (e: React.FormEvent): void => {
+//     e.preventDefault();
+
+//     if (!form.firstName.trim() || form.firstName.length < 2) {
+//       alert("Please enter a valid first name (at least 2 characters).");
+//       return;
+//     }
+
+//     if (!form.lastName.trim() || form.lastName.length < 2) {
+//       alert("Please enter a valid last name (at least 2 characters).");
+//       return;
+//     }
+
+//     if (!validateEmail(form.email)) {
+//       alert("Please enter a valid work email address in correct format.");
+//       return;
+//     }
+
+//     const phoneRegex = /^[0-9+()\-\s]{7,20}$/;
+//     if (!phoneRegex.test(form.phone)) {
+//       alert("Please enter a valid phone number (7-20 characters).");
+//       return;
+//     }
+
+//     if (!form.company.trim() || form.company.length < 2) {
+//       alert("Please enter a valid company name.");
+//       return;
+//     }
+
+//     if (!form.country) {
+//       alert("Please select a country.");
+//       return;
+//     }
+
+//     if (!form.state) {
+//       alert("Please select a state.");
+//       return;
+//     }
+
+//     if (!form.city) {
+//       alert("Please select a city.");
+//       return;
+//     }
+
+//     if (!form.source) {
+//       alert("Please tell us how you heard about us.");
+//       return;
+//     }
+
+//     alert(
+//       "Thank you for your interest! We will contact you soon to schedule your demo."
+//     );
+
+//     setForm({
+//       firstName: "",
+//       lastName: "",
+//       phone: "",
+//       email: "",
+//       company: "",
+//       country: "",
+//       state: "",
+//       city: "",
+//       source: "",
+//     });
+//     setEmailError("");
+//     setStates([]);
+//     setCities([]);
+//   };
+
+//   return (
+//     <div className="app">
+//       <div className="gradient-bg"></div>
+//       <div className="stars-container" ref={starsContainerRef}></div>
+//       <canvas
+//         ref={moonCanvasRef}
+//         style={{
+//           position: 'fixed',
+//           top: 0,
+//           left: 0,
+//           width: '100%',
+//           height: '100%',
+//           zIndex: 2,
+//           pointerEvents: 'none'
+//         }}
+//       />
+//       <div id="canvas-container" ref={canvasRef} />
+
+//       {/* Enhanced Navigation Bar */}
+//       <nav className="main-nav">
+//         <div className="nav-container">
+//           <div className="brand-section">
+//             <div className="artemis-logo">
+//               <svg className="logo-svg" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <g className="logo-icon">
+//                   <path d="M8 20 L18 20" stroke="url(#logoGradient1)" strokeWidth="2.5" strokeLinecap="round"/>
+//                   <path d="M18 20 L24 14 L18 20 L24 26 Z" fill="url(#logoGradient1)"/>
+//                   <circle cx="8" cy="20" r="3" fill="url(#logoGradient2)" opacity="0.8"/>
+//                   <path d="M12 14 Q18 20 12 26" stroke="url(#logoGradient1)" strokeWidth="2" fill="none"/>
+//                 </g>
+
+//                 <g className="logo-text">
+//                   <text x="32" y="27" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="18" fill="url(#logoGradient3)" letterSpacing="1">
+//                     ARTEMIS
+//                   </text>
+//                 </g>
+
+//                 <defs>
+//                   <linearGradient id="logoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+//                     <stop offset="0%" stopColor="#667eea"/>
+//                     <stop offset="100%" stopColor="#764ba2"/>
+//                   </linearGradient>
+//                   <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+//                     <stop offset="0%" stopColor="#6ea8fe"/>
+//                     <stop offset="100%" stopColor="#667eea"/>
+//                   </linearGradient>
+//                   <linearGradient id="logoGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+//                     <stop offset="0%" stopColor="#667eea"/>
+//                     <stop offset="50%" stopColor="#764ba2"/>
+//                     <stop offset="100%" stopColor="#6ea8fe"/>
+//                   </linearGradient>
+//                 </defs>
+//               </svg>
+//             </div>
+//           </div>
+
+//           <div
+//             className={`menu-toggle ${menuOpen ? "active" : ""}`}
+//             onClick={() => setMenuOpen(!menuOpen)}
+//           >
+//             <span></span>
+//             <span></span>
+//             <span></span>
+//           </div>
+
+//           <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
+//             <div className="nav-links-group">
+//               <a href="#home" onClick={handleScrollTo("#home")} className="nav-link">
+//                 Home
+//               </a>
+//               <a href="#about" onClick={handleScrollTo("#about")} className="nav-link">
+//                 About
+//               </a>
+//               <a href="#superpowers" onClick={handleScrollTo("#superpowers")} className="nav-link">
+//                 Superpowers
+//               </a>
+//               <a href="#pricing" onClick={handleScrollTo("#pricing")} className="nav-link">
+//                 Pricing
+//               </a>
+//               <a href="#integrations" onClick={handleScrollTo("#integrations")} className="nav-link">
+//                 Integrations
+//               </a>
+//               <a href="#resources" onClick={handleScrollTo("#resources")} className="nav-link">
+//                 Resources
+//               </a>
+//             </div>
+//             <a
+//               href="#demo"
+//               className="nav-cta-button"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book a Demo
+//             </a>
+//           </div>
+//         </div>
+//       </nav>
+
+//       {/* Hero Section */}
+//       <section className="hero-section" id="home">
+//         <div className="hero-content-wrapper">
+//           <div className="hero-badge">AI-powered ATS for Healthcare Staffing</div>
+//           <h1 className="hero-title">Recruit faster with clarity, not clutter.</h1>
+//           <p className="hero-description">
+//             Streamlined workflows, intelligent automation, and minimalist design
+//             that empowers healthcare staffing teams to focus on what matters most:
+//             connecting great talent with exceptional opportunities.
+//           </p>
+//           <div className="hero-cta-group">
+//             <a
+//               href="#demo"
+//               className="hero-primary-cta"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book a Demo
+//             </a>
+//             <a
+//               href="#superpowers"
+//               className="hero-secondary-cta"
+//               onClick={handleScrollTo("#superpowers")}
+//             >
+//               Explore Features
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* The Challenge Section - INFINITE SLIDER LIKE TALENT SUPERPOWERS */}
+//      {/* The Challenge Section - INFINITE SLIDER LIKE TALENT SUPERPOWERS */}
+// {/* The Challenge Section - INFINITE SLIDER */}
+// <section className="challenge-section" id="challenge">
+//   <div className="content-container">
+//     <div className="section-header">
+//       <h2 className="section-title-main">The Challenge We Solve</h2>
+//       <p className="section-subtitle-main">
+//         Healthcare staffing agencies face overwhelming complexity in their daily operations
+//       </p>
+//     </div>
+
+//     <div className="slider-wrapper-with-nav">
+//       <button
+//         className="slider-nav-btn-absolute slider-nav-left"
+//         onClick={() => handleChallengeScroll('left')}
+//         aria-label="Previous challenge"
+//       >
+//         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//           <polyline points="15 18 9 12 15 6"></polyline>
+//         </svg>
+//       </button>
+
+//       <div
+//         className="slider-container-infinite"
+//         ref={challengeSliderRef}
+//         onMouseEnter={pauseAutoScroll}
+//         onMouseLeave={resumeAutoScroll}
+//       >
+//         <div className="slider-track-infinite">
+//           {/* Original Set */}
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <circle cx="12" cy="12" r="10"></circle>
+//                 <polyline points="12 6 12 12 16 14"></polyline>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Time-Consuming Manual Work</h3>
+//             <p className="feature-description">
+//               Hours spent on resume parsing, data entry, and candidate tracking that
+//               could be automated, pulling recruiters away from relationship building.
+//             </p>
+//           </div>
+
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <circle cx="11" cy="11" r="8"></circle>
+//                 <path d="m21 21-4.35-4.35"></path>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Difficulty Finding Qualified Talent</h3>
+//             <p className="feature-description">
+//               Traditional search methods make it nearly impossible to quickly identify
+//               candidates with the right skills, certifications, and availability.
+//             </p>
+//           </div>
+
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+//                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Disconnected Systems</h3>
+//             <p className="feature-description">
+//               VMS platforms, ATS software, and communication tools operating in silos,
+//               creating data gaps and workflow friction.
+//             </p>
+//           </div>
+
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
+//                 <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
+//                 <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
+//                 <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Compliance & Credentialing Complexity</h3>
+//             <p className="feature-description">
+//               Tracking licenses, certifications, and compliance documentation across
+//               dozens or hundreds of healthcare professionals is error-prone and stressful.
+//             </p>
+//           </div>
+
+//           {/* Duplicate Set for Infinite Loop */}
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <circle cx="12" cy="12" r="10"></circle>
+//                 <polyline points="12 6 12 12 16 14"></polyline>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Time-Consuming Manual Work</h3>
+//             <p className="feature-description">
+//               Hours spent on resume parsing, data entry, and candidate tracking that
+//               could be automated, pulling recruiters away from relationship building.
+//             </p>
+//           </div>
+
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <circle cx="11" cy="11" r="8"></circle>
+//                 <path d="m21 21-4.35-4.35"></path>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Difficulty Finding Qualified Talent</h3>
+//             <p className="feature-description">
+//               Traditional search methods make it nearly impossible to quickly identify
+//               candidates with the right skills, certifications, and availability.
+//             </p>
+//           </div>
+
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+//                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Disconnected Systems</h3>
+//             <p className="feature-description">
+//               VMS platforms, ATS software, and communication tools operating in silos,
+//               creating data gaps and workflow friction.
+//             </p>
+//           </div>
+
+//           <div className="feature-slide-card">
+//             <div className="feature-icon-box-pro">
+//               <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
+//                 <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
+//                 <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
+//                 <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+//               </svg>
+//             </div>
+//             <h3 className="feature-title">Compliance & Credentialing Complexity</h3>
+//             <p className="feature-description">
+//               Tracking licenses, certifications, and compliance documentation across
+//               dozens or hundreds of healthcare professionals is error-prone and stressful.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+
+//       <button
+//         className="slider-nav-btn-absolute slider-nav-right"
+//         onClick={() => handleChallengeScroll('right')}
+//         aria-label="Next challenge"
+//       >
+//         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//           <polyline points="9 18 15 12 9 6"></polyline>
+//         </svg>
+//       </button>
+//     </div>
+//   </div>
+// </section>
+//       {/* Automatic Success Stories Slider WITH NAVIGATION BUTTONS */}
+//     {/* Automatic Success Stories Slider WITH INFINITE SCROLL */}
+// <section className="success-slider-section">
+//   <div className="content-container">
+//     <div className="section-header">
+//       <h2 className="section-title-main">Trusted by Leading Healthcare Staffing Agencies</h2>
+//       <p className="section-subtitle-main">
+//         Join hundreds of agencies achieving remarkable results with Artemis
+//       </p>
+//     </div>
+
+//     <div className="slider-wrapper-with-nav">
+//       <button
+//         className="slider-nav-btn-absolute slider-nav-left"
+//         onClick={() => handleSuccessScroll('left')}
+//         aria-label="Previous success story"
+//       >
+//         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//           <polyline points="15 18 9 12 15 6"></polyline>
+//         </svg>
+//       </button>
+
+//       <div className="slider-container-infinite" ref={successSliderRef}>
+//         <div className="slider-track-infinite">
+//           {/* Success slides - Original Set */}
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">67%</div>
+//                 <div className="metric-label">Faster Time-to-Submit</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad1)"/>
+//                     <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="white" opacity="0.9"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">HealthStaff Pro</div>
+//                   <div className="company-type">Travel Nursing Agency</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "Artemis transformed our candidate submission process. What used to take
+//                 hours now takes minutes."
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">3.2x</div>
+//                 <div className="metric-label">More Placements Per Month</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad2)"/>
+//                     <circle cx="20" cy="20" r="12" stroke="white" strokeWidth="2" fill="none"/>
+//                     <path d="M20 14 L20 26 M14 20 L26 20" stroke="white" strokeWidth="2"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">MedTalent Solutions</div>
+//                   <div className="company-type">Allied Health Staffing</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "The AI-powered matching helped us scale our placement volume without
+//                 adding headcount."
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">$420K</div>
+//                 <div className="metric-label">Annual Cost Savings</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad3)"/>
+//                     <path d="M20 8 L32 20 L20 32 L8 20 Z" stroke="white" strokeWidth="2" fill="none"/>
+//                     <circle cx="20" cy="20" r="4" fill="white"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">Apex Healthcare Staffing</div>
+//                   <div className="company-type">Multi-Specialty Agency</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "ROI was immediate. Artemis paid for itself in the first quarter through
+//                 efficiency gains alone."
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">94%</div>
+//                 <div className="metric-label">Candidate Satisfaction</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad4)"/>
+//                     <path d="M10 20 Q20 10 30 20 Q20 30 10 20" fill="white" opacity="0.9"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">CareLink Professionals</div>
+//                   <div className="company-type">Locum Tenens Placement</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "Our candidates love the smooth onboarding experience. It's a competitive
+//                 advantage for us."
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* Duplicate Set for Infinite Loop */}
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">67%</div>
+//                 <div className="metric-label">Faster Time-to-Submit</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad1)"/>
+//                     <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="white" opacity="0.9"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">HealthStaff Pro</div>
+//                   <div className="company-type">Travel Nursing Agency</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "Artemis transformed our candidate submission process. What used to take
+//                 hours now takes minutes."
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">3.2x</div>
+//                 <div className="metric-label">More Placements Per Month</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad2)"/>
+//                     <circle cx="20" cy="20" r="12" stroke="white" strokeWidth="2" fill="none"/>
+//                     <path d="M20 14 L20 26 M14 20 L26 20" stroke="white" strokeWidth="2"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">MedTalent Solutions</div>
+//                   <div className="company-type">Allied Health Staffing</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "The AI-powered matching helped us scale our placement volume without
+//                 adding headcount."
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">$420K</div>
+//                 <div className="metric-label">Annual Cost Savings</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad3)"/>
+//                     <path d="M20 8 L32 20 L20 32 L8 20 Z" stroke="white" strokeWidth="2" fill="none"/>
+//                     <circle cx="20" cy="20" r="4" fill="white"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">Apex Healthcare Staffing</div>
+//                   <div className="company-type">Multi-Specialty Agency</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "ROI was immediate. Artemis paid for itself in the first quarter through
+//                 efficiency gains alone."
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="success-slide">
+//             <div className="success-slide-content">
+//               <div className="success-metric">
+//                 <div className="metric-value">94%</div>
+//                 <div className="metric-label">Candidate Satisfaction</div>
+//               </div>
+//               <div className="success-company">
+//                 <div className="company-logo-placeholder">
+//                   <svg viewBox="0 0 40 40" fill="none">
+//                     <rect width="40" height="40" rx="8" fill="url(#companyGrad4)"/>
+//                     <path d="M10 20 Q20 10 30 20 Q20 30 10 20" fill="white" opacity="0.9"/>
+//                   </svg>
+//                 </div>
+//                 <div className="company-info">
+//                   <div className="company-name">CareLink Professionals</div>
+//                   <div className="company-type">Locum Tenens Placement</div>
+//                 </div>
+//               </div>
+//               <p className="success-quote">
+//                 "Our candidates love the smooth onboarding experience. It's a competitive
+//                 advantage for us."
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <button
+//         className="slider-nav-btn-absolute slider-nav-right"
+//         onClick={() => handleSuccessScroll('right')}
+//         aria-label="Next success story"
+//       >
+//         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//           <polyline points="9 18 15 12 9 6"></polyline>
+//         </svg>
+//       </button>
+//     </div>
+//   </div>
+// </section>
+
+//       {/* Feature Highlights with Navigation Buttons */}
+//       <section className="highlights-section" id="superpowers">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Talent Superpowers</h2>
+//             <p className="section-subtitle-main">
+//               Designed for recruiters. Powered by AI. Built for speed and simplicity.
+//             </p>
+//           </div>
+
+//           <div className="slider-wrapper-with-nav">
+//             <button
+//               className="slider-nav-btn-absolute slider-nav-left"
+//               onClick={() => handleFeatureScroll('left')}
+//               aria-label="Previous feature"
+//             >
+//               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <polyline points="15 18 9 12 15 6"></polyline>
+//               </svg>
+//             </button>
+
+//             <div className="slider-container-infinite" ref={featureSliderRef}>
+//               <div className="slider-track-infinite">
+//                 {/* Original Set */}
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <circle cx="11" cy="11" r="8"></circle>
+//                       <path d="m21 21-4.35-4.35"></path>
+//                       <circle cx="11" cy="11" r="3"></circle>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">AI-Powered Candidate Search</h3>
+//                   <p className="feature-description">
+//                     Find the perfect match instantly with intelligent search that understands
+//                     skills, experience, certifications, and availability patterns.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Natural language search queries</li>
+//                     <li>Smart skill matching algorithms</li>
+//                     <li>Real-time availability tracking</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
+//                   <p className="feature-description">
+//                     Seamlessly integrate with major VMS platforms. Jobs flow automatically
+//                     into Artemis, eliminating manual data entry.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Automatic job ingestion</li>
+//                     <li>Real-time updates</li>
+//                     <li>Multi-VMS support</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+//                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Built-In Skills Checklists</h3>
+//                   <p className="feature-description">
+//                     Interactive checklists that capture candidate qualifications with precision,
+//                     convert to PDFs, and distribute to stakeholders instantly.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Customizable checklist templates</li>
+//                     <li>Digital signature collection</li>
+//                     <li>Automated distribution</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+//                       <line x1="3" y1="9" x2="21" y2="9"></line>
+//                       <line x1="9" y1="21" x2="9" y2="9"></line>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Smart Onboarding Dashboards</h3>
+//                   <p className="feature-description">
+//                     Visual pipelines that show exactly where every candidate stands,
+//                     with automated reminders and next-step recommendations.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Drag-and-drop pipeline management</li>
+//                     <li>Automated workflow triggers</li>
+//                     <li>Real-time status updates</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+//                       <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+//                       <line x1="12" y1="22.08" x2="12" y2="12"></line>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Candidate Pipeline Management</h3>
+//                   <p className="feature-description">
+//                     Design dynamic, stage-based workflows that adapt to your process.
+//                     Never lose track of a candidate again.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Customizable pipeline stages</li>
+//                     <li>Bulk candidate actions</li>
+//                     <li>Advanced filtering</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+//                       <polyline points="14 2 14 8 20 8"></polyline>
+//                       <line x1="9" y1="15" x2="15" y2="15"></line>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Right-to-Represent Automation</h3>
+//                   <p className="feature-description">
+//                     Send RTR forms instantly, track signatures, and maintain compliance
+//                     documentation—all within a single, streamlined workflow.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>One-click RTR distribution</li>
+//                     <li>E-signature integration</li>
+//                     <li>Automatic record keeping</li>
+//                   </ul>
+//                 </div>
+
+//                 {/* Duplicate Set for Infinite Loop */}
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <circle cx="11" cy="11" r="8"></circle>
+//                       <path d="m21 21-4.35-4.35"></path>
+//                       <circle cx="11" cy="11" r="3"></circle>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">AI-Powered Candidate Search</h3>
+//                   <p className="feature-description">
+//                     Find the perfect match instantly with intelligent search that understands
+//                     skills, experience, certifications, and availability patterns.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Natural language search queries</li>
+//                     <li>Smart skill matching algorithms</li>
+//                     <li>Real-time availability tracking</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
+//                   <p className="feature-description">
+//                     Seamlessly integrate with major VMS platforms. Jobs flow automatically
+//                     into Artemis, eliminating manual data entry.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Automatic job ingestion</li>
+//                     <li>Real-time updates</li>
+//                     <li>Multi-VMS support</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+//                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Built-In Skills Checklists</h3>
+//                   <p className="feature-description">
+//                     Interactive checklists that capture candidate qualifications with precision,
+//                     convert to PDFs, and distribute to stakeholders instantly.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Customizable checklist templates</li>
+//                     <li>Digital signature collection</li>
+//                     <li>Automated distribution</li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <button
+//               className="slider-nav-btn-absolute slider-nav-right"
+//               onClick={() => handleFeatureScroll('right')}
+//               aria-label="Next feature"
+//             >
+//               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                 <polyline points="9 18 15 12 9 6"></polyline>
+//               </svg>
+//             </button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* About Artemis Section */}
+//       <section className="about-section" id="about">
+//         <div className="content-container">
+//           <div className="about-hero">
+//             <h2 className="about-hero-title">Built to bring clarity back to recruiting</h2>
+//             <p className="about-hero-subtitle">
+//               Artemis combines cutting-edge AI technology with intuitive design to deliver
+//               the most powerful yet simple ATS for healthcare staffing agencies.
+//             </p>
+//           </div>
+
+//           <div className="about-story-grid">
+//             <div className="about-story-content">
+//               <h3>Our Approach</h3>
+//               <p>
+//                 Born from real-world staffing challenges, Artemis was designed by industry veterans
+//                 who understand the unique pressures of healthcare recruitment. We've eliminated the
+//                 bloat and complexity that plague traditional ATS platforms, focusing instead on the
+//                 features that actually drive placements.
+//               </p>
+//               <p>
+//                 Every workflow, every interface element, and every automation has been carefully
+//                 crafted to save you time while improving accuracy. Whether you're placing travel
+//                 nurses, allied health professionals, or locum tenens physicians, Artemis adapts
+//                 to your process—not the other way around.
+//               </p>
+
+//               <div className="about-stats-inline">
+//                 <div className="stat-inline-item">
+//                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+//                     <circle cx="9" cy="7" r="4"></circle>
+//                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+//                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+//                   </svg>
+//                   <div>
+//                     <div className="stat-inline-numbe">500+</div>
+//                     <div className="stat-inline-label">Active Agencies</div>
+//                   </div>
+//                 </div>
+
+//                 <div className="stat-inline-item">
+//                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+//                     <circle cx="8.5" cy="7" r="4"></circle>
+//                     <polyline points="17 11 19 13 23 9"></polyline>
+//                   </svg>
+//                   <div>
+//                     <div className="stat-inline-numbe">10K+</div>
+//                     <div className="stat-inline-label">Candidates Placed</div>
+//                   </div>
+//                 </div>
+
+//                 <div className="stat-inline-item">
+//                   <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+//                   </svg>
+//                   <div>
+//                     <div className="stat-inline-numbe">99.9%</div>
+//                     <div className="stat-inline-label">Platform Uptime</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="about-illustration">
+//               <div className="illustration-card">
+//                 <svg className="illustration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+//                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+//                   <line x1="8" y1="21" x2="16" y2="21"></line>
+//                   <line x1="12" y1="17" x2="12" y2="21"></line>
+//                   <path d="M7 8h10M7 12h6"></path>
+//                 </svg>
+//                 <h4>Modern Platform</h4>
+//                 <p>Cloud-based architecture built for speed and reliability</p>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="about-mvv-grid">
+//             <div className="mvv-card">
+//               <div className="mvv-icon-wrapper">
+//                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <circle cx="12" cy="12" r="10"></circle>
+//                   <polyline points="12 6 12 12 16 14"></polyline>
+//                 </svg>
+//               </div>
+//               <h3>Our Mission</h3>
+//               <p>
+//                 To democratize enterprise-grade recruitment technology, making sophisticated
+//                 ATS capabilities accessible to staffing agencies of all sizes. We believe powerful
+//                 tools shouldn't come with complexity or prohibitive costs.
+//               </p>
+//             </div>
+
+//             <div className="mvv-card">
+//               <div className="mvv-icon-wrapper">
+//                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+//                   <circle cx="12" cy="12" r="3"></circle>
+//                 </svg>
+//               </div>
+//               <h3>Our Vision</h3>
+//               <p>
+//                 To become the global standard for intelligent staffing solutions, where every
+//                 recruiter has access to AI-powered tools that eliminate repetitive tasks and
+//                 provide actionable insights that drive better hiring decisions.
+//               </p>
+//             </div>
+
+//             <div className="mvv-card">
+//               <div className="mvv-icon-wrapper">
+//                 <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+//                 </svg>
+//               </div>
+//               <h3>Core Values</h3>
+//               <ul className="values-list">
+//                 <li>
+//                   <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span><strong>Simplicity First:</strong> Elegant interfaces that reduce training time</span>
+//                 </li>
+//                 <li>
+//                   <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span><strong>Security by Design:</strong> Enterprise-grade protection for sensitive data</span>
+//                 </li>
+//                 <li>
+//                   <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span><strong>Continuous Innovation:</strong> Regular updates driven by user feedback</span>
+//                 </li>
+//                 <li>
+//                   <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span><strong>Customer Success:</strong> Your growth is our success</span>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+
+//           <div className="about-cta-banner">
+//             <h3>Ready to Transform Your Staffing Operations?</h3>
+//             <p>Join hundreds of agencies already using Artemis to streamline their recruitment process.</p>
+//             <a href="#demo" className="about-cta-button" onClick={handleScrollTo("#demo")}>
+//               Book a Demo
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Pricing Section */}
+//       <section className="pricing-section" id="pricing">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Flexible Pricing for Every Stage of Growth</h2>
+//             <p className="section-subtitle-main">
+//               Custom plans designed around your agency's unique needs
+//             </p>
+//           </div>
+
+//           <div className="pricing-content">
+//             <div className="pricing-card">
+//               <h3>What's Included</h3>
+//               <ul className="pricing-features-list">
+//                 <li>✓ Unlimited users and candidates</li>
+//                 <li>✓ AI-powered search and matching</li>
+//                 <li>✓ VMS integration (Bullhorn, others)</li>
+//                 <li>✓ Skills checklists with PDF generation</li>
+//                 <li>✓ Right-to-Represent automation</li>
+//                 <li>✓ Pipeline management tools</li>
+//                 <li>✓ Credentials tracking</li>
+//                 <li>✓ 24/7 customer support</li>
+//                 <li>✓ Regular feature updates</li>
+//                 <li>✓ Enterprise-grade security</li>
+//               </ul>
+//             </div>
+
+//             <div className="pricing-card highlighted">
+//               <h3>Why Custom Pricing?</h3>
+//               <p>
+//                 Every staffing agency operates differently. Your pricing should reflect your
+//                 agency's size, placement volume, integration needs, and growth trajectory.
+//               </p>
+//               <p>
+//                 We work with you to create a plan that makes sense for your business—no
+//                 hidden fees, no surprise charges, no complicated tier systems.
+//               </p>
+//               <a href="#demo" className="pricing-cta" onClick={handleScrollTo("#demo")}>
+//                 Contact Us for Pricing
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Integrations Section */}
+//       <section className="integrations-section" id="integrations">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Stay in Sync with Your Workflow</h2>
+//             <p className="section-subtitle-main">
+//               Seamless connections to the tools you already use
+//             </p>
+//           </div>
+
+//           <div className="integrations-content">
+//             <div className="integration-card primary">
+//               <div className="integration-icon-wrapper">
+//                 <svg className="integration-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <circle cx="18" cy="5" r="3"></circle>
+//                   <circle cx="6" cy="12" r="3"></circle>
+//                   <circle cx="18" cy="19" r="3"></circle>
+//                   <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+//                   <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+//                 </svg>
+//               </div>
+//               <h3>VMS Integrations</h3>
+//               <p>
+//                 Connect Artemis to your Vendor Management Systems for automatic job feed synchronization.
+//                 New opportunities appear in Artemis instantly, ready for candidate matching.
+//               </p>
+//               <div className="integration-logos">
+//                 <div className="logo-placeholder">Bullhorn</div>
+//                 <div className="logo-placeholder">Fieldglass</div>
+//                 <div className="logo-placeholder">Beeline</div>
+//                 <div className="logo-placeholder">+ More</div>
+//               </div>
+//             </div>
+
+//             <div className="integration-card">
+//               <div className="integration-icon-wrapper">
+//                 <svg className="integration-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+//                   <path d="M2 17l10 5 10-5"></path>
+//                   <path d="M2 12l10 5 10-5"></path>
+//                 </svg>
+//               </div>
+//               <h3>Coming Soon</h3>
+//               <p>
+//                 We're continuously expanding our integration ecosystem based on customer feedback.
+//               </p>
+//               <ul className="roadmap-list">
+//                 <li>• Calendar sync (Google, Outlook)</li>
+//                 <li>• Email integration</li>
+//                 <li>• Background check providers</li>
+//                 <li>• Payroll systems</li>
+//                 <li>• Communication platforms</li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Resources Section */}
+//       <section className="resources-section" id="resources">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Resources & Insights</h2>
+//             <p className="section-subtitle-main">
+//               Expert guidance to transform your healthcare staffing operations
+//             </p>
+//           </div>
+
+//           <div className="resources-grid">
+//             <div className="resource-category-card">
+//               <div className="category-icon-wrapper">
+//                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+//                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+//                 </svg>
+//               </div>
+//               <h3>Practical Tips for Recruiters</h3>
+//               <p>
+//                 Time-saving strategies, workflow optimizations, and proven techniques
+//                 to increase placement velocity and candidate satisfaction.
+//               </p>
+//             </div>
+
+//             <div className="resource-category-card">
+//               <div className="category-icon-wrapper">
+//                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+//                   <line x1="8" y1="21" x2="16" y2="21"></line>
+//                   <line x1="12" y1="17" x2="12" y2="21"></line>
+//                 </svg>
+//               </div>
+//               <h3>Technology in Healthcare Staffing</h3>
+//               <p>
+//                 Explore how AI, automation, and modern ATS platforms are reshaping
+//                 the healthcare staffing landscape.
+//               </p>
+//             </div>
+
+//             <div className="resource-category-card">
+//               <div className="category-icon-wrapper">
+//                 <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                   <line x1="12" y1="1" x2="12" y2="23"></line>
+//                   <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+//                 </svg>
+//               </div>
+//               <h3>Industry Trends & Market Insights</h3>
+//               <p>
+//                 Stay ahead with analysis of healthcare labor markets, regulatory changes,
+//                 and emerging opportunities.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="newsletter-section">
+//             <h3>Stay Updated</h3>
+//             <p>Get the latest insights delivered to your inbox</p>
+//             <div className="newsletter-form">
+//               <input type="email" placeholder="Enter your email" className="newsletter-input" />
+//               <button className="newsletter-button">Subscribe</button>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Vision Teaser + CTA */}
+//       <section className="vision-section">
+//         <div className="content-container">
+//           <div className="vision-content">
+//             <h2>Experience Clarity in Every Click</h2>
+//             <p>
+//               Join hundreds of healthcare staffing agencies who have transformed their
+//               recruitment process with Artemis. Faster placements, happier teams, better outcomes.
+//             </p>
+//             <a
+//               href="#demo"
+//               className="vision-cta-button"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book Your Demo Today
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Book a Demo Section with REAL-TIME EMAIL VALIDATION */}
+//       <section className="demo-section" id="demo">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Book a Demo</h2>
+//             <p className="section-subtitle-main">
+//               See Artemis in action and discover how we can transform your staffing operations
+//             </p>
+//           </div>
+
+//           <div className="demo-layout">
+//             <div className="demo-form-container">
+//               <form onSubmit={submitDemo} className="demo-form">
+//                 <div className="form-row">
+//                   <div className="form-field">
+//                     <label htmlFor="firstName">First Name *</label>
+//                     <input
+//                       type="text"
+//                       id="firstName"
+//                       required
+//                       value={form.firstName}
+//                       onChange={(e) =>
+//                         setForm({ ...form, firstName: e.target.value })
+//                       }
+//                       placeholder="John"
+//                     />
+//                   </div>
+//                   <div className="form-field">
+//                     <label htmlFor="lastName">Last Name *</label>
+//                     <input
+//                       type="text"
+//                       id="lastName"
+//                       required
+//                       value={form.lastName}
+//                       onChange={(e) =>
+//                         setForm({ ...form, lastName: e.target.value })
+//                       }
+//                       placeholder="Doe"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="form-row">
+//                   <div className="form-field">
+//                     <label htmlFor="email">Work Email *</label>
+//                     <input
+//                       type="email"
+//                       id="email"
+//                       required
+//                       value={form.email}
+//                       onChange={handleEmailChange}
+//                       placeholder="john.doe@company.com"
+//                       className={emailError ? 'input-error' : ''}
+//                     />
+//                     {emailError && (
+//                       <span className="error-label">{emailError}</span>
+//                     )}
+//                   </div>
+//                   <div className="form-field">
+//                     <label htmlFor="phone">Phone *</label>
+//                     <input
+//                       type="tel"
+//                       id="phone"
+//                       required
+//                       value={form.phone}
+//                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
+//                       placeholder="+1 (555) 123-4567"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="form-field full-width">
+//                   <label htmlFor="company">Company *</label>
+//                   <input
+//                     type="text"
+//                     id="company"
+//                     required
+//                     value={form.company}
+//                     onChange={(e) =>
+//                       setForm({ ...form, company: e.target.value })
+//                     }
+//                     placeholder="Your Company Name"
+//                   />
+//                 </div>
+
+//                 <div className="form-row">
+//                   <div className="form-field">
+//                     <label htmlFor="country">Country *</label>
+//                     <select
+//                       id="country"
+//                       required
+//                       value={form.country}
+//                       onChange={handleCountryChange}
+//                     >
+//                       <option value="">Select Country</option>
+//                       {countries.map((country) => (
+//                         <option key={country.iso2} value={country.iso2}>
+//                           {country.name}
+//                         </option>
+//                       ))}
+//                     </select>
+//                   </div>
+
+//                   <div className="form-field">
+//                     <label htmlFor="state">State/Province *</label>
+//                     <select
+//                       id="state"
+//                       required
+//                       value={form.state}
+//                       onChange={handleStateChange}
+//                       disabled={!form.country || loadingStates}
+//                     >
+//                       <option value="">
+//                         {loadingStates ? "Loading..." : "Select State"}
+//                       </option>
+//                       {states.map((state) => (
+//                         <option key={state.iso2} value={state.iso2}>
+//                           {state.name}
+//                         </option>
+//                       ))}
+//                     </select>
+//                   </div>
+//                 </div>
+
+//                 <div className="form-field full-width">
+//                   <label htmlFor="city">City *</label>
+//                   <select
+//                     id="city"
+//                     required
+//                     value={form.city}
+//                     onChange={(e) => setForm({ ...form, city: e.target.value })}
+//                     disabled={!form.state || loadingCities}
+//                   >
+//                     <option value="">
+//                       {loadingCities ? "Loading..." : "Select City"}
+//                     </option>
+//                     {cities.map((city, index) => (
+//                       <option key={index} value={city.name}>
+//                         {city.name}
+//                       </option>
+//                     ))}
+//                   </select>
+//                 </div>
+
+//                 <div className="form-field full-width">
+//                   <label htmlFor="source">How did you hear about us? *</label>
+//                   <select
+//                     id="source"
+//                     required
+//                     value={form.source}
+//                     onChange={(e) => setForm({ ...form, source: e.target.value })}
+//                   >
+//                     <option value="">Select one</option>
+//                     <option value="google">Google Search</option>
+//                     <option value="linkedin">LinkedIn</option>
+//                     <option value="referral">Referral / Word of Mouth</option>
+//                     <option value="conference">Conference / Event</option>
+//                     <option value="email">Email Outreach</option>
+//                     <option value="customer">Existing Customer</option>
+//                     <option value="other">Other</option>
+//                   </select>
+//                 </div>
+
+//                 <button type="submit" className="demo-submit-button">
+//                   Request Demo
+//                 </button>
+//               </form>
+//             </div>
+
+//             <div className="demo-info-container">
+//               <h3>What to Expect</h3>
+//               <ul className="expectations-list">
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <circle cx="12" cy="12" r="10"></circle>
+//                       <path d="M12 6v6l4 2"></path>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>Personalized Walkthrough</strong>
+//                     <p>See Artemis configured for your agency's specific workflows</p>
+//                   </div>
+//                 </li>
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <circle cx="12" cy="12" r="10"></circle>
+//                       <polyline points="12 6 12 12 16 14"></polyline>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>30-Minute Session</strong>
+//                     <p>Quick, focused demo that respects your time</p>
+//                   </div>
+//                 </li>
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>Q&A Included</strong>
+//                     <p>Ask anything about features, pricing, or implementation</p>
+//                   </div>
+//                 </li>
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                       <line x1="18" y1="20" x2="18" y2="10"></line>
+//                       <line x1="12" y1="20" x2="12" y2="4"></line>
+//                       <line x1="6" y1="20" x2="6" y2="14"></line>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>Live Platform Access</strong>
+//                     <p>Hands-on experience with real candidate and job data</p>
+//                   </div>
+//                 </li>
+//               </ul>
+
+//               <div className="social-proof">
+//                 <p className="proof-label">Trusted by leading agencies</p>
+//                 <div className="proof-stats">
+//                   <span>⭐⭐⭐⭐⭐ 4.9/5 Rating</span>
+//                   <span>500+ Active Users</span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="site-footer" id="contact">
+//         <div className="footer-content">
+//           <div className="footer-column">
+//             <h4>Artemis ATS</h4>
+//             <p>AI-powered recruitment technology for healthcare staffing excellence.</p>
+//             <div className="social-links">
+//               <a href="#" aria-label="LinkedIn">💼</a>
+//               <a href="#" aria-label="Facebook">📘</a>
+//               <a href="#" aria-label="Twitter">🐦</a>
+//             </div>
+//           </div>
+
+//           <div className="footer-column">
+//             <h4>Quick Links</h4>
+//             <a href="#home" onClick={handleScrollTo("#home")}>Home</a>
+//             <a href="#about" onClick={handleScrollTo("#about")}>About</a>
+//             <a href="#superpowers" onClick={handleScrollTo("#superpowers")}>Superpowers</a>
+//             <a href="#pricing" onClick={handleScrollTo("#pricing")}>Pricing</a>
+//             <a href="#integrations" onClick={handleScrollTo("#integrations")}>Integrations</a>
+//             <a href="#resources" onClick={handleScrollTo("#resources")}>Resources</a>
+//           </div>
+
+//           <div className="footer-column">
+//             <h4>Contact</h4>
+//             <p>
+//               9330 Lyndon B Johnson Fwy #900
+//               <br />
+//               Dallas, TX, 75243
+//             </p>
+//             <p>📧 info@artemisats.com</p>
+//           </div>
+//         </div>
+
+//         <div className="footer-bottom">
+//           <p>© {new Date().getFullYear()} Artemis. All rights reserved.</p>
+//         </div>
+//       </footer>
 //     </div>
 //   );
 // };
@@ -13677,6 +15597,2615 @@
 
 
 
+// import React, { useState, useEffect, useRef } from "react";
+// import * as THREE from "three";
+// import "./Home.css";
+// import emailjs from "@emailjs/browser";
+// import { toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+// // Font loading
+// if (typeof window !== "undefined") {
+//   const link = document.createElement("link");
+//   link.href =
+//     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap";
+//   link.rel = "stylesheet";
+//   document.head.appendChild(link);
+// }
+//  const showToast = () => {
+//     toast.success("Demo request sent successfully!");
+//   };
+//  const showToastError = () => {
+//     toast.success("Something went wrong. Please try again later.");
+//   };
+// interface FormData {
+//   firstName: string;
+//   lastName: string;
+//   phone: string;
+//   email: string;
+//   company: string;
+//   country: string;
+//   state: string;
+//   city: string;
+//   source: string;
+// }
+
+// interface Country {
+//   name: string;
+//   iso2: string;
+// }
+
+// interface State {
+//   name: string;
+//   iso2: string;
+// }
+
+// interface City {
+//   name: string;
+// }
+
+// const Home: React.FC = () => {
+//   const [form, setForm] = useState<FormData>({
+//     firstName: "",
+//     lastName: "",
+//     phone: "",
+//     email: "",
+//     company: "",
+//     country: "",
+//     state: "",
+//     city: "",
+//     source: "",
+//   });
+//   const submitDemo = (e: any) => {
+//     e.preventDefault();
+//     console.log("Form data submitted:", form);
+//     emailjs
+//       .send(
+//         "service_245y37w",
+//         "template_bca0q3m", // Template name you created
+//         {
+//           firstName: form.firstName,
+//           lastName: form.lastName,
+//           email: form.email,
+//           phone: form.phone,
+//           company: form.company,
+//           country: form.country,
+//           state: form.state,
+//           city: form.city,
+//           source: form.source,
+//         },
+//         "GqiI7hbjYCg0jB6-Z"
+//       )
+//       .then(
+//         (result: any) => {
+//           console.log("Email sent successfully!", result.text);
+//         //   alert("Demo request sent successfully!");
+        
+  
+//         },
+//         (error: any) => {
+//           console.error("Failed to send email:", error.text);
+//           showToastError();
+//         //   alert("Something went wrong. Please try again later.");
+//         }
+//       );
+//   };
+//   const [emailError, setEmailError] = useState<string>("");
+//   const [countries, setCountries] = useState<Country[]>([]);
+//   const [states, setStates] = useState<State[]>([]);
+//   const [cities, setCities] = useState<City[]>([]);
+//   const [loadingStates, setLoadingStates] = useState(false);
+//   const [loadingCities, setLoadingCities] = useState(false);
+
+//   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+//   // Slider refs for manual control
+//   const challengeSliderRef = useRef<HTMLDivElement>(null);
+//   const successSliderRef = useRef<HTMLDivElement>(null);
+//   const featureSliderRef = useRef<HTMLDivElement>(null);
+
+//   const canvasRef = useRef<HTMLDivElement>(null);
+//   const starsContainerRef = useRef<HTMLDivElement>(null);
+//   const moonCanvasRef = useRef<HTMLCanvasElement>(null);
+//   const sceneRef = useRef<THREE.Scene | null>(null);
+//   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
+//   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+//   const particlesMeshRef = useRef<THREE.Points | null>(null);
+
+//   // Real-time email validation
+//   const validateEmail = (email: string): boolean => {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+//     return emailRegex.test(email);
+//   };
+
+//   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     const email = e.target.value;
+//     setForm({ ...form, email });
+
+//     if (email.length > 0 && !validateEmail(email)) {
+//       setEmailError(
+//         "Please enter email in correct format (example@domain.com)"
+//       );
+//     } else {
+//       setEmailError("");
+//     }
+//   };
+
+  
+//   // Fetch countries on component mount
+//   useEffect(() => {
+//     fetchCountries();
+//   }, []);
+
+//   const fetchCountries = async () => {
+//     try {
+//       const response = await fetch(
+//         "https://api.countrystatecity.in/v1/countries",
+//         {
+//           headers: {
+//             "X-CSCAPI-KEY":
+//               "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+//           },
+//         }
+//       );
+//       const data = await response.json();
+//       setCountries(data);
+//     } catch (error) {
+//       console.error("Error fetching countries:", error);
+//     }
+//   };
+
+//   const fetchStates = async (countryCode: string) => {
+//     setLoadingStates(true);
+//     try {
+//       const response = await fetch(
+//         `https://api.countrystatecity.in/v1/countries/${countryCode}/states`,
+//         {
+//           headers: {
+//             "X-CSCAPI-KEY":
+//               "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+//           },
+//         }
+//       );
+//       const data = await response.json();
+//       setStates(data);
+//     } catch (error) {
+//       console.error("Error fetching states:", error);
+//     }
+//     setLoadingStates(false);
+//   };
+
+//   const fetchCities = async (countryCode: string, stateCode: string) => {
+//     setLoadingCities(true);
+//     try {
+//       const response = await fetch(
+//         `https://api.countrystatecity.in/v1/countries/${countryCode}/states/${stateCode}/cities`,
+//         {
+//           headers: {
+//             "X-CSCAPI-KEY":
+//               "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+//           },
+//         }
+//       );
+//       const data = await response.json();
+//       setCities(data);
+//     } catch (error) {
+//       console.error("Error fetching cities:", error);
+//     }
+//     setLoadingCities(false);
+//   };
+
+//   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+//     const countryCode = e.target.value;
+//     setForm({ ...form, country: countryCode, state: "", city: "" });
+//     setStates([]);
+//     setCities([]);
+//     if (countryCode) {
+//       fetchStates(countryCode);
+//     }
+//   };
+
+//   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+//     const stateCode = e.target.value;
+//     setForm({ ...form, state: stateCode, city: "" });
+//     setCities([]);
+//     if (stateCode && form.country) {
+//       fetchCities(form.country, stateCode);
+//     }
+//   };
+
+//   // Canvas moon animation
+//   useEffect(() => {
+//     if (!moonCanvasRef.current) return;
+
+//     const canvas = moonCanvasRef.current;
+//     const ctx = canvas.getContext("2d");
+//     if (!ctx) return;
+
+//     let width = (canvas.width = window.innerWidth);
+//     let height = (canvas.height = window.innerHeight);
+//     let scrollY = 0;
+//     let rotationAngle = 0;
+
+//     const handleResize = (): void => {
+//       width = canvas.width = window.innerWidth;
+//       height = canvas.height = window.innerHeight;
+//     };
+
+//     const handleScroll = (): void => {
+//       scrollY = window.scrollY || window.pageYOffset;
+//     };
+
+//     window.addEventListener("resize", handleResize);
+//     window.addEventListener("scroll", handleScroll);
+
+//     let moonAngle = Math.PI * 0.2;
+//     const baseMoonRadius = 70;
+//     const baseOrbitRadiusX = width * 0.12;
+//     const baseOrbitRadiusY = width * 0.1;
+//     const baseMoonCenterX = width * 0.75;
+//     const baseMoonCenterY = height * 0.25;
+
+//     const drawMoon = (): void => {
+//       const scrollProgress = Math.min(scrollY / 2000, 1);
+
+//       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
+//       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
+//       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
+
+//       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
+//       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
+
+//       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
+//       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
+
+//       ctx.save();
+//       ctx.translate(moonX, moonY);
+//       ctx.rotate(rotationAngle);
+
+//       const moonGlow = ctx.createRadialGradient(
+//         0,
+//         0,
+//         moonRadius * 0.4,
+//         0,
+//         0,
+//         moonRadius * 2.0
+//       );
+//       //   moonGlow.addColorStop(0, 'rgba(255, 255, 255, 0.15)');
+//       //   moonGlow.addColorStop(0.5, 'rgba(255, 255, 255, 0.08)');
+//       //   moonGlow.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+//       ctx.fillStyle = moonGlow;
+//       ctx.beginPath();
+//       ctx.arc(0, 0, moonRadius * 2.0, 0, Math.PI * 2);
+//       ctx.fill();
+
+//       const moonBase = ctx.createRadialGradient(
+//         -moonRadius * 0.3,
+//         -moonRadius * 0.3,
+//         0,
+//         0,
+//         0,
+//         moonRadius
+//       );
+//       //   moonBase.addColorStop(0, '#ffffff');
+//       //   moonBase.addColorStop(0.7, '#f0f0f0');
+//       //   moonBase.addColorStop(1, '#d0d0d0');
+
+//       ctx.fillStyle = moonBase;
+//       ctx.beginPath();
+//       ctx.arc(0, 0, moonRadius, 0, Math.PI * 2);
+//       ctx.fill();
+
+//       for (let i = 0; i < 12; i++) {
+//         const angle = (i / 12) * Math.PI * 2;
+//         const radius = moonRadius * 0.6;
+//         const x = Math.cos(angle) * radius;
+//         const y = Math.sin(angle) * radius;
+
+//         const textureGradient = ctx.createRadialGradient(
+//           x,
+//           y,
+//           0,
+//           x,
+//           y,
+//           moonRadius * 0.2
+//         );
+//         // textureGradient.addColorStop(0, 'rgba(200, 200, 200, 0.5)');
+//         // textureGradient.addColorStop(1, 'rgba(200, 200, 200, 0)');
+
+//         ctx.fillStyle = textureGradient;
+//         ctx.beginPath();
+//         ctx.arc(x, y, moonRadius * 0.2, 0, Math.PI * 2);
+//         ctx.fill();
+//       }
+
+//       for (let i = 0; i < 6; i++) {
+//         const waveAngle = (i / 6) * Math.PI * 2 + rotationAngle * 2;
+//         const waveRadius = moonRadius * 0.7;
+//         const waveX = Math.cos(waveAngle) * waveRadius;
+//         const waveY = Math.sin(waveAngle) * waveRadius;
+
+//         const waveGradient = ctx.createRadialGradient(
+//           waveX,
+//           waveY,
+//           0,
+//           waveX,
+//           waveY,
+//           moonRadius * 0.15
+//         );
+//         // waveGradient.addColorStop(0, 'rgba(180, 180, 180, 0.4)');
+//         // waveGradient.addColorStop(1, 'rgba(180, 180, 180, 0)');
+
+//         ctx.fillStyle = waveGradient;
+//         ctx.beginPath();
+//         ctx.arc(waveX, waveY, moonRadius * 0.15, 0, Math.PI * 2);
+//         ctx.fill();
+//       }
+
+//       const shineGradient = ctx.createRadialGradient(
+//         -moonRadius * 0.3,
+//         -moonRadius * 0.3,
+//         0,
+//         -moonRadius * 0.3,
+//         -moonRadius * 0.3,
+//         moonRadius * 0.5
+//       );
+//       //   shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.8)');
+//       //   shineGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.3)');
+//       //   shineGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+//       ctx.fillStyle = shineGradient;
+//       ctx.beginPath();
+//       ctx.arc(
+//         -moonRadius * 0.3,
+//         -moonRadius * 0.3,
+//         moonRadius * 0.5,
+//         0,
+//         Math.PI * 2
+//       );
+//       ctx.fill();
+
+//       ctx.restore();
+//     };
+
+//     const animate = (): void => {
+//       ctx.clearRect(0, 0, width, height);
+//       drawMoon();
+//       moonAngle += 0.0006;
+//       rotationAngle += 0.0003;
+//       requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => {
+//       window.removeEventListener("resize", handleResize);
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
+//   useEffect(() => {
+//     if (!starsContainerRef.current) return;
+
+//     for (let i = 0; i < 35; i++) {
+//       const star = document.createElement("div");
+//       star.className = "star";
+
+//       const size = Math.random() * 2.5 + 0.8;
+//       star.style.width = size + "px";
+//       star.style.height = size + "px";
+
+//       star.style.left = Math.random() * 100 + "%";
+//       star.style.top = Math.random() * 100 + "%";
+
+//       const isGolden = Math.random() > 0.96;
+//       if (isGolden) {
+//         star.style.backgroundColor = "#ffd700";
+//         star.style.boxShadow = "0 0 3px #ffd700, 0 0 6px #ffd700";
+//         star.style.animationDelay = Math.random() * 5 + "s";
+//         star.style.animationDuration = Math.random() * 4 + 3 + "s";
+//       } else {
+//         star.style.backgroundColor = "#ffffff";
+//         star.style.animationDelay = Math.random() * 3 + "s";
+//         star.style.animationDuration = Math.random() * 3 + 2 + "s";
+//       }
+
+//       starsContainerRef.current.appendChild(star);
+//     }
+//   }, []);
+
+//   useEffect(() => {
+//     if (!canvasRef.current) return;
+
+//     const scene = new THREE.Scene();
+//     sceneRef.current = scene;
+
+//     const camera = new THREE.PerspectiveCamera(
+//       75,
+//       window.innerWidth / window.innerHeight,
+//       0.1,
+//       1000
+//     );
+//     cameraRef.current = camera;
+
+//     const renderer = new THREE.WebGLRenderer({
+//       alpha: true,
+//       antialias: true,
+//     });
+//     rendererRef.current = renderer;
+
+//     renderer.setSize(window.innerWidth, window.innerHeight);
+//     renderer.setClearColor(0x000000, 0);
+//     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+//     canvasRef.current.appendChild(renderer.domElement);
+
+//     const particlesGeometry = new THREE.BufferGeometry();
+//     const particlesCount = 3000;
+//     const posArray = new Float32Array(particlesCount * 3);
+//     const colorsArray = new Float32Array(particlesCount * 3);
+//     const sizesArray = new Float32Array(particlesCount);
+
+//     for (let i = 0; i < particlesCount * 3; i++) {
+//       posArray[i] = (Math.random() - 0.5) * 50;
+
+//       const colorChoice = Math.random();
+//       if (colorChoice < 0.33) {
+//         colorsArray[i] = 0.4 + Math.random() * 0.6;
+//         if (i % 3 === 1) colorsArray[i] = 0.5 + Math.random() * 0.3;
+//         if (i % 3 === 2) colorsArray[i] = 0.8 + Math.random() * 0.2;
+//       } else if (colorChoice < 0.66) {
+//         colorsArray[i] = 0.7 + Math.random() * 0.3;
+//         if (i % 3 === 0) colorsArray[i] = 0.4 + Math.random() * 0.3;
+//         if (i % 3 === 2) colorsArray[i] = 0.6 + Math.random() * 0.4;
+//       } else {
+//         colorsArray[i] = 0.8 + Math.random() * 0.2;
+//         if (i % 3 === 0) colorsArray[i] = 0.9 + Math.random() * 0.1;
+//         if (i % 3 === 1) colorsArray[i] = 0.5 + Math.random() * 0.3;
+//       }
+//     }
+
+//     for (let i = 0; i < particlesCount; i++) {
+//       sizesArray[i] = Math.random() * 0.05;
+//     }
+
+//     particlesGeometry.setAttribute(
+//       "position",
+//       new THREE.BufferAttribute(posArray, 3)
+//     );
+//     particlesGeometry.setAttribute(
+//       "color",
+//       new THREE.BufferAttribute(colorsArray, 3)
+//     );
+//     particlesGeometry.setAttribute(
+//       "size",
+//       new THREE.BufferAttribute(sizesArray, 1)
+//     );
+
+//     const particlesMaterial = new THREE.PointsMaterial({
+//       size: 0.03,
+//       vertexColors: true,
+//       transparent: true,
+//       opacity: 0.8,
+//       sizeAttenuation: true,
+//     });
+
+//     const particlesMesh = new THREE.Points(
+//       particlesGeometry,
+//       particlesMaterial
+//     );
+//     particlesMeshRef.current = particlesMesh;
+//     scene.add(particlesMesh);
+
+//     const bluePlanetGroup = new THREE.Group();
+//     const bluePlanetGeometry = new THREE.SphereGeometry(1.2, 32, 32);
+//     const bluePlanetMaterial = new THREE.MeshStandardMaterial({
+//       color: 0x6b9fff,
+//       metalness: 0.3,
+//       roughness: 0.5,
+//       emissive: 0x4a7acc,
+//       emissiveIntensity: 0.1,
+//     });
+//     const bluePlanet = new THREE.Mesh(bluePlanetGeometry, bluePlanetMaterial);
+//     bluePlanetGroup.add(bluePlanet);
+//     bluePlanetGroup.position.set(35, 15, -40);
+//     scene.add(bluePlanetGroup);
+
+//     const orangePlanetGroup = new THREE.Group();
+//     const orangePlanetGeometry = new THREE.SphereGeometry(1.5, 32, 32);
+//     const orangePlanetMaterial = new THREE.MeshStandardMaterial({
+//       color: 0xffaa66,
+//       metalness: 0.2,
+//       roughness: 0.6,
+//       emissive: 0xcc6633,
+//       emissiveIntensity: 0.08,
+//     });
+//     const orangePlanet = new THREE.Mesh(
+//       orangePlanetGeometry,
+//       orangePlanetMaterial
+//     );
+//     orangePlanetGroup.add(orangePlanet);
+//     orangePlanetGroup.position.set(-30, -12, -45);
+//     scene.add(orangePlanetGroup);
+
+//     const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+//     scene.add(ambientLight);
+
+//     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+//     directionalLight.position.set(10, 10, 10);
+//     scene.add(directionalLight);
+
+//     const pointLight = new THREE.PointLight(0xffffff, 0.15, 50);
+//     pointLight.position.set(0, 0, 5);
+//     scene.add(pointLight);
+
+//     const hemisphereLight = new THREE.HemisphereLight(0x667eea, 0x764ba2, 0.2);
+//     scene.add(hemisphereLight);
+
+//     camera.position.set(0, 0, 20);
+
+//     let scrollY = 0;
+//     let mouseX = 0;
+//     let mouseY = 0;
+//     let time = 0;
+
+//     const handleScroll = (): void => {
+//       scrollY = window.scrollY || window.pageYOffset;
+//     };
+
+//     const handleMouseMove = (event: MouseEvent): void => {
+//       mouseX = (event.clientX - window.innerWidth / 2) / 100;
+//       mouseY = (event.clientY - window.innerHeight / 2) / 100;
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     document.addEventListener("mousemove", handleMouseMove);
+
+//     const animate = (): void => {
+//       requestAnimationFrame(animate);
+//       time += 0.01;
+
+//       if (particlesMeshRef.current) {
+//         particlesMeshRef.current.rotation.y += 0.0005;
+//         particlesMeshRef.current.rotation.x += 0.0003;
+
+//         const parallaxY = scrollY * 0.001;
+//         particlesMeshRef.current.position.y = -parallaxY * 2;
+//         particlesMeshRef.current.position.x = Math.sin(time * 0.5) * 0.5;
+//       }
+
+//       if (cameraRef.current) {
+//         cameraRef.current.position.x +=
+//           (mouseX - cameraRef.current.position.x) * 0.05;
+//         cameraRef.current.position.y +=
+//           (-mouseY - cameraRef.current.position.y) * 0.05;
+//         cameraRef.current.lookAt(scene.position);
+
+//         const baseZ = 20;
+//         cameraRef.current.position.z = baseZ;
+
+//         const scrollEffect = scrollY * 0.001;
+//         cameraRef.current.rotation.z = scrollEffect * 0.05;
+//       }
+
+//       pointLight.position.x = Math.sin(time) * 2.5;
+//       pointLight.position.y = Math.cos(time) * 2.5;
+
+//       if (rendererRef.current && sceneRef.current && cameraRef.current) {
+//         rendererRef.current.render(sceneRef.current, cameraRef.current);
+//       }
+//     };
+
+//     animate();
+
+//     const handleResize = (): void => {
+//       if (cameraRef.current) {
+//         cameraRef.current.aspect = window.innerWidth / window.innerHeight;
+//         cameraRef.current.updateProjectionMatrix();
+//       }
+//       if (rendererRef.current) {
+//         rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+//       }
+//     };
+
+//     window.addEventListener("resize", handleResize);
+
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//       document.removeEventListener("mousemove", handleMouseMove);
+//       window.removeEventListener("resize", handleResize);
+//       if (canvasRef.current && rendererRef.current?.domElement) {
+//         canvasRef.current.removeChild(rendererRef.current.domElement);
+//       }
+//     };
+//   }, []);
+
+//   const handleScrollTo =
+//     (selector: string) =>
+//     (e: React.MouseEvent<HTMLAnchorElement>): void => {
+//       e.preventDefault();
+//       const el = document.querySelector(selector);
+//       if (el) {
+//         el.scrollIntoView({ behavior: "smooth", block: "start" });
+//         setMenuOpen(false);
+//       }
+//     };
+
+//   //   const submitDemo = (e: React.FormEvent): void => {
+//   //     e.preventDefault();
+
+//   //     if (!form.firstName.trim() || form.firstName.length < 2) {
+//   //       alert("Please enter a valid first name (at least 2 characters).");
+//   //       return;
+//   //     }
+
+//   //     if (!form.lastName.trim() || form.lastName.length < 2) {
+//   //       alert("Please enter a valid last name (at least 2 characters).");
+//   //       return;
+//   //     }
+
+//   //     if (!validateEmail(form.email)) {
+//   //       alert("Please enter a valid work email address in correct format.");
+//   //       return;
+//   //     }
+
+//   //     const phoneRegex = /^[0-9+()\-\s]{7,20}$/;
+//   //     if (!phoneRegex.test(form.phone)) {
+//   //       alert("Please enter a valid phone number (7-20 characters).");
+//   //       return;
+//   //     }
+
+//   //     if (!form.company.trim() || form.company.length < 2) {
+//   //       alert("Please enter a valid company name.");
+//   //       return;
+//   //     }
+
+//   //     if (!form.country) {
+//   //       alert("Please select a country.");
+//   //       return;
+//   //     }
+
+//   //     if (!form.state) {
+//   //       alert("Please select a state.");
+//   //       return;
+//   //     }
+
+//   //     if (!form.city) {
+//   //       alert("Please select a city.");
+//   //       return;
+//   //     }
+
+//   //     if (!form.source) {
+//   //       alert("Please tell us how you heard about us.");
+//   //       return;
+//   //     }
+
+//   //     alert(
+//   //       "Thank you for your interest! We will contact you soon to schedule your demo."
+//   //     );
+
+//   //     setForm({
+//   //       firstName: "",
+//   //       lastName: "",
+//   //       phone: "",
+//   //       email: "",
+//   //       company: "",
+//   //       country: "",
+//   //       state: "",
+//   //       city: "",
+//   //       source: "",
+//   //     });
+//   //     setEmailError("");
+//   //     setStates([]);
+//   //     setCities([]);
+//   //   };
+
+//   return (
+//     <div className="app">
+//       <div className="gradient-bg"></div>
+//       <div className="stars-container" ref={starsContainerRef}></div>
+//       <canvas
+//         ref={moonCanvasRef}
+//         style={{
+//           position: "fixed",
+//           top: 0,
+//           left: 0,
+//           width: "100%",
+//           height: "100%",
+//           zIndex: 2,
+//           pointerEvents: "none",
+//         }}
+//       />
+//       <div id="canvas-container" ref={canvasRef} />
+
+//       {/* Enhanced Navigation Bar */}
+//       <nav className="main-nav">
+//         <div className="nav-container">
+//           <div className="brand-section">
+//             <div className="artemis-logo">
+//               <svg
+//                 className="logo-svg"
+//                 viewBox="0 0 140 50"
+//                 fill="none"
+//                 xmlns="http://www.w3.org/2000/svg"
+//               >
+//                 <defs>
+//                   <linearGradient
+//                     id="logoGradient1"
+//                     x1="0%"
+//                     y1="0%"
+//                     x2="100%"
+//                     y2="100%"
+//                   >
+//                     <stop offset="0%" stopColor="#667eea" />
+//                     <stop offset="100%" stopColor="#764ba2" />
+//                   </linearGradient>
+//                   <linearGradient
+//                     id="logoGradient2"
+//                     x1="0%"
+//                     y1="0%"
+//                     x2="100%"
+//                     y2="100%"
+//                   >
+//                     <stop offset="0%" stopColor="#6ea8fe" />
+//                     <stop offset="100%" stopColor="#667eea" />
+//                   </linearGradient>
+//                   <linearGradient
+//                     id="logoGradient3"
+//                     x1="0%"
+//                     y1="0%"
+//                     x2="100%"
+//                     y2="0%"
+//                   >
+//                     <stop offset="0%" stopColor="#667eea" />
+//                     <stop offset="50%" stopColor="#764ba2" />
+//                     <stop offset="100%" stopColor="#6ea8fe" />
+//                   </linearGradient>
+//                 </defs>
+
+//                 {/* Logo Icon - Simplified Arrow and Target */}
+
+//                 {/* Logo Text */}
+//                 <g className="logo-text">
+//                   <text
+//                     x="45"
+//                     y="32"
+//                     fontFamily="'Poppins', sans-serif"
+//                     fontWeight="700"
+//                     fontSize="20"
+//                     fill="url(#logoGradient3)"
+//                     letterSpacing="1"
+//                   >
+//                     ARTEMIS
+//                   </text>
+//                 </g>
+//               </svg>
+//             </div>
+//           </div>
+
+//           <div
+//             className={`menu-toggle ${menuOpen ? "active" : ""}`}
+//             onClick={() => setMenuOpen(!menuOpen)}
+//           >
+//             <span></span>
+//             <span></span>
+//             <span></span>
+//           </div>
+
+//           <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
+//             <div className="nav-links-group">
+//               <a
+//                 href="#home"
+//                 onClick={handleScrollTo("#home")}
+//                 className="nav-link"
+//               >
+//                 Home
+//               </a>
+//               <a
+//                 href="#about"
+//                 onClick={handleScrollTo("#about")}
+//                 className="nav-link"
+//               >
+//                 About
+//               </a>
+//               <a
+//                 href="#superpowers"
+//                 onClick={handleScrollTo("#superpowers")}
+//                 className="nav-link"
+//               >
+//                 Superpowers
+//               </a>
+//               <a
+//                 href="#pricing"
+//                 onClick={handleScrollTo("#pricing")}
+//                 className="nav-link"
+//               >
+//                 Pricing
+//               </a>
+//               <a
+//                 href="#integrations"
+//                 onClick={handleScrollTo("#integrations")}
+//                 className="nav-link"
+//               >
+//                 Integrations
+//               </a>
+//               <a
+//                 href="#resources"
+//                 onClick={handleScrollTo("#resources")}
+//                 className="nav-link"
+//               >
+//                 Resources
+//               </a>
+//             </div>
+//             <a
+//               href="#demo"
+//               className="nav-cta-button"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book a Demo
+//             </a>
+//           </div>
+//         </div>
+//       </nav>
+
+//       {/* Hero Section */}
+//       <section className="hero-section" id="home">
+//         <div className="hero-content-wrapper">
+//           <div className="hero-badge">
+//             AI-powered ATS for Healthcare Staffing
+//           </div>
+//           <h1 className="hero-title">
+//             Recruit faster with clarity, not clutter.
+//           </h1>
+//           <p className="hero-description">
+//             Streamlined workflows, intelligent automation, and minimalist design
+//             that empowers healthcare staffing teams to focus on what matters
+//             most: connecting great talent with exceptional opportunities.
+//           </p>
+//           <div className="hero-cta-group">
+//             <a
+//               href="#demo"
+//               className="hero-primary-cta"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book a Demo
+//             </a>
+//             <a
+//               href="#superpowers"
+//               className="hero-secondary-cta"
+//               onClick={handleScrollTo("#superpowers")}
+//             >
+//               Explore Features
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* The Challenge Section - INFINITE SLIDER */}
+//       <section className="challenge-section" id="challenge">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">The Challenge We Solve</h2>
+//             <p className="section-subtitle-main">
+//               Healthcare staffing agencies face overwhelming complexity in their
+//               daily operations
+//             </p>
+//           </div>
+
+//           <div className="slider-container-infinite-wrapper">
+//             <div className="slider-container-infinite" ref={challengeSliderRef}>
+//               <div className="slider-track-infinite challenge-slider">
+//                 {/* Original Set */}
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="12" cy="12" r="10"></circle>
+//                       <polyline points="12 6 12 12 16 14"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Time-Consuming Manual Work</h3>
+//                   <p className="feature-description">
+//                     Hours spent on resume parsing, data entry, and candidate
+//                     tracking that could be automated, pulling recruiters away
+//                     from relationship building.
+//                   </p>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="11" cy="11" r="8"></circle>
+//                       <path d="m21 21-4.35-4.35"></path>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">
+//                     Difficulty Finding Qualified Talent
+//                   </h3>
+//                   <p className="feature-description">
+//                     Traditional search methods make it nearly impossible to
+//                     quickly identify candidates with the right skills,
+//                     certifications, and availability.
+//                   </p>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+//                       <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Disconnected Systems</h3>
+//                   <p className="feature-description">
+//                     VMS platforms, ATS software, and communication tools
+//                     operating in silos, creating data gaps and workflow
+//                     friction.
+//                   </p>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
+//                       <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
+//                       <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
+//                       <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">
+//                     Compliance & Credentialing Complexity
+//                   </h3>
+//                   <p className="feature-description">
+//                     Tracking licenses, certifications, and compliance
+//                     documentation across dozens or hundreds of healthcare
+//                     professionals is error-prone and stressful.
+//                   </p>
+//                 </div>
+
+//                 {/* Duplicate Set for Infinite Loop */}
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="12" cy="12" r="10"></circle>
+//                       <polyline points="12 6 12 12 16 14"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Time-Consuming Manual Work</h3>
+//                   <p className="feature-description">
+//                     Hours spent on resume parsing, data entry, and candidate
+//                     tracking that could be automated, pulling recruiters away
+//                     from relationship building.
+//                   </p>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="11" cy="11" r="8"></circle>
+//                       <path d="m21 21-4.35-4.35"></path>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">
+//                     Difficulty Finding Qualified Talent
+//                   </h3>
+//                   <p className="feature-description">
+//                     Traditional search methods make it nearly impossible to
+//                     quickly identify candidates with the right skills,
+//                     certifications, and availability.
+//                   </p>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+//                       <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Disconnected Systems</h3>
+//                   <p className="feature-description">
+//                     VMS platforms, ATS software, and communication tools
+//                     operating in silos, creating data gaps and workflow
+//                     friction.
+//                   </p>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
+//                       <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
+//                       <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
+//                       <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">
+//                     Compliance & Credentialing Complexity
+//                   </h3>
+//                   <p className="feature-description">
+//                     Tracking licenses, certifications, and compliance
+//                     documentation across dozens or hundreds of healthcare
+//                     professionals is error-prone and stressful.
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Success Stories Slider - INFINITE SCROLL */}
+//       <section className="success-slider-section">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">
+//               Trusted by Leading Healthcare Staffing Agencies
+//             </h2>
+//             <p className="section-subtitle-main">
+//               Join hundreds of agencies achieving remarkable results with
+//               Artemis
+//             </p>
+//           </div>
+
+//           <div className="slider-container-infinite-wrapper">
+//             <div className="slider-container-infinite" ref={successSliderRef}>
+//               <div className="slider-track-infinite success-slider">
+//                 {/* Success slides - Original Set */}
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">67%</div>
+//                       <div className="metric-label">Faster Time-to-Submit</div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad1)"
+//                           />
+//                           <path
+//                             d="M20 10 L30 20 L20 30 L10 20 Z"
+//                             fill="white"
+//                             opacity="0.9"
+//                           />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad1"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#667eea" />
+//                               <stop offset="100%" stopColor="#764ba2" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">HealthStaff Pro</div>
+//                         <div className="company-type">
+//                           Travel Nursing Agency
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "Artemis transformed our candidate submission process.
+//                       What used to take hours now takes minutes."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">3.2x</div>
+//                       <div className="metric-label">
+//                         More Placements Per Month
+//                       </div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad2)"
+//                           />
+//                           <circle
+//                             cx="20"
+//                             cy="20"
+//                             r="12"
+//                             stroke="white"
+//                             strokeWidth="2"
+//                             fill="none"
+//                           />
+//                           <path
+//                             d="M20 14 L20 26 M14 20 L26 20"
+//                             stroke="white"
+//                             strokeWidth="2"
+//                           />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad2"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#6ea8fe" />
+//                               <stop offset="100%" stopColor="#667eea" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">MedTalent Solutions</div>
+//                         <div className="company-type">
+//                           Allied Health Staffing
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "The AI-powered matching helped us scale our placement
+//                       volume without adding headcount."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">$420K</div>
+//                       <div className="metric-label">Annual Cost Savings</div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad3)"
+//                           />
+//                           <path
+//                             d="M20 8 L32 20 L20 32 L8 20 Z"
+//                             stroke="white"
+//                             strokeWidth="2"
+//                             fill="none"
+//                           />
+//                           <circle cx="20" cy="20" r="4" fill="white" />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad3"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#764ba2" />
+//                               <stop offset="100%" stopColor="#667eea" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">
+//                           Apex Healthcare Staffing
+//                         </div>
+//                         <div className="company-type">
+//                           Multi-Specialty Agency
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "ROI was immediate. Artemis paid for itself in the first
+//                       quarter through efficiency gains alone."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">94%</div>
+//                       <div className="metric-label">Candidate Satisfaction</div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad4)"
+//                           />
+//                           <path
+//                             d="M10 20 Q20 10 30 20 Q20 30 10 20"
+//                             fill="white"
+//                             opacity="0.9"
+//                           />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad4"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#667eea" />
+//                               <stop offset="100%" stopColor="#6ea8fe" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">
+//                           CareLink Professionals
+//                         </div>
+//                         <div className="company-type">
+//                           Locum Tenens Placement
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "Our candidates love the smooth onboarding experience.
+//                       It's a competitive advantage for us."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 {/* Duplicate Set for Infinite Loop */}
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">67%</div>
+//                       <div className="metric-label">Faster Time-to-Submit</div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad1a)"
+//                           />
+//                           <path
+//                             d="M20 10 L30 20 L20 30 L10 20 Z"
+//                             fill="white"
+//                             opacity="0.9"
+//                           />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad1a"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#667eea" />
+//                               <stop offset="100%" stopColor="#764ba2" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">HealthStaff Pro</div>
+//                         <div className="company-type">
+//                           Travel Nursing Agency
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "Artemis transformed our candidate submission process.
+//                       What used to take hours now takes minutes."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">3.2x</div>
+//                       <div className="metric-label">
+//                         More Placements Per Month
+//                       </div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad2a)"
+//                           />
+//                           <circle
+//                             cx="20"
+//                             cy="20"
+//                             r="12"
+//                             stroke="white"
+//                             strokeWidth="2"
+//                             fill="none"
+//                           />
+//                           <path
+//                             d="M20 14 L20 26 M14 20 L26 20"
+//                             stroke="white"
+//                             strokeWidth="2"
+//                           />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad2a"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#6ea8fe" />
+//                               <stop offset="100%" stopColor="#667eea" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">MedTalent Solutions</div>
+//                         <div className="company-type">
+//                           Allied Health Staffing
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "The AI-powered matching helped us scale our placement
+//                       volume without adding headcount."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">$420K</div>
+//                       <div className="metric-label">Annual Cost Savings</div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad3a)"
+//                           />
+//                           <path
+//                             d="M20 8 L32 20 L20 32 L8 20 Z"
+//                             stroke="white"
+//                             strokeWidth="2"
+//                             fill="none"
+//                           />
+//                           <circle cx="20" cy="20" r="4" fill="white" />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad3a"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#764ba2" />
+//                               <stop offset="100%" stopColor="#667eea" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">
+//                           Apex Healthcare Staffing
+//                         </div>
+//                         <div className="company-type">
+//                           Multi-Specialty Agency
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "ROI was immediate. Artemis paid for itself in the first
+//                       quarter through efficiency gains alone."
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="success-slide">
+//                   <div className="success-slide-content">
+//                     <div className="success-metric">
+//                       <div className="metric-value">94%</div>
+//                       <div className="metric-label">Candidate Satisfaction</div>
+//                     </div>
+//                     <div className="success-company">
+//                       <div className="company-logo-placeholder">
+//                         <svg viewBox="0 0 40 40" fill="none">
+//                           <rect
+//                             width="40"
+//                             height="40"
+//                             rx="8"
+//                             fill="url(#companyGrad4a)"
+//                           />
+//                           <path
+//                             d="M10 20 Q20 10 30 20 Q20 30 10 20"
+//                             fill="white"
+//                             opacity="0.9"
+//                           />
+//                           <defs>
+//                             <linearGradient
+//                               id="companyGrad4a"
+//                               x1="0%"
+//                               y1="0%"
+//                               x2="100%"
+//                               y2="100%"
+//                             >
+//                               <stop offset="0%" stopColor="#667eea" />
+//                               <stop offset="100%" stopColor="#6ea8fe" />
+//                             </linearGradient>
+//                           </defs>
+//                         </svg>
+//                       </div>
+//                       <div className="company-info">
+//                         <div className="company-name">
+//                           CareLink Professionals
+//                         </div>
+//                         <div className="company-type">
+//                           Locum Tenens Placement
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <p className="success-quote">
+//                       "Our candidates love the smooth onboarding experience.
+//                       It's a competitive advantage for us."
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Feature Highlights - INFINITE SLIDER */}
+//       <section className="highlights-section" id="superpowers">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Talent Superpowers</h2>
+//             <p className="section-subtitle-main">
+//               Designed for recruiters. Powered by AI. Built for speed and
+//               simplicity.
+//             </p>
+//           </div>
+
+//           <div className="slider-container-infinite-wrapper">
+//             <div className="slider-container-infinite" ref={featureSliderRef}>
+//               <div className="slider-track-infinite features-slider">
+//                 {/* Original Set */}
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="11" cy="11" r="8"></circle>
+//                       <path d="m21 21-4.35-4.35"></path>
+//                       <circle cx="11" cy="11" r="3"></circle>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">AI-Powered Candidate Search</h3>
+//                   <p className="feature-description">
+//                     Find the perfect match instantly with intelligent search
+//                     that understands skills, experience, certifications, and
+//                     availability patterns.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Natural language search queries</li>
+//                     <li>Smart skill matching algorithms</li>
+//                     <li>Real-time availability tracking</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
+//                   <p className="feature-description">
+//                     Seamlessly integrate with major VMS platforms. Jobs flow
+//                     automatically into Artemis, eliminating manual data entry.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Automatic job ingestion</li>
+//                     <li>Real-time updates</li>
+//                     <li>Multi-VMS support</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+//                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Built-In Skills Checklists</h3>
+//                   <p className="feature-description">
+//                     Interactive checklists that capture candidate qualifications
+//                     with precision, convert to PDFs, and distribute to
+//                     stakeholders instantly.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Customizable checklist templates</li>
+//                     <li>Digital signature collection</li>
+//                     <li>Automated distribution</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <rect
+//                         x="3"
+//                         y="3"
+//                         width="18"
+//                         height="18"
+//                         rx="2"
+//                         ry="2"
+//                       ></rect>
+//                       <line x1="3" y1="9" x2="21" y2="9"></line>
+//                       <line x1="9" y1="21" x2="9" y2="9"></line>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Smart Onboarding Dashboards</h3>
+//                   <p className="feature-description">
+//                     Visual pipelines that show exactly where every candidate
+//                     stands, with automated reminders and next-step
+//                     recommendations.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Drag-and-drop pipeline management</li>
+//                     <li>Automated workflow triggers</li>
+//                     <li>Real-time status updates</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+//                       <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+//                       <line x1="12" y1="22.08" x2="12" y2="12"></line>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">
+//                     Candidate Pipeline Management
+//                   </h3>
+//                   <p className="feature-description">
+//                     Design dynamic, stage-based workflows that adapt to your
+//                     process. Never lose track of a candidate again.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Customizable pipeline stages</li>
+//                     <li>Bulk candidate actions</li>
+//                     <li>Advanced filtering</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+//                       <polyline points="14 2 14 8 20 8"></polyline>
+//                       <line x1="9" y1="15" x2="15" y2="15"></line>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">
+//                     Right-to-Represent Automation
+//                   </h3>
+//                   <p className="feature-description">
+//                     Send RTR forms instantly, track signatures, and maintain
+//                     compliance documentation—all within a single, streamlined
+//                     workflow.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>One-click RTR distribution</li>
+//                     <li>E-signature integration</li>
+//                     <li>Automatic record keeping</li>
+//                   </ul>
+//                 </div>
+
+//                 {/* Duplicate Set for Infinite Loop */}
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="11" cy="11" r="8"></circle>
+//                       <path d="m21 21-4.35-4.35"></path>
+//                       <circle cx="11" cy="11" r="3"></circle>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">AI-Powered Candidate Search</h3>
+//                   <p className="feature-description">
+//                     Find the perfect match instantly with intelligent search
+//                     that understands skills, experience, certifications, and
+//                     availability patterns.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Natural language search queries</li>
+//                     <li>Smart skill matching algorithms</li>
+//                     <li>Real-time availability tracking</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
+//                   <p className="feature-description">
+//                     Seamlessly integrate with major VMS platforms. Jobs flow
+//                     automatically into Artemis, eliminating manual data entry.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Automatic job ingestion</li>
+//                     <li>Real-time updates</li>
+//                     <li>Multi-VMS support</li>
+//                   </ul>
+//                 </div>
+
+//                 <div className="feature-slide-card">
+//                   <div className="feature-icon-box-pro">
+//                     <svg
+//                       className="feature-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+//                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
+//                     </svg>
+//                   </div>
+//                   <h3 className="feature-title">Built-In Skills Checklists</h3>
+//                   <p className="feature-description">
+//                     Interactive checklists that capture candidate qualifications
+//                     with precision, convert to PDFs, and distribute to
+//                     stakeholders instantly.
+//                   </p>
+//                   <ul className="feature-list">
+//                     <li>Customizable checklist templates</li>
+//                     <li>Digital signature collection</li>
+//                     <li>Automated distribution</li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//       {/* About Artemis Section */}
+//       <section className="about-section" id="about">
+//         <div className="content-container">
+//           <div className="about-hero">
+//             <h2 className="about-hero-title">
+//               Built to bring clarity back to recruiting
+//             </h2>
+//             <p className="about-hero-subtitle">
+//               Artemis combines cutting-edge AI technology with intuitive design
+//               to deliver the most powerful yet simple ATS for healthcare
+//               staffing agencies.
+//             </p>
+//           </div>
+
+//           <div className="about-story-grid">
+//             <div className="about-story-content">
+//               <h3>Our Approach</h3>
+//               <p>
+//                 Born from real-world staffing challenges, Artemis was designed
+//                 by industry veterans who understand the unique pressures of
+//                 healthcare recruitment. We've eliminated the bloat and
+//                 complexity that plague traditional ATS platforms, focusing
+//                 instead on the features that actually drive placements.
+//               </p>
+//               <p>
+//                 Every workflow, every interface element, and every automation
+//                 has been carefully crafted to save you time while improving
+//                 accuracy. Whether you're placing travel nurses, allied health
+//                 professionals, or locum tenens physicians, Artemis adapts to
+//                 your process—not the other way around.
+//               </p>
+
+//               <div className="about-stats-inline">
+//                 <div className="stat-inline-item">
+//                   <svg
+//                     className="stat-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+//                     <circle cx="9" cy="7" r="4"></circle>
+//                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+//                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+//                   </svg>
+//                   <div>
+//                     <div className="stat-inline-numbe">500+</div>
+//                     <div className="stat-inline-label">Active Agencies</div>
+//                   </div>
+//                 </div>
+
+//                 <div className="stat-inline-item">
+//                   <svg
+//                     className="stat-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+//                     <circle cx="8.5" cy="7" r="4"></circle>
+//                     <polyline points="17 11 19 13 23 9"></polyline>
+//                   </svg>
+//                   <div>
+//                     <div className="stat-inline-numbe">10K+</div>
+//                     <div className="stat-inline-label">Candidates Placed</div>
+//                   </div>
+//                 </div>
+
+//                 <div className="stat-inline-item">
+//                   <svg
+//                     className="stat-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+//                   </svg>
+//                   <div>
+//                     <div className="stat-inline-numbe">99.9%</div>
+//                     <div className="stat-inline-label">Platform Uptime</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="about-illustration">
+//               <div className="illustration-card">
+//                 <svg
+//                   className="illustration-icon"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="1.5"
+//                 >
+//                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+//                   <line x1="8" y1="21" x2="16" y2="21"></line>
+//                   <line x1="12" y1="17" x2="12" y2="21"></line>
+//                   <path d="M7 8h10M7 12h6"></path>
+//                 </svg>
+//                 <h4>Modern Platform</h4>
+//                 <p>Cloud-based architecture built for speed and reliability</p>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="about-mvv-grid">
+//             <div className="mvv-card">
+//               <div className="mvv-icon-wrapper">
+//                 <svg
+//                   className="mvv-icon"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <circle cx="12" cy="12" r="10"></circle>
+//                   <polyline points="12 6 12 12 16 14"></polyline>
+//                 </svg>
+//               </div>
+//               <h3>Our Mission</h3>
+//               <p>
+//                 To democratize enterprise-grade recruitment technology, making
+//                 sophisticated ATS capabilities accessible to staffing agencies
+//                 of all sizes. We believe powerful tools shouldn't come with
+//                 complexity or prohibitive costs.
+//               </p>
+//             </div>
+
+//             <div className="mvv-card">
+//               <div className="mvv-icon-wrapper">
+//                 <svg
+//                   className="mvv-icon"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+//                   <circle cx="12" cy="12" r="3"></circle>
+//                 </svg>
+//               </div>
+//               <h3>Our Vision</h3>
+//               <p>
+//                 To become the global standard for intelligent staffing
+//                 solutions, where every recruiter has access to AI-powered tools
+//                 that eliminate repetitive tasks and provide actionable insights
+//                 that drive better hiring decisions.
+//               </p>
+//             </div>
+
+//             <div className="mvv-card">
+//               <div className="mvv-icon-wrapper">
+//                 <svg
+//                   className="mvv-icon"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+//                 </svg>
+//               </div>
+//               <h3>Core Values</h3>
+//               <ul className="values-list">
+//                 <li>
+//                   <svg
+//                     className="check-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span>
+//                     <strong>Simplicity First:</strong> Elegant interfaces that
+//                     reduce training time
+//                   </span>
+//                 </li>
+//                 <li>
+//                   <svg
+//                     className="check-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span>
+//                     <strong>Security by Design:</strong> Enterprise-grade
+//                     protection for sensitive data
+//                   </span>
+//                 </li>
+//                 <li>
+//                   <svg
+//                     className="check-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span>
+//                     <strong>Continuous Innovation:</strong> Regular updates
+//                     driven by user feedback
+//                   </span>
+//                 </li>
+//                 <li>
+//                   <svg
+//                     className="check-icon"
+//                     viewBox="0 0 24 24"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     strokeWidth="2"
+//                   >
+//                     <polyline points="20 6 9 17 4 12"></polyline>
+//                   </svg>
+//                   <span>
+//                     <strong>Customer Success:</strong> Your growth is our
+//                     success
+//                   </span>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+
+//           <div className="about-cta-banner">
+//             <h3>Ready to Transform Your Staffing Operations?</h3>
+//             <p>
+//               Join hundreds of agencies already using Artemis to streamline
+//               their recruitment process.
+//             </p>
+//             <a
+//               href="#demo"
+//               className="about-cta-button"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book a Demo
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Pricing Section */}
+//       <section className="pricing-section" id="pricing">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">
+//               Flexible Pricing for Every Stage of Growth
+//             </h2>
+//             <p className="section-subtitle-main">
+//               Custom plans designed around your agency's unique needs
+//             </p>
+//           </div>
+
+//           <div className="pricing-content">
+//             <div className="pricing-card">
+//               <h3>What's Included</h3>
+//               <ul className="pricing-features-list">
+//                 <li>✓ Unlimited users and candidates</li>
+//                 <li>✓ AI-powered search and matching</li>
+//                 <li>✓ VMS integration (Bullhorn, others)</li>
+//                 <li>✓ Skills checklists with PDF generation</li>
+//                 <li>✓ Right-to-Represent automation</li>
+//                 <li>✓ Pipeline management tools</li>
+//                 <li>✓ Credentials tracking</li>
+//                 <li>✓ 24/7 customer support</li>
+//                 <li>✓ Regular feature updates</li>
+//                 <li>✓ Enterprise-grade security</li>
+//               </ul>
+//             </div>
+
+//             <div className="pricing-card highlighted">
+//               <h3>Why Custom Pricing?</h3>
+//               <p>
+//                 Every staffing agency operates differently. Your pricing should
+//                 reflect your agency's size, placement volume, integration needs,
+//                 and growth trajectory.
+//               </p>
+//               <p>
+//                 We work with you to create a plan that makes sense for your
+//                 business—no hidden fees, no surprise charges, no complicated
+//                 tier systems.
+//               </p>
+//               <a
+//                 href="#demo"
+//                 className="pricing-cta"
+//                 onClick={handleScrollTo("#demo")}
+//               >
+//                 Contact Us for Pricing
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Integrations Section */}
+//       <section className="integrations-section" id="integrations">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">
+//               Stay in Sync with Your Workflow
+//             </h2>
+//             <p className="section-subtitle-main">
+//               Seamless connections to the tools you already use
+//             </p>
+//           </div>
+
+//           <div className="integrations-content">
+//             <div className="integration-card primary">
+//               <div className="integration-icon-wrapper">
+//                 <svg
+//                   className="integration-icon-svg"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <circle cx="18" cy="5" r="3"></circle>
+//                   <circle cx="6" cy="12" r="3"></circle>
+//                   <circle cx="18" cy="19" r="3"></circle>
+//                   <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+//                   <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+//                 </svg>
+//               </div>
+//               <h3>VMS Integrations</h3>
+//               <p>
+//                 Connect Artemis to your Vendor Management Systems for automatic
+//                 job feed synchronization. New opportunities appear in Artemis
+//                 instantly, ready for candidate matching.
+//               </p>
+//               <div className="integration-logos">
+//                 <div className="logo-placeholder">Bullhorn</div>
+//                 <div className="logo-placeholder">Fieldglass</div>
+//                 <div className="logo-placeholder">Beeline</div>
+//                 <div className="logo-placeholder">+ More</div>
+//               </div>
+//             </div>
+
+//             <div className="integration-card">
+//               <div className="integration-icon-wrapper">
+//                 <svg
+//                   className="integration-icon-svg"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+//                   <path d="M2 17l10 5 10-5"></path>
+//                   <path d="M2 12l10 5 10-5"></path>
+//                 </svg>
+//               </div>
+//               <h3>Coming Soon</h3>
+//               <p>
+//                 We're continuously expanding our integration ecosystem based on
+//                 customer feedback.
+//               </p>
+//               <ul className="roadmap-list">
+//                 <li>• Calendar sync (Google, Outlook)</li>
+//                 <li>• Email integration</li>
+//                 <li>• Background check providers</li>
+//                 <li>• Payroll systems</li>
+//                 <li>• Communication platforms</li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Resources Section */}
+//       <section className="resources-section" id="resources">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Resources & Insights</h2>
+//             <p className="section-subtitle-main">
+//               Expert guidance to transform your healthcare staffing operations
+//             </p>
+//           </div>
+
+//           <div className="resources-grid">
+//             <div className="resource-category-card">
+//               <div className="category-icon-wrapper">
+//                 <svg
+//                   className="category-icon-svg"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+//                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+//                 </svg>
+//               </div>
+//               <h3>Practical Tips for Recruiters</h3>
+//               <p>
+//                 Time-saving strategies, workflow optimizations, and proven
+//                 techniques to increase placement velocity and candidate
+//                 satisfaction.
+//               </p>
+//             </div>
+
+//             <div className="resource-category-card">
+//               <div className="category-icon-wrapper">
+//                 <svg
+//                   className="category-icon-svg"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+//                   <line x1="8" y1="21" x2="16" y2="21"></line>
+//                   <line x1="12" y1="17" x2="12" y2="21"></line>
+//                 </svg>
+//               </div>
+//               <h3>Technology in Healthcare Staffing</h3>
+//               <p>
+//                 Explore how AI, automation, and modern ATS platforms are
+//                 reshaping the healthcare staffing landscape.
+//               </p>
+//             </div>
+
+//             <div className="resource-category-card">
+//               <div className="category-icon-wrapper">
+//                 <svg
+//                   className="category-icon-svg"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth="2"
+//                 >
+//                   <line x1="12" y1="1" x2="12" y2="23"></line>
+//                   <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+//                 </svg>
+//               </div>
+//               <h3>Industry Trends & Market Insights</h3>
+//               <p>
+//                 Stay ahead with analysis of healthcare labor markets, regulatory
+//                 changes, and emerging opportunities.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="newsletter-section">
+//             <h3>Stay Updated</h3>
+//             <p>Get the latest insights delivered to your inbox</p>
+//             <div className="newsletter-form">
+//               <input
+//                 type="email"
+//                 placeholder="Enter your email"
+//                 className="newsletter-input"
+//               />
+//               <button className="newsletter-button">Subscribe</button>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Vision Teaser + CTA */}
+//       <section className="vision-section">
+//         <div className="content-container">
+//           <div className="vision-content">
+//             <h2>Experience Clarity in Every Click</h2>
+//             <p>
+//               Join hundreds of healthcare staffing agencies who have transformed
+//               their recruitment process with Artemis. Faster placements, happier
+//               teams, better outcomes.
+//             </p>
+//             <a
+//               href="#demo"
+//               className="vision-cta-button"
+//               onClick={handleScrollTo("#demo")}
+//             >
+//               Book Your Demo Today
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Book a Demo Section with REAL-TIME EMAIL VALIDATION */}
+//       <section className="demo-section" id="demo">
+//         <div className="content-container">
+//           <div className="section-header">
+//             <h2 className="section-title-main">Book a Demo</h2>
+//             <p className="section-subtitle-main">
+//               See Artemis in action and discover how we can transform your
+//               staffing operations
+//             </p>
+//           </div>
+
+//           <div className="demo-layout">
+//             <div className="demo-form-container">
+//               <form onSubmit={submitDemo} className="demo-form">
+//                 <div className="form-row">
+//                   <div className="form-field">
+//                     <label htmlFor="firstName">First Name *</label>
+//                     <input
+//                       type="text"
+//                       id="firstName"
+//                       required
+//                       value={form.firstName}
+//                       onChange={(e) =>
+//                         setForm({ ...form, firstName: e.target.value })
+//                       }
+//                       placeholder="John"
+//                     />
+//                   </div>
+//                   <div className="form-field">
+//                     <label htmlFor="lastName">Last Name *</label>
+//                     <input
+//                       type="text"
+//                       id="lastName"
+//                       required
+//                       value={form.lastName}
+//                       onChange={(e) =>
+//                         setForm({ ...form, lastName: e.target.value })
+//                       }
+//                       placeholder="Doe"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="form-row">
+//                   <div className="form-field">
+//                     <label htmlFor="email">Work Email *</label>
+//                     <input
+//                       type="email"
+//                       id="email"
+//                       required
+//                       value={form.email}
+//                       onChange={handleEmailChange}
+//                       placeholder="john.doe@company.com"
+//                       className={emailError ? "input-error" : ""}
+//                     />
+//                     {emailError && (
+//                       <span className="error-label">{emailError}</span>
+//                     )}
+//                   </div>
+//                   <div className="form-field">
+//                     <label htmlFor="phone">Phone *</label>
+//                     <input
+//                       type="tel"
+//                       id="phone"
+//                       required
+//                       value={form.phone}
+//                       onChange={(e) =>
+//                         setForm({ ...form, phone: e.target.value })
+//                       }
+//                       placeholder="+1 (555) 123-4567"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="form-field full-width">
+//                   <label htmlFor="company">Company *</label>
+//                   <input
+//                     type="text"
+//                     id="company"
+//                     required
+//                     value={form.company}
+//                     onChange={(e) =>
+//                       setForm({ ...form, company: e.target.value })
+//                     }
+//                     placeholder="Your Company Name"
+//                   />
+//                 </div>
+
+//                 <div className="form-row">
+//                   <div className="form-field">
+//                     <label htmlFor="country">Country *</label>
+//                     <select
+//                       id="country"
+//                       required
+//                       value={form.country}
+//                       onChange={handleCountryChange}
+//                     >
+//                       <option value="">Select Country</option>
+//                       {countries.map((country) => (
+//                         <option key={country.iso2} value={country.iso2}>
+//                           {country.name}
+//                         </option>
+//                       ))}
+//                     </select>
+//                   </div>
+
+//                   <div className="form-field">
+//                     <label htmlFor="state">State/Province *</label>
+//                     <select
+//                       id="state"
+//                       required
+//                       value={form.state}
+//                       onChange={handleStateChange}
+//                       disabled={!form.country || loadingStates}
+//                     >
+//                       <option value="">
+//                         {loadingStates ? "Loading..." : "Select State"}
+//                       </option>
+//                       {states.map((state) => (
+//                         <option key={state.iso2} value={state.iso2}>
+//                           {state.name}
+//                         </option>
+//                       ))}
+//                     </select>
+//                   </div>
+//                 </div>
+
+//                 <div className="form-field full-width">
+//                   <label htmlFor="city">City *</label>
+//                   <select
+//                     id="city"
+//                     required
+//                     value={form.city}
+//                     onChange={(e) => setForm({ ...form, city: e.target.value })}
+//                     disabled={!form.state || loadingCities}
+//                   >
+//                     <option value="">
+//                       {loadingCities ? "Loading..." : "Select City"}
+//                     </option>
+//                     {cities.map((city, index) => (
+//                       <option key={index} value={city.name}>
+//                         {city.name}
+//                       </option>
+//                     ))}
+//                   </select>
+//                 </div>
+
+//                 <div className="form-field full-width">
+//                   <label htmlFor="source">How did you hear about us? *</label>
+//                   <select
+//                     id="source"
+//                     required
+//                     value={form.source}
+//                     onChange={(e) =>
+//                       setForm({ ...form, source: e.target.value })
+//                     }
+//                   >
+//                     <option value="">Select one</option>
+//                     <option value="google">Google Search</option>
+//                     <option value="linkedin">LinkedIn</option>
+//                     <option value="referral">Referral / Word of Mouth</option>
+//                     <option value="conference">Conference / Event</option>
+//                     <option value="email">Email Outreach</option>
+//                     <option value="customer">Existing Customer</option>
+//                     <option value="other">Other</option>
+//                   </select>
+//                 </div>
+
+//                 <button type="submit" className="demo-submit-button">
+//                   Request Demo
+//                 </button>
+//               </form>
+//             </div>
+
+//             <div className="demo-info-container">
+//               <h3>What to Expect</h3>
+//               <ul className="expectations-list">
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg
+//                       className="expectation-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="12" cy="12" r="10"></circle>
+//                       <path d="M12 6v6l4 2"></path>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>Personalized Walkthrough</strong>
+//                     <p>
+//                       See Artemis configured for your agency's specific
+//                       workflows
+//                     </p>
+//                   </div>
+//                 </li>
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg
+//                       className="expectation-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <circle cx="12" cy="12" r="10"></circle>
+//                       <polyline points="12 6 12 12 16 14"></polyline>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>30-Minute Session</strong>
+//                     <p>Quick, focused demo that respects your time</p>
+//                   </div>
+//                 </li>
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg
+//                       className="expectation-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>Q&A Included</strong>
+//                     <p>
+//                       Ask anything about features, pricing, or implementation
+//                     </p>
+//                   </div>
+//                 </li>
+//                 <li>
+//                   <div className="expectation-icon-wrapper">
+//                     <svg
+//                       className="expectation-icon-svg"
+//                       viewBox="0 0 24 24"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       strokeWidth="2"
+//                     >
+//                       <line x1="18" y1="20" x2="18" y2="10"></line>
+//                       <line x1="12" y1="20" x2="12" y2="4"></line>
+//                       <line x1="6" y1="20" x2="6" y2="14"></line>
+//                     </svg>
+//                   </div>
+//                   <div>
+//                     <strong>Live Platform Access</strong>
+//                     <p>Hands-on experience with real candidate and job data</p>
+//                   </div>
+//                 </li>
+//               </ul>
+
+//               <div className="social-proof">
+//                 <p className="proof-label">Trusted by leading agencies</p>
+//                 <div className="proof-stats">
+//                   <span>⭐⭐⭐⭐⭐ 4.9/5 Rating</span>
+//                   <span>500+ Active Users</span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="site-footer" id="contact">
+//         <div className="footer-content">
+//           <div className="footer-column">
+//             <h4>Artemis ATS</h4>
+//             <p>
+//               AI-powered recruitment technology for healthcare staffing
+//               excellence.
+//             </p>
+//             <div className="social-links">
+//               <a href="#" aria-label="LinkedIn">
+//                 💼
+//               </a>
+//               <a href="#" aria-label="Facebook">
+//                 📘
+//               </a>
+//               <a href="#" aria-label="Twitter">
+//                 🐦
+//               </a>
+//             </div>
+//           </div>
+
+//           <div className="footer-column">
+//             <h4>Quick Links</h4>
+//             <a href="#home" onClick={handleScrollTo("#home")}>
+//               Home
+//             </a>
+//             <a href="#about" onClick={handleScrollTo("#about")}>
+//               About
+//             </a>
+//             <a href="#superpowers" onClick={handleScrollTo("#superpowers")}>
+//               Superpowers
+//             </a>
+//             <a href="#pricing" onClick={handleScrollTo("#pricing")}>
+//               Pricing
+//             </a>
+//             <a href="#integrations" onClick={handleScrollTo("#integrations")}>
+//               Integrations
+//             </a>
+//             <a href="#resources" onClick={handleScrollTo("#resources")}>
+//               Resources
+//             </a>
+//           </div>
+
+//           <div className="footer-column">
+//             <h4>Contact</h4>
+//             <p>
+//               9330 Lyndon B Johnson Fwy #900
+//               <br />
+//               Dallas, TX, 75243
+//             </p>
+//             <p>📧 info@artemisats.com</p>
+//           </div>
+//         </div>
+
+//         <div className="footer-bottom">
+//           <p>© {new Date().getFullYear()} Artemis. All rights reserved.</p>
+//         </div>
+//       </footer>
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
+
+
+
 
 
 
@@ -13685,13 +18214,17 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import * as THREE from "three";
-import './Home.css';
+import "./Home.css";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Font loading
-if (typeof window !== 'undefined') {
-  const link = document.createElement('link');
-  link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap';
-  link.rel = 'stylesheet';
+if (typeof window !== "undefined") {
+  const link = document.createElement("link");
+  link.href =
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap";
+  link.rel = "stylesheet";
   document.head.appendChild(link);
 }
 
@@ -13740,8 +18273,8 @@ const Home: React.FC = () => {
   const [cities, setCities] = useState<City[]>([]);
   const [loadingStates, setLoadingStates] = useState(false);
   const [loadingCities, setLoadingCities] = useState(false);
-  
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   // Slider refs for manual control
   const challengeSliderRef = useRef<HTMLDivElement>(null);
@@ -13756,60 +18289,197 @@ const Home: React.FC = () => {
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const particlesMeshRef = useRef<THREE.Points | null>(null);
 
+  // Enhanced Toast Notifications
+  const showSuccessToast = (message: string) => {
+    toast.success(message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      style: {
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        color: "white",
+        fontWeight: "500",
+        borderRadius: "12px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+      },
+    });
+  };
+
+  const showErrorToast = (message: string) => {
+    toast.error(message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      style: {
+        background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)",
+        color: "white",
+        fontWeight: "500",
+        borderRadius: "12px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+      },
+    });
+  };
+
+//   const showInfoToast = (message: string) => {
+//     toast.info(message, {
+//       position: "top-right",
+//       autoClose: 4000,
+//       hideProgressBar: false,
+//       closeOnClick: true,
+//       pauseOnHover: true,
+//       draggable: true,
+//       progress: undefined,
+//       theme: "light",
+//     });
+//   };
+
+  // Enhanced form validation
+  const validateForm = (): boolean => {
+    if (!form.firstName.trim() || form.firstName.length < 2) {
+      showErrorToast("Please enter a valid first name (at least 2 characters)");
+      return false;
+    }
+
+    if (!form.lastName.trim() || form.lastName.length < 2) {
+      showErrorToast("Please enter a valid last name (at least 2 characters)");
+      return false;
+    }
+
+    if (!validateEmail(form.email)) {
+      showErrorToast("Please enter a valid work email address");
+      return false;
+    }
+
+    const phoneRegex = /^[0-9+()\-\s]{7,20}$/;
+    if (!phoneRegex.test(form.phone)) {
+      showErrorToast("Please enter a valid phone number (7-20 characters)");
+      return false;
+    }
+
+    if (!form.company.trim() || form.company.length < 2) {
+      showErrorToast("Please enter a valid company name");
+      return false;
+    }
+
+    if (!form.country) {
+      showErrorToast("Please select a country");
+      return false;
+    }
+
+    if (!form.state) {
+      showErrorToast("Please select a state");
+      return false;
+    }
+
+    if (!form.city) {
+      showErrorToast("Please select a city");
+      return false;
+    }
+
+    if (!form.source) {
+      showErrorToast("Please tell us how you heard about us");
+      return false;
+    }
+
+    return true;
+  };
+
+  // Enhanced demo submission with better toast notifications
+  const submitDemo = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Show loading state
+    const toastId = toast.loading("Scheduling your demo...", {
+      position: "top-right",
+      theme: "light",
+    });
+
+    try {
+      const result = await emailjs.send(
+        "service_245y37w",
+        "template_bca0q3m",
+        {
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          country: form.country,
+          state: form.state,
+          city: form.city,
+          source: form.source,
+          submittedAt: new Date().toISOString(),
+        },
+        "GqiI7hbjYCg0jB6-Z"
+      );
+
+      // Dismiss loading toast
+      toast.dismiss(toastId);
+
+      if (result.status === 200) {
+        showSuccessToast(
+          `🎉 Demo booked successfully, ${form.firstName}! We'll contact you within 24 hours to confirm your schedule.`
+        );
+
+        // Reset form
+        setForm({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          company: "",
+          country: "",
+          state: "",
+          city: "",
+          source: "",
+        });
+        setEmailError("");
+        setStates([]);
+        setCities([]);
+      }
+    } catch (error: any) {
+      // Dismiss loading toast
+      toast.dismiss(toastId);
+      
+      console.error("Failed to send email:", error);
+      showErrorToast(
+        "😔 Something went wrong. Please try again or contact us directly at info@artemisats.com"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   // Real-time email validation
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     return emailRegex.test(email);
   };
-const [isPaused, setIsPaused] = useState(false);
-const autoScrollRef = useRef<number | null>(null);
-
-// Auto scroll function
-const startAutoScroll = () => {
-  if (autoScrollRef.current) {
-    clearInterval(autoScrollRef.current);
-  }
-
-  autoScrollRef.current = setInterval(() => {
-    if (!isPaused) {
-      handleChallengeScroll('right');
-    }
-  }, 3000); // Change slide every 3 seconds
-};
-
-// Pause and resume functions
-const pauseAutoScroll = () => {
-  setIsPaused(true);
-};
-
-const resumeAutoScroll = () => {
-  setIsPaused(false);
-};
-
-// Update your existing handleChallengeScroll function to handle auto-scroll reset
-
-// Start auto-scroll on component mount and clean up on unmount
-useEffect(() => {
-  startAutoScroll();
-  
-  return () => {
-    if (autoScrollRef.current) {
-      clearInterval(autoScrollRef.current);
-    }
-  };
-}, []);
-
-// Optional: Reset auto-scroll timer when manually navigating will be handled 
-// in the existing enhancedHandleChallengeScroll function
-
-
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const email = e.target.value;
     setForm({ ...form, email });
-    
+
     if (email.length > 0 && !validateEmail(email)) {
-      setEmailError("Please enter email in correct format (example@domain.com)");
+      setEmailError(
+        "Please enter email in correct format (example@domain.com)"
+      );
     } else {
       setEmailError("");
     }
@@ -13822,30 +18492,40 @@ useEffect(() => {
 
   const fetchCountries = async () => {
     try {
-      const response = await fetch('https://api.countrystatecity.in/v1/countries', {
-        headers: {
-          'X-CSCAPI-KEY': 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+      const response = await fetch(
+        "https://api.countrystatecity.in/v1/countries",
+        {
+          headers: {
+            "X-CSCAPI-KEY":
+              "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+          },
         }
-      });
+      );
       const data = await response.json();
       setCountries(data);
     } catch (error) {
-      console.error('Error fetching countries:', error);
+      console.error("Error fetching countries:", error);
+      showErrorToast("Failed to load countries. Please refresh the page.");
     }
   };
 
   const fetchStates = async (countryCode: string) => {
     setLoadingStates(true);
     try {
-      const response = await fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states`, {
-        headers: {
-          'X-CSCAPI-KEY': 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+      const response = await fetch(
+        `https://api.countrystatecity.in/v1/countries/${countryCode}/states`,
+        {
+          headers: {
+            "X-CSCAPI-KEY":
+              "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+          },
         }
-      });
+      );
       const data = await response.json();
       setStates(data);
     } catch (error) {
-      console.error('Error fetching states:', error);
+      console.error("Error fetching states:", error);
+      showErrorToast("Failed to load states. Please try again.");
     }
     setLoadingStates(false);
   };
@@ -13853,15 +18533,20 @@ useEffect(() => {
   const fetchCities = async (countryCode: string, stateCode: string) => {
     setLoadingCities(true);
     try {
-      const response = await fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states/${stateCode}/cities`, {
-        headers: {
-          'X-CSCAPI-KEY': 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+      const response = await fetch(
+        `https://api.countrystatecity.in/v1/countries/${countryCode}/states/${stateCode}/cities`,
+        {
+          headers: {
+            "X-CSCAPI-KEY":
+              "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+          },
         }
-      });
+      );
       const data = await response.json();
       setCities(data);
     } catch (error) {
-      console.error('Error fetching cities:', error);
+      console.error("Error fetching cities:", error);
+      showErrorToast("Failed to load cities. Please try again.");
     }
     setLoadingCities(false);
   };
@@ -13885,123 +18570,6 @@ useEffect(() => {
     }
   };
 
-  // Slider navigation functions with auto-scroll support
- const handleChallengeScroll = (direction: 'left' | 'right') => {
-  if (!challengeSliderRef.current) return;
-  
-  const container = challengeSliderRef.current;
-  const slideCard = container.querySelector('.feature-slide-card');
-  if (!slideCard) return;
-  
-  const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
-  const currentScroll = container.scrollLeft;
-  const maxScroll = container.scrollWidth - container.clientWidth;
-  
-  let newScrollPos;
-  
-  if (direction === 'right') {
-    newScrollPos = currentScroll + slideWidth;
-    
-    // If we're at the end of the original set, reset to start without animation
-    if (currentScroll >= maxScroll - 10) {
-      container.scrollTo({ left: 0, behavior: 'instant' });
-      return;
-    }
-  } else {
-    newScrollPos = currentScroll - slideWidth;
-    
-    // If we're at the start, reset to end without animation
-    if (currentScroll <= 10) {
-      container.scrollTo({ left: maxScroll, behavior: 'instant' });
-      return;
-    }
-  }
-  
-  container.scrollTo({
-    left: newScrollPos,
-    behavior: 'smooth'
-  });
-  
-  // Reset auto-scroll timer
-  if (autoScrollRef.current) {
-    clearInterval(autoScrollRef.current);
-    startAutoScroll();
-  }
-};
-
-const handleSuccessScroll = (direction: 'left' | 'right') => {
-  if (!successSliderRef.current) return;
-  
-  const container = successSliderRef.current;
-  const slideCard = container.querySelector('.success-slide');
-  if (!slideCard) return;
-  
-  const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
-  const currentScroll = container.scrollLeft;
-  const maxScroll = container.scrollWidth - container.clientWidth;
-  
-  let newScrollPos;
-  
-  if (direction === 'right') {
-    newScrollPos = currentScroll + slideWidth;
-    
-    // If we're at the end of the original set, reset to start without animation
-    if (currentScroll >= maxScroll - 10) {
-      container.scrollTo({ left: 0, behavior: 'instant' });
-      return;
-    }
-  } else {
-    newScrollPos = currentScroll - slideWidth;
-    
-    // If we're at the start, reset to end without animation
-    if (currentScroll <= 10) {
-      container.scrollTo({ left: maxScroll, behavior: 'instant' });
-      return;
-    }
-  }
-  
-  container.scrollTo({
-    left: newScrollPos,
-    behavior: 'smooth'
-  });
-};
-
-const handleFeatureScroll = (direction: 'left' | 'right') => {
-  if (!featureSliderRef.current) return;
-  
-  const container = featureSliderRef.current;
-  const slideCard = container.querySelector('.feature-slide-card');
-  if (!slideCard) return;
-  
-  const slideWidth = (slideCard as HTMLElement).offsetWidth + 32; // card width + gap
-  const currentScroll = container.scrollLeft;
-  const maxScroll = container.scrollWidth - container.clientWidth;
-  
-  let newScrollPos;
-  
-  if (direction === 'right') {
-    newScrollPos = currentScroll + slideWidth;
-    
-    // If we're at the end of the original set, reset to start without animation
-    if (currentScroll >= maxScroll - 10) {
-      container.scrollTo({ left: 0, behavior: 'instant' });
-      return;
-    }
-  } else {
-    newScrollPos = currentScroll - slideWidth;
-    
-    // If we're at the start, reset to end without animation
-    if (currentScroll <= 10) {
-      container.scrollTo({ left: maxScroll, behavior: 'instant' });
-      return;
-    }
-  }
-  
-  container.scrollTo({
-    left: newScrollPos,
-    behavior: 'smooth'
-  });
-};
   // Canvas moon animation
   useEffect(() => {
     if (!moonCanvasRef.current) return;
@@ -14036,14 +18604,14 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
 
     const drawMoon = (): void => {
       const scrollProgress = Math.min(scrollY / 2000, 1);
-      
+
       const moonRadius = baseMoonRadius * (1 + scrollProgress * 0.5);
       const orbitRadiusX = baseOrbitRadiusX * (1 + scrollProgress * 0.3);
       const orbitRadiusY = baseOrbitRadiusY * (1 + scrollProgress * 0.3);
-      
+
       const moonCenterX = baseMoonCenterX - scrollProgress * width * 0.1;
       const moonCenterY = baseMoonCenterY + scrollProgress * height * 0.08;
-      
+
       const moonX = moonCenterX + Math.cos(moonAngle) * orbitRadiusX;
       const moonY = moonCenterY + Math.sin(moonAngle) * orbitRadiusY;
 
@@ -14052,9 +18620,16 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       ctx.rotate(rotationAngle);
 
       const moonGlow = ctx.createRadialGradient(
-        0, 0, moonRadius * 0.4,
-        0, 0, moonRadius * 2.0
+        0,
+        0,
+        moonRadius * 0.4,
+        0,
+        0,
+        moonRadius * 2.0
       );
+    //   moonGlow.addColorStop(0, 'rgba(255, 255, 255, 0.15)');
+    //   moonGlow.addColorStop(0.5, 'rgba(255, 255, 255, 0.08)');
+    //   moonGlow.addColorStop(1, 'rgba(255, 255, 255, 0)');
 
       ctx.fillStyle = moonGlow;
       ctx.beginPath();
@@ -14062,9 +18637,16 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       ctx.fill();
 
       const moonBase = ctx.createRadialGradient(
-        -moonRadius * 0.3, -moonRadius * 0.3, 0,
-        0, 0, moonRadius
+        -moonRadius * 0.3,
+        -moonRadius * 0.3,
+        0,
+        0,
+        0,
+        moonRadius
       );
+    //   moonBase.addColorStop(0, '#ffffff');
+    //   moonBase.addColorStop(0.7, '#f0f0f0');
+    //   moonBase.addColorStop(1, '#d0d0d0');
 
       ctx.fillStyle = moonBase;
       ctx.beginPath();
@@ -14076,12 +18658,18 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
         const radius = moonRadius * 0.6;
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
-        
+
         const textureGradient = ctx.createRadialGradient(
-          x, y, 0,
-          x, y, moonRadius * 0.2
+          x,
+          y,
+          0,
+          x,
+          y,
+          moonRadius * 0.2
         );
-        
+        // textureGradient.addColorStop(0, 'rgba(200, 200, 200, 0.5)');
+        // textureGradient.addColorStop(1, 'rgba(200, 200, 200, 0)');
+
         ctx.fillStyle = textureGradient;
         ctx.beginPath();
         ctx.arc(x, y, moonRadius * 0.2, 0, Math.PI * 2);
@@ -14093,12 +18681,18 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
         const waveRadius = moonRadius * 0.7;
         const waveX = Math.cos(waveAngle) * waveRadius;
         const waveY = Math.sin(waveAngle) * waveRadius;
-        
+
         const waveGradient = ctx.createRadialGradient(
-          waveX, waveY, 0,
-          waveX, waveY, moonRadius * 0.15
+          waveX,
+          waveY,
+          0,
+          waveX,
+          waveY,
+          moonRadius * 0.15
         );
-        
+        // waveGradient.addColorStop(0, 'rgba(180, 180, 180, 0.4)');
+        // waveGradient.addColorStop(1, 'rgba(180, 180, 180, 0)');
+
         ctx.fillStyle = waveGradient;
         ctx.beginPath();
         ctx.arc(waveX, waveY, moonRadius * 0.15, 0, Math.PI * 2);
@@ -14106,13 +18700,26 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       }
 
       const shineGradient = ctx.createRadialGradient(
-        -moonRadius * 0.3, -moonRadius * 0.3, 0,
-        -moonRadius * 0.3, -moonRadius * 0.3, moonRadius * 0.5
+        -moonRadius * 0.3,
+        -moonRadius * 0.3,
+        0,
+        -moonRadius * 0.3,
+        -moonRadius * 0.3,
+        moonRadius * 0.5
       );
+    //   shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.8)');
+    //   shineGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.3)');
+    //   shineGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
 
       ctx.fillStyle = shineGradient;
       ctx.beginPath();
-      ctx.arc(-moonRadius * 0.3, -moonRadius * 0.3, moonRadius * 0.5, 0, Math.PI * 2);
+      ctx.arc(
+        -moonRadius * 0.3,
+        -moonRadius * 0.3,
+        moonRadius * 0.5,
+        0,
+        Math.PI * 2
+      );
       ctx.fill();
 
       ctx.restore();
@@ -14268,7 +18875,10 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       emissive: 0xcc6633,
       emissiveIntensity: 0.08,
     });
-    const orangePlanet = new THREE.Mesh(orangePlanetGeometry, orangePlanetMaterial);
+    const orangePlanet = new THREE.Mesh(
+      orangePlanetGeometry,
+      orangePlanetMaterial
+    );
     orangePlanetGroup.add(orangePlanet);
     orangePlanetGroup.position.set(-30, -12, -45);
     scene.add(orangePlanetGroup);
@@ -14366,7 +18976,8 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
   }, []);
 
   const handleScrollTo =
-    (selector: string) => (e: React.MouseEvent<HTMLAnchorElement>): void => {
+    (selector: string) =>
+    (e: React.MouseEvent<HTMLAnchorElement>): void => {
       e.preventDefault();
       const el = document.querySelector(selector);
       if (el) {
@@ -14375,89 +18986,37 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       }
     };
 
-  const submitDemo = (e: React.FormEvent): void => {
-    e.preventDefault();
-    
-    if (!form.firstName.trim() || form.firstName.length < 2) {
-      alert("Please enter a valid first name (at least 2 characters).");
-      return;
-    }
-    
-    if (!form.lastName.trim() || form.lastName.length < 2) {
-      alert("Please enter a valid last name (at least 2 characters).");
-      return;
-    }
-    
-    if (!validateEmail(form.email)) {
-      alert("Please enter a valid work email address in correct format.");
-      return;
-    }
-    
-    const phoneRegex = /^[0-9+()\-\s]{7,20}$/;
-    if (!phoneRegex.test(form.phone)) {
-      alert("Please enter a valid phone number (7-20 characters).");
-      return;
-    }
-    
-    if (!form.company.trim() || form.company.length < 2) {
-      alert("Please enter a valid company name.");
-      return;
-    }
-    
-    if (!form.country) {
-      alert("Please select a country.");
-      return;
-    }
-    
-    if (!form.state) {
-      alert("Please select a state.");
-      return;
-    }
-    
-    if (!form.city) {
-      alert("Please select a city.");
-      return;
-    }
-    
-    if (!form.source) {
-      alert("Please tell us how you heard about us.");
-      return;
-    }
-    
-    alert(
-      "Thank you for your interest! We will contact you soon to schedule your demo."
-    );
-    
-    setForm({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      company: "",
-      country: "",
-      state: "",
-      city: "",
-      source: "",
-    });
-    setEmailError("");
-    setStates([]);
-    setCities([]);
-  };
-
   return (
     <div className="app">
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        style={{
+          zIndex: 9999,
+        }}
+      />
+
       <div className="gradient-bg"></div>
       <div className="stars-container" ref={starsContainerRef}></div>
-      <canvas 
-        ref={moonCanvasRef} 
+      <canvas
+        ref={moonCanvasRef}
         style={{
-          position: 'fixed',
+          position: "fixed",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%',
+          width: "100%",
+          height: "100%",
           zIndex: 2,
-          pointerEvents: 'none'
+          pointerEvents: "none",
         }}
       />
       <div id="canvas-container" ref={canvasRef} />
@@ -14467,39 +19026,64 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
         <div className="nav-container">
           <div className="brand-section">
             <div className="artemis-logo">
-              <svg className="logo-svg" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g className="logo-icon">
-                  <path d="M8 20 L18 20" stroke="url(#logoGradient1)" strokeWidth="2.5" strokeLinecap="round"/>
-                  <path d="M18 20 L24 14 L18 20 L24 26 Z" fill="url(#logoGradient1)"/>
-                  <circle cx="8" cy="20" r="3" fill="url(#logoGradient2)" opacity="0.8"/>
-                  <path d="M12 14 Q18 20 12 26" stroke="url(#logoGradient1)" strokeWidth="2" fill="none"/>
-                </g>
-                
+              <svg
+                className="logo-svg"
+                viewBox="0 0 140 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="logoGradient1"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#667eea" />
+                    <stop offset="100%" stopColor="#764ba2" />
+                  </linearGradient>
+                  <linearGradient
+                    id="logoGradient2"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#6ea8fe" />
+                    <stop offset="100%" stopColor="#667eea" />
+                  </linearGradient>
+                  <linearGradient
+                    id="logoGradient3"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stopColor="#667eea" />
+                    <stop offset="50%" stopColor="#764ba2" />
+                    <stop offset="100%" stopColor="#6ea8fe" />
+                  </linearGradient>
+                </defs>
+
+                {/* Logo Text */}
                 <g className="logo-text">
-                  <text x="32" y="27" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="18" fill="url(#logoGradient3)" letterSpacing="1">
+                  <text
+                    x="45"
+                    y="32"
+                    fontFamily="'Poppins', sans-serif"
+                    fontWeight="700"
+                    fontSize="20"
+                    fill="url(#logoGradient3)"
+                    letterSpacing="1"
+                  >
                     ARTEMIS
                   </text>
                 </g>
-                
-                <defs>
-                  <linearGradient id="logoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#667eea"/>
-                    <stop offset="100%" stopColor="#764ba2"/>
-                  </linearGradient>
-                  <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#6ea8fe"/>
-                    <stop offset="100%" stopColor="#667eea"/>
-                  </linearGradient>
-                  <linearGradient id="logoGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#667eea"/>
-                    <stop offset="50%" stopColor="#764ba2"/>
-                    <stop offset="100%" stopColor="#6ea8fe"/>
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
           </div>
-          
+
           <div
             className={`menu-toggle ${menuOpen ? "active" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -14508,25 +19092,49 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
             <span></span>
             <span></span>
           </div>
-          
+
           <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
             <div className="nav-links-group">
-              <a href="#home" onClick={handleScrollTo("#home")} className="nav-link">
+              <a
+                href="#home"
+                onClick={handleScrollTo("#home")}
+                className="nav-link"
+              >
                 Home
               </a>
-              <a href="#about" onClick={handleScrollTo("#about")} className="nav-link">
+              <a
+                href="#about"
+                onClick={handleScrollTo("#about")}
+                className="nav-link"
+              >
                 About
               </a>
-              <a href="#superpowers" onClick={handleScrollTo("#superpowers")} className="nav-link">
+              <a
+                href="#superpowers"
+                onClick={handleScrollTo("#superpowers")}
+                className="nav-link"
+              >
                 Superpowers
               </a>
-              <a href="#pricing" onClick={handleScrollTo("#pricing")} className="nav-link">
+              <a
+                href="#pricing"
+                onClick={handleScrollTo("#pricing")}
+                className="nav-link"
+              >
                 Pricing
               </a>
-              <a href="#integrations" onClick={handleScrollTo("#integrations")} className="nav-link">
+              <a
+                href="#integrations"
+                onClick={handleScrollTo("#integrations")}
+                className="nav-link"
+              >
                 Integrations
               </a>
-              <a href="#resources" onClick={handleScrollTo("#resources")} className="nav-link">
+              <a
+                href="#resources"
+                onClick={handleScrollTo("#resources")}
+                className="nav-link"
+              >
                 Resources
               </a>
             </div>
@@ -14544,12 +19152,16 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       {/* Hero Section */}
       <section className="hero-section" id="home">
         <div className="hero-content-wrapper">
-          <div className="hero-badge">AI-powered ATS for Healthcare Staffing</div>
-          <h1 className="hero-title">Recruit faster with clarity, not clutter.</h1>
+          <div className="hero-badge">
+            AI-powered ATS for Healthcare Staffing
+          </div>
+          <h1 className="hero-title">
+            Recruit faster with clarity, not clutter.
+          </h1>
           <p className="hero-description">
-            Streamlined workflows, intelligent automation, and minimalist design 
-            that empowers healthcare staffing teams to focus on what matters most: 
-            connecting great talent with exceptional opportunities.
+            Streamlined workflows, intelligent automation, and minimalist design
+            that empowers healthcare staffing teams to focus on what matters
+            most: connecting great talent with exceptional opportunities.
           </p>
           <div className="hero-cta-group">
             <a
@@ -14570,440 +19182,670 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
         </div>
       </section>
 
-      {/* The Challenge Section - INFINITE SLIDER LIKE TALENT SUPERPOWERS */}
-     {/* The Challenge Section - INFINITE SLIDER LIKE TALENT SUPERPOWERS */}
-{/* The Challenge Section - INFINITE SLIDER */}
-<section className="challenge-section" id="challenge">
-  <div className="content-container">
-    <div className="section-header">
-      <h2 className="section-title-main">The Challenge We Solve</h2>
-      <p className="section-subtitle-main">
-        Healthcare staffing agencies face overwhelming complexity in their daily operations
-      </p>
-    </div>
-    
-    <div className="slider-wrapper-with-nav">
-      <button 
-        className="slider-nav-btn-absolute slider-nav-left" 
-        onClick={() => handleChallengeScroll('left')}
-        aria-label="Previous challenge"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-      </button>
-      
-      <div 
-        className="slider-container-infinite" 
-        ref={challengeSliderRef}
-        onMouseEnter={pauseAutoScroll}
-        onMouseLeave={resumeAutoScroll}
-      >
-        <div className="slider-track-infinite">
-          {/* Original Set */}
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-            </div>
-            <h3 className="feature-title">Time-Consuming Manual Work</h3>
-            <p className="feature-description">
-              Hours spent on resume parsing, data entry, and candidate tracking that 
-              could be automated, pulling recruiters away from relationship building.
-            </p>
-          </div>
-          
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </div>
-            <h3 className="feature-title">Difficulty Finding Qualified Talent</h3>
-            <p className="feature-description">
-              Traditional search methods make it nearly impossible to quickly identify 
-              candidates with the right skills, certifications, and availability.
-            </p>
-          </div>
-          
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </div>
-            <h3 className="feature-title">Disconnected Systems</h3>
-            <p className="feature-description">
-              VMS platforms, ATS software, and communication tools operating in silos, 
-              creating data gaps and workflow friction.
-            </p>
-          </div>
-          
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
-                <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
-                <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
-                <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
-              </svg>
-            </div>
-            <h3 className="feature-title">Compliance & Credentialing Complexity</h3>
-            <p className="feature-description">
-              Tracking licenses, certifications, and compliance documentation across 
-              dozens or hundreds of healthcare professionals is error-prone and stressful.
+      {/* The Challenge Section - INFINITE SLIDER */}
+      <section className="challenge-section" id="challenge">
+        <div className="content-container">
+          <div className="section-header">
+            <h2 className="section-title-main">The Challenge We Solve</h2>
+            <p className="section-subtitle-main">
+              Healthcare staffing agencies face overwhelming complexity in their
+              daily operations
             </p>
           </div>
 
-          {/* Duplicate Set for Infinite Loop */}
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-            </div>
-            <h3 className="feature-title">Time-Consuming Manual Work</h3>
-            <p className="feature-description">
-              Hours spent on resume parsing, data entry, and candidate tracking that 
-              could be automated, pulling recruiters away from relationship building.
-            </p>
-          </div>
-          
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </div>
-            <h3 className="feature-title">Difficulty Finding Qualified Talent</h3>
-            <p className="feature-description">
-              Traditional search methods make it nearly impossible to quickly identify 
-              candidates with the right skills, certifications, and availability.
-            </p>
-          </div>
-          
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </div>
-            <h3 className="feature-title">Disconnected Systems</h3>
-            <p className="feature-description">
-              VMS platforms, ATS software, and communication tools operating in silos, 
-              creating data gaps and workflow friction.
-            </p>
-          </div>
-          
-          <div className="feature-slide-card">
-            <div className="feature-icon-box-pro">
-              <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
-                <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
-                <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
-                <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
-              </svg>
-            </div>
-            <h3 className="feature-title">Compliance & Credentialing Complexity</h3>
-            <p className="feature-description">
-              Tracking licenses, certifications, and compliance documentation across 
-              dozens or hundreds of healthcare professionals is error-prone and stressful.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <button 
-        className="slider-nav-btn-absolute slider-nav-right" 
-        onClick={() => handleChallengeScroll('right')}
-        aria-label="Next challenge"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </button>
-    </div>
-  </div>
-</section>
-      {/* Automatic Success Stories Slider WITH NAVIGATION BUTTONS */}
-    {/* Automatic Success Stories Slider WITH INFINITE SCROLL */}
-<section className="success-slider-section">
-  <div className="content-container">
-    <div className="section-header">
-      <h2 className="section-title-main">Trusted by Leading Healthcare Staffing Agencies</h2>
-      <p className="section-subtitle-main">
-        Join hundreds of agencies achieving remarkable results with Artemis
-      </p>
-    </div>
-    
-    <div className="slider-wrapper-with-nav">
-      <button 
-        className="slider-nav-btn-absolute slider-nav-left" 
-        onClick={() => handleSuccessScroll('left')}
-        aria-label="Previous success story"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-      </button>
-      
-      <div className="slider-container-infinite" ref={successSliderRef}>
-        <div className="slider-track-infinite">
-          {/* Success slides - Original Set */}
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">67%</div>
-                <div className="metric-label">Faster Time-to-Submit</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad1)"/>
-                    <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="white" opacity="0.9"/>
-                  </svg>
+          <div className="slider-container-infinite-wrapper">
+            <div className="slider-container-infinite" ref={challengeSliderRef}>
+              <div className="slider-track-infinite challenge-slider">
+                {/* Original Set */}
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">Time-Consuming Manual Work</h3>
+                  <p className="feature-description">
+                    Hours spent on resume parsing, data entry, and candidate
+                    tracking that could be automated, pulling recruiters away
+                    from relationship building.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">HealthStaff Pro</div>
-                  <div className="company-type">Travel Nursing Agency</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "Artemis transformed our candidate submission process. What used to take 
-                hours now takes minutes."
-              </p>
-            </div>
-          </div>
 
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">3.2x</div>
-                <div className="metric-label">More Placements Per Month</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad2)"/>
-                    <circle cx="20" cy="20" r="12" stroke="white" strokeWidth="2" fill="none"/>
-                    <path d="M20 14 L20 26 M14 20 L26 20" stroke="white" strokeWidth="2"/>
-                  </svg>
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">
+                    Difficulty Finding Qualified Talent
+                  </h3>
+                  <p className="feature-description">
+                    Traditional search methods make it nearly impossible to
+                    quickly identify candidates with the right skills,
+                    certifications, and availability.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">MedTalent Solutions</div>
-                  <div className="company-type">Allied Health Staffing</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "The AI-powered matching helped us scale our placement volume without 
-                adding headcount."
-              </p>
-            </div>
-          </div>
 
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">$420K</div>
-                <div className="metric-label">Annual Cost Savings</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad3)"/>
-                    <path d="M20 8 L32 20 L20 32 L8 20 Z" stroke="white" strokeWidth="2" fill="none"/>
-                    <circle cx="20" cy="20" r="4" fill="white"/>
-                  </svg>
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">Disconnected Systems</h3>
+                  <p className="feature-description">
+                    VMS platforms, ATS software, and communication tools
+                    operating in silos, creating data gaps and workflow
+                    friction.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">Apex Healthcare Staffing</div>
-                  <div className="company-type">Multi-Specialty Agency</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "ROI was immediate. Artemis paid for itself in the first quarter through 
-                efficiency gains alone."
-              </p>
-            </div>
-          </div>
 
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">94%</div>
-                <div className="metric-label">Candidate Satisfaction</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad4)"/>
-                    <path d="M10 20 Q20 10 30 20 Q20 30 10 20" fill="white" opacity="0.9"/>
-                  </svg>
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
+                      <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
+                      <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
+                      <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">
+                    Compliance & Credentialing Complexity
+                  </h3>
+                  <p className="feature-description">
+                    Tracking licenses, certifications, and compliance
+                    documentation across dozens or hundreds of healthcare
+                    professionals is error-prone and stressful.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">CareLink Professionals</div>
-                  <div className="company-type">Locum Tenens Placement</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "Our candidates love the smooth onboarding experience. It's a competitive 
-                advantage for us."
-              </p>
-            </div>
-          </div>
 
-          {/* Duplicate Set for Infinite Loop */}
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">67%</div>
-                <div className="metric-label">Faster Time-to-Submit</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad1)"/>
-                    <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="white" opacity="0.9"/>
-                  </svg>
+                {/* Duplicate Set for Infinite Loop */}
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">Time-Consuming Manual Work</h3>
+                  <p className="feature-description">
+                    Hours spent on resume parsing, data entry, and candidate
+                    tracking that could be automated, pulling recruiters away
+                    from relationship building.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">HealthStaff Pro</div>
-                  <div className="company-type">Travel Nursing Agency</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "Artemis transformed our candidate submission process. What used to take 
-                hours now takes minutes."
-              </p>
-            </div>
-          </div>
 
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">3.2x</div>
-                <div className="metric-label">More Placements Per Month</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad2)"/>
-                    <circle cx="20" cy="20" r="12" stroke="white" strokeWidth="2" fill="none"/>
-                    <path d="M20 14 L20 26 M14 20 L26 20" stroke="white" strokeWidth="2"/>
-                  </svg>
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">
+                    Difficulty Finding Qualified Talent
+                  </h3>
+                  <p className="feature-description">
+                    Traditional search methods make it nearly impossible to
+                    quickly identify candidates with the right skills,
+                    certifications, and availability.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">MedTalent Solutions</div>
-                  <div className="company-type">Allied Health Staffing</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "The AI-powered matching helped us scale our placement volume without 
-                adding headcount."
-              </p>
-            </div>
-          </div>
 
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">$420K</div>
-                <div className="metric-label">Annual Cost Savings</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad3)"/>
-                    <path d="M20 8 L32 20 L20 32 L8 20 Z" stroke="white" strokeWidth="2" fill="none"/>
-                    <circle cx="20" cy="20" r="4" fill="white"/>
-                  </svg>
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">Disconnected Systems</h3>
+                  <p className="feature-description">
+                    VMS platforms, ATS software, and communication tools
+                    operating in silos, creating data gaps and workflow
+                    friction.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">Apex Healthcare Staffing</div>
-                  <div className="company-type">Multi-Specialty Agency</div>
-                </div>
-              </div>
-              <p className="success-quote">
-                "ROI was immediate. Artemis paid for itself in the first quarter through 
-                efficiency gains alone."
-              </p>
-            </div>
-          </div>
 
-          <div className="success-slide">
-            <div className="success-slide-content">
-              <div className="success-metric">
-                <div className="metric-value">94%</div>
-                <div className="metric-label">Candidate Satisfaction</div>
-              </div>
-              <div className="success-company">
-                <div className="company-logo-placeholder">
-                  <svg viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="8" fill="url(#companyGrad4)"/>
-                    <path d="M10 20 Q20 10 30 20 Q20 30 10 20" fill="white" opacity="0.9"/>
-                  </svg>
+                <div className="feature-slide-card">
+                  <div className="feature-icon-box-pro">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M9 11H3v5a2 2 0 0 0 2 2h4"></path>
+                      <path d="M9 7V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4"></path>
+                      <path d="M15 11h6v5a2 2 0 0 1-2 2h-4"></path>
+                      <path d="M15 7V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+                    </svg>
+                  </div>
+                  <h3 className="feature-title">
+                    Compliance & Credentialing Complexity
+                  </h3>
+                  <p className="feature-description">
+                    Tracking licenses, certifications, and compliance
+                    documentation across dozens or hundreds of healthcare
+                    professionals is error-prone and stressful.
+                  </p>
                 </div>
-                <div className="company-info">
-                  <div className="company-name">CareLink Professionals</div>
-                  <div className="company-type">Locum Tenens Placement</div>
-                </div>
               </div>
-              <p className="success-quote">
-                "Our candidates love the smooth onboarding experience. It's a competitive 
-                advantage for us."
-              </p>
             </div>
           </div>
         </div>
-      </div>
-      
-      <button 
-        className="slider-nav-btn-absolute slider-nav-right" 
-        onClick={() => handleSuccessScroll('right')}
-        aria-label="Next success story"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </button>
-    </div>
-  </div>
-</section>
+      </section>
 
-      {/* Feature Highlights with Navigation Buttons */}
+      {/* Success Stories Slider - INFINITE SCROLL */}
+      <section className="success-slider-section">
+        <div className="content-container">
+          <div className="section-header">
+            <h2 className="section-title-main">
+              Trusted by Leading Healthcare Staffing Agencies
+            </h2>
+            <p className="section-subtitle-main">
+              Join hundreds of agencies achieving remarkable results with
+              Artemis
+            </p>
+          </div>
+
+          <div className="slider-container-infinite-wrapper">
+            <div className="slider-container-infinite" ref={successSliderRef}>
+              <div className="slider-track-infinite success-slider">
+                {/* Success slides - Original Set */}
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">67%</div>
+                      <div className="metric-label">Faster Time-to-Submit</div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad1)"
+                          />
+                          <path
+                            d="M20 10 L30 20 L20 30 L10 20 Z"
+                            fill="white"
+                            opacity="0.9"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad1"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#667eea" />
+                              <stop offset="100%" stopColor="#764ba2" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">HealthStaff Pro</div>
+                        <div className="company-type">
+                          Travel Nursing Agency
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "Artemis transformed our candidate submission process.
+                      What used to take hours now takes minutes."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">3.2x</div>
+                      <div className="metric-label">
+                        More Placements Per Month
+                      </div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad2)"
+                          />
+                          <circle
+                            cx="20"
+                            cy="20"
+                            r="12"
+                            stroke="white"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <path
+                            d="M20 14 L20 26 M14 20 L26 20"
+                            stroke="white"
+                            strokeWidth="2"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad2"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#6ea8fe" />
+                              <stop offset="100%" stopColor="#667eea" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">MedTalent Solutions</div>
+                        <div className="company-type">
+                          Allied Health Staffing
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "The AI-powered matching helped us scale our placement
+                      volume without adding headcount."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">$420K</div>
+                      <div className="metric-label">Annual Cost Savings</div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad3)"
+                          />
+                          <path
+                            d="M20 8 L32 20 L20 32 L8 20 Z"
+                            stroke="white"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <circle cx="20" cy="20" r="4" fill="white" />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad3"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#764ba2" />
+                              <stop offset="100%" stopColor="#667eea" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">
+                          Apex Healthcare Staffing
+                        </div>
+                        <div className="company-type">
+                          Multi-Specialty Agency
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "ROI was immediate. Artemis paid for itself in the first
+                      quarter through efficiency gains alone."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">94%</div>
+                      <div className="metric-label">Candidate Satisfaction</div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad4)"
+                          />
+                          <path
+                            d="M10 20 Q20 10 30 20 Q20 30 10 20"
+                            fill="white"
+                            opacity="0.9"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad4"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#667eea" />
+                              <stop offset="100%" stopColor="#6ea8fe" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">
+                          CareLink Professionals
+                        </div>
+                        <div className="company-type">
+                          Locum Tenens Placement
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "Our candidates love the smooth onboarding experience.
+                      It's a competitive advantage for us."
+                    </p>
+                  </div>
+                </div>
+
+                {/* Duplicate Set for Infinite Loop */}
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">67%</div>
+                      <div className="metric-label">Faster Time-to-Submit</div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad1a)"
+                          />
+                          <path
+                            d="M20 10 L30 20 L20 30 L10 20 Z"
+                            fill="white"
+                            opacity="0.9"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad1a"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#667eea" />
+                              <stop offset="100%" stopColor="#764ba2" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">HealthStaff Pro</div>
+                        <div className="company-type">
+                          Travel Nursing Agency
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "Artemis transformed our candidate submission process.
+                      What used to take hours now takes minutes."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">3.2x</div>
+                      <div className="metric-label">
+                        More Placements Per Month
+                      </div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad2a)"
+                          />
+                          <circle
+                            cx="20"
+                            cy="20"
+                            r="12"
+                            stroke="white"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <path
+                            d="M20 14 L20 26 M14 20 L26 20"
+                            stroke="white"
+                            strokeWidth="2"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad2a"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#6ea8fe" />
+                              <stop offset="100%" stopColor="#667eea" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">MedTalent Solutions</div>
+                        <div className="company-type">
+                          Allied Health Staffing
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "The AI-powered matching helped us scale our placement
+                      volume without adding headcount."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">$420K</div>
+                      <div className="metric-label">Annual Cost Savings</div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad3a)"
+                          />
+                          <path
+                            d="M20 8 L32 20 L20 32 L8 20 Z"
+                            stroke="white"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <circle cx="20" cy="20" r="4" fill="white" />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad3a"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#764ba2" />
+                              <stop offset="100%" stopColor="#667eea" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">
+                          Apex Healthcare Staffing
+                        </div>
+                        <div className="company-type">
+                          Multi-Specialty Agency
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "ROI was immediate. Artemis paid for itself in the first
+                      quarter through efficiency gains alone."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="success-slide">
+                  <div className="success-slide-content">
+                    <div className="success-metric">
+                      <div className="metric-value">94%</div>
+                      <div className="metric-label">Candidate Satisfaction</div>
+                    </div>
+                    <div className="success-company">
+                      <div className="company-logo-placeholder">
+                        <svg viewBox="0 0 40 40" fill="none">
+                          <rect
+                            width="40"
+                            height="40"
+                            rx="8"
+                            fill="url(#companyGrad4a)"
+                          />
+                          <path
+                            d="M10 20 Q20 10 30 20 Q20 30 10 20"
+                            fill="white"
+                            opacity="0.9"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="companyGrad4a"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#667eea" />
+                              <stop offset="100%" stopColor="#6ea8fe" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div className="company-info">
+                        <div className="company-name">
+                          CareLink Professionals
+                        </div>
+                        <div className="company-type">
+                          Locum Tenens Placement
+                        </div>
+                      </div>
+                    </div>
+                    <p className="success-quote">
+                      "Our candidates love the smooth onboarding experience.
+                      It's a competitive advantage for us."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Highlights - INFINITE SLIDER */}
       <section className="highlights-section" id="superpowers">
         <div className="content-container">
           <div className="section-header">
             <h2 className="section-title-main">Talent Superpowers</h2>
             <p className="section-subtitle-main">
-              Designed for recruiters. Powered by AI. Built for speed and simplicity.
+              Designed for recruiters. Powered by AI. Built for speed and
+              simplicity.
             </p>
           </div>
 
-          <div className="slider-wrapper-with-nav">
-            <button 
-              className="slider-nav-btn-absolute slider-nav-left" 
-              onClick={() => handleFeatureScroll('left')}
-              aria-label="Previous feature"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            
+          <div className="slider-container-infinite-wrapper">
             <div className="slider-container-infinite" ref={featureSliderRef}>
-              <div className="slider-track-infinite">
+              <div className="slider-track-infinite features-slider">
                 {/* Original Set */}
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                       <circle cx="11" cy="11" r="3"></circle>
@@ -15011,8 +19853,9 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                   </div>
                   <h3 className="feature-title">AI-Powered Candidate Search</h3>
                   <p className="feature-description">
-                    Find the perfect match instantly with intelligent search that understands 
-                    skills, experience, certifications, and availability patterns.
+                    Find the perfect match instantly with intelligent search
+                    that understands skills, experience, certifications, and
+                    availability patterns.
                   </p>
                   <ul className="feature-list">
                     <li>Natural language search queries</li>
@@ -15020,17 +19863,23 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Real-time availability tracking</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
                     </svg>
                   </div>
                   <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
                   <p className="feature-description">
-                    Seamlessly integrate with major VMS platforms. Jobs flow automatically 
-                    into Artemis, eliminating manual data entry.
+                    Seamlessly integrate with major VMS platforms. Jobs flow
+                    automatically into Artemis, eliminating manual data entry.
                   </p>
                   <ul className="feature-list">
                     <li>Automatic job ingestion</li>
@@ -15038,18 +19887,25 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Multi-VMS support</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                   </div>
                   <h3 className="feature-title">Built-In Skills Checklists</h3>
                   <p className="feature-description">
-                    Interactive checklists that capture candidate qualifications with precision, 
-                    convert to PDFs, and distribute to stakeholders instantly.
+                    Interactive checklists that capture candidate qualifications
+                    with precision, convert to PDFs, and distribute to
+                    stakeholders instantly.
                   </p>
                   <ul className="feature-list">
                     <li>Customizable checklist templates</li>
@@ -15057,19 +19913,33 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Automated distribution</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"
+                      ></rect>
                       <line x1="3" y1="9" x2="21" y2="9"></line>
                       <line x1="9" y1="21" x2="9" y2="9"></line>
                     </svg>
                   </div>
                   <h3 className="feature-title">Smart Onboarding Dashboards</h3>
                   <p className="feature-description">
-                    Visual pipelines that show exactly where every candidate stands, 
-                    with automated reminders and next-step recommendations.
+                    Visual pipelines that show exactly where every candidate
+                    stands, with automated reminders and next-step
+                    recommendations.
                   </p>
                   <ul className="feature-list">
                     <li>Drag-and-drop pipeline management</li>
@@ -15077,19 +19947,27 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Real-time status updates</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                       <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                       <line x1="12" y1="22.08" x2="12" y2="12"></line>
                     </svg>
                   </div>
-                  <h3 className="feature-title">Candidate Pipeline Management</h3>
+                  <h3 className="feature-title">
+                    Candidate Pipeline Management
+                  </h3>
                   <p className="feature-description">
-                    Design dynamic, stage-based workflows that adapt to your process. 
-                    Never lose track of a candidate again.
+                    Design dynamic, stage-based workflows that adapt to your
+                    process. Never lose track of a candidate again.
                   </p>
                   <ul className="feature-list">
                     <li>Customizable pipeline stages</li>
@@ -15097,19 +19975,28 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Advanced filtering</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                       <polyline points="14 2 14 8 20 8"></polyline>
                       <line x1="9" y1="15" x2="15" y2="15"></line>
                     </svg>
                   </div>
-                  <h3 className="feature-title">Right-to-Represent Automation</h3>
+                  <h3 className="feature-title">
+                    Right-to-Represent Automation
+                  </h3>
                   <p className="feature-description">
-                    Send RTR forms instantly, track signatures, and maintain compliance 
-                    documentation—all within a single, streamlined workflow.
+                    Send RTR forms instantly, track signatures, and maintain
+                    compliance documentation—all within a single, streamlined
+                    workflow.
                   </p>
                   <ul className="feature-list">
                     <li>One-click RTR distribution</li>
@@ -15121,7 +20008,13 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                 {/* Duplicate Set for Infinite Loop */}
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                       <circle cx="11" cy="11" r="3"></circle>
@@ -15129,8 +20022,9 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                   </div>
                   <h3 className="feature-title">AI-Powered Candidate Search</h3>
                   <p className="feature-description">
-                    Find the perfect match instantly with intelligent search that understands 
-                    skills, experience, certifications, and availability patterns.
+                    Find the perfect match instantly with intelligent search
+                    that understands skills, experience, certifications, and
+                    availability patterns.
                   </p>
                   <ul className="feature-list">
                     <li>Natural language search queries</li>
@@ -15138,17 +20032,23 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Real-time availability tracking</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
                     </svg>
                   </div>
                   <h3 className="feature-title">Lightning-Fast VMS Job Sync</h3>
                   <p className="feature-description">
-                    Seamlessly integrate with major VMS platforms. Jobs flow automatically 
-                    into Artemis, eliminating manual data entry.
+                    Seamlessly integrate with major VMS platforms. Jobs flow
+                    automatically into Artemis, eliminating manual data entry.
                   </p>
                   <ul className="feature-list">
                     <li>Automatic job ingestion</li>
@@ -15156,18 +20056,25 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <li>Multi-VMS support</li>
                   </ul>
                 </div>
-                
+
                 <div className="feature-slide-card">
                   <div className="feature-icon-box-pro">
-                    <svg className="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="feature-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                   </div>
                   <h3 className="feature-title">Built-In Skills Checklists</h3>
                   <p className="feature-description">
-                    Interactive checklists that capture candidate qualifications with precision, 
-                    convert to PDFs, and distribute to stakeholders instantly.
+                    Interactive checklists that capture candidate qualifications
+                    with precision, convert to PDFs, and distribute to
+                    stakeholders instantly.
                   </p>
                   <ul className="feature-list">
                     <li>Customizable checklist templates</li>
@@ -15177,88 +20084,106 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                 </div>
               </div>
             </div>
-            
-            <button 
-              className="slider-nav-btn-absolute slider-nav-right" 
-              onClick={() => handleFeatureScroll('right')}
-              aria-label="Next feature"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
           </div>
         </div>
       </section>
-
       {/* About Artemis Section */}
       <section className="about-section" id="about">
         <div className="content-container">
           <div className="about-hero">
-            <h2 className="about-hero-title">Built to bring clarity back to recruiting</h2>
+            <h2 className="about-hero-title">
+              Built to bring clarity back to recruiting
+            </h2>
             <p className="about-hero-subtitle">
-              Artemis combines cutting-edge AI technology with intuitive design to deliver 
-              the most powerful yet simple ATS for healthcare staffing agencies.
+              Artemis combines cutting-edge AI technology with intuitive design
+              to deliver the most powerful yet simple ATS for healthcare
+              staffing agencies.
             </p>
           </div>
-          
+
           <div className="about-story-grid">
             <div className="about-story-content">
               <h3>Our Approach</h3>
               <p>
-                Born from real-world staffing challenges, Artemis was designed by industry veterans 
-                who understand the unique pressures of healthcare recruitment. We've eliminated the 
-                bloat and complexity that plague traditional ATS platforms, focusing instead on the 
-                features that actually drive placements.
+                Born from real-world staffing challenges, Artemis was designed
+                by industry veterans who understand the unique pressures of
+                healthcare recruitment. We've eliminated the bloat and
+                complexity that plague traditional ATS platforms, focusing
+                instead on the features that actually drive placements.
               </p>
               <p>
-                Every workflow, every interface element, and every automation has been carefully 
-                crafted to save you time while improving accuracy. Whether you're placing travel 
-                nurses, allied health professionals, or locum tenens physicians, Artemis adapts 
-                to your process—not the other way around.
+                Every workflow, every interface element, and every automation
+                has been carefully crafted to save you time while improving
+                accuracy. Whether you're placing travel nurses, allied health
+                professionals, or locum tenens physicians, Artemis adapts to
+                your process—not the other way around.
               </p>
-              
+
               <div className="about-stats-inline">
                 <div className="stat-inline-item">
-                  <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   <div>
-                    <div className="stat-inline-number">500+</div>
+                    <div className="stat-inline-numbe">500+</div>
                     <div className="stat-inline-label">Active Agencies</div>
                   </div>
                 </div>
-                
+
                 <div className="stat-inline-item">
-                  <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="8.5" cy="7" r="4"></circle>
                     <polyline points="17 11 19 13 23 9"></polyline>
                   </svg>
                   <div>
-                    <div className="stat-inline-number">10K+</div>
+                    <div className="stat-inline-numbe">10K+</div>
                     <div className="stat-inline-label">Candidates Placed</div>
                   </div>
                 </div>
-                
+
                 <div className="stat-inline-item">
-                  <svg className="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="stat-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                   <div>
-                    <div className="stat-inline-number">99.9%</div>
+                    <div className="stat-inline-numbe">99.9%</div>
                     <div className="stat-inline-label">Platform Uptime</div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="about-illustration">
               <div className="illustration-card">
-                <svg className="illustration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg
+                  className="illustration-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                   <line x1="8" y1="21" x2="16" y2="21"></line>
                   <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -15269,78 +20194,141 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
               </div>
             </div>
           </div>
-          
+
           <div className="about-mvv-grid">
             <div className="mvv-card">
               <div className="mvv-icon-wrapper">
-                <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="mvv-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
               <h3>Our Mission</h3>
               <p>
-                To democratize enterprise-grade recruitment technology, making sophisticated 
-                ATS capabilities accessible to staffing agencies of all sizes. We believe powerful 
-                tools shouldn't come with complexity or prohibitive costs.
+                To democratize enterprise-grade recruitment technology, making
+                sophisticated ATS capabilities accessible to staffing agencies
+                of all sizes. We believe powerful tools shouldn't come with
+                complexity or prohibitive costs.
               </p>
             </div>
-            
+
             <div className="mvv-card">
               <div className="mvv-icon-wrapper">
-                <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="mvv-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </div>
               <h3>Our Vision</h3>
               <p>
-                To become the global standard for intelligent staffing solutions, where every 
-                recruiter has access to AI-powered tools that eliminate repetitive tasks and 
-                provide actionable insights that drive better hiring decisions.
+                To become the global standard for intelligent staffing
+                solutions, where every recruiter has access to AI-powered tools
+                that eliminate repetitive tasks and provide actionable insights
+                that drive better hiring decisions.
               </p>
             </div>
-            
+
             <div className="mvv-card">
               <div className="mvv-icon-wrapper">
-                <svg className="mvv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="mvv-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                 </svg>
               </div>
               <h3>Core Values</h3>
               <ul className="values-list">
                 <li>
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span><strong>Simplicity First:</strong> Elegant interfaces that reduce training time</span>
+                  <span>
+                    <strong>Simplicity First:</strong> Elegant interfaces that
+                    reduce training time
+                  </span>
                 </li>
                 <li>
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span><strong>Security by Design:</strong> Enterprise-grade protection for sensitive data</span>
+                  <span>
+                    <strong>Security by Design:</strong> Enterprise-grade
+                    protection for sensitive data
+                  </span>
                 </li>
                 <li>
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span><strong>Continuous Innovation:</strong> Regular updates driven by user feedback</span>
+                  <span>
+                    <strong>Continuous Innovation:</strong> Regular updates
+                    driven by user feedback
+                  </span>
                 </li>
                 <li>
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    className="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span><strong>Customer Success:</strong> Your growth is our success</span>
+                  <span>
+                    <strong>Customer Success:</strong> Your growth is our
+                    success
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
-          
+
           <div className="about-cta-banner">
             <h3>Ready to Transform Your Staffing Operations?</h3>
-            <p>Join hundreds of agencies already using Artemis to streamline their recruitment process.</p>
-            <a href="#demo" className="about-cta-button" onClick={handleScrollTo("#demo")}>
+            <p>
+              Join hundreds of agencies already using Artemis to streamline
+              their recruitment process.
+            </p>
+            <a
+              href="#demo"
+              className="about-cta-button"
+              onClick={handleScrollTo("#demo")}
+            >
               Book a Demo
             </a>
           </div>
@@ -15351,12 +20339,14 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       <section className="pricing-section" id="pricing">
         <div className="content-container">
           <div className="section-header">
-            <h2 className="section-title-main">Flexible Pricing for Every Stage of Growth</h2>
+            <h2 className="section-title-main">
+              Flexible Pricing for Every Stage of Growth
+            </h2>
             <p className="section-subtitle-main">
               Custom plans designed around your agency's unique needs
             </p>
           </div>
-          
+
           <div className="pricing-content">
             <div className="pricing-card">
               <h3>What's Included</h3>
@@ -15373,18 +20363,24 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                 <li>✓ Enterprise-grade security</li>
               </ul>
             </div>
-            
+
             <div className="pricing-card highlighted">
               <h3>Why Custom Pricing?</h3>
               <p>
-                Every staffing agency operates differently. Your pricing should reflect your 
-                agency's size, placement volume, integration needs, and growth trajectory.
+                Every staffing agency operates differently. Your pricing should
+                reflect your agency's size, placement volume, integration needs,
+                and growth trajectory.
               </p>
               <p>
-                We work with you to create a plan that makes sense for your business—no 
-                hidden fees, no surprise charges, no complicated tier systems.
+                We work with you to create a plan that makes sense for your
+                business—no hidden fees, no surprise charges, no complicated
+                tier systems.
               </p>
-              <a href="#demo" className="pricing-cta" onClick={handleScrollTo("#demo")}>
+              <a
+                href="#demo"
+                className="pricing-cta"
+                onClick={handleScrollTo("#demo")}
+              >
                 Contact Us for Pricing
               </a>
             </div>
@@ -15396,16 +20392,24 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
       <section className="integrations-section" id="integrations">
         <div className="content-container">
           <div className="section-header">
-            <h2 className="section-title-main">Stay in Sync with Your Workflow</h2>
+            <h2 className="section-title-main">
+              Stay in Sync with Your Workflow
+            </h2>
             <p className="section-subtitle-main">
               Seamless connections to the tools you already use
             </p>
           </div>
-          
+
           <div className="integrations-content">
             <div className="integration-card primary">
               <div className="integration-icon-wrapper">
-                <svg className="integration-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="integration-icon-svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <circle cx="18" cy="5" r="3"></circle>
                   <circle cx="6" cy="12" r="3"></circle>
                   <circle cx="18" cy="19" r="3"></circle>
@@ -15415,8 +20419,9 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
               </div>
               <h3>VMS Integrations</h3>
               <p>
-                Connect Artemis to your Vendor Management Systems for automatic job feed synchronization. 
-                New opportunities appear in Artemis instantly, ready for candidate matching.
+                Connect Artemis to your Vendor Management Systems for automatic
+                job feed synchronization. New opportunities appear in Artemis
+                instantly, ready for candidate matching.
               </p>
               <div className="integration-logos">
                 <div className="logo-placeholder">Bullhorn</div>
@@ -15425,10 +20430,16 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                 <div className="logo-placeholder">+ More</div>
               </div>
             </div>
-            
+
             <div className="integration-card">
               <div className="integration-icon-wrapper">
-                <svg className="integration-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="integration-icon-svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                   <path d="M2 17l10 5 10-5"></path>
                   <path d="M2 12l10 5 10-5"></path>
@@ -15436,7 +20447,8 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
               </div>
               <h3>Coming Soon</h3>
               <p>
-                We're continuously expanding our integration ecosystem based on customer feedback.
+                We're continuously expanding our integration ecosystem based on
+                customer feedback.
               </p>
               <ul className="roadmap-list">
                 <li>• Calendar sync (Google, Outlook)</li>
@@ -15459,25 +20471,38 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
               Expert guidance to transform your healthcare staffing operations
             </p>
           </div>
-          
+
           <div className="resources-grid">
             <div className="resource-category-card">
               <div className="category-icon-wrapper">
-                <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="category-icon-svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
               </div>
               <h3>Practical Tips for Recruiters</h3>
               <p>
-                Time-saving strategies, workflow optimizations, and proven techniques 
-                to increase placement velocity and candidate satisfaction.
+                Time-saving strategies, workflow optimizations, and proven
+                techniques to increase placement velocity and candidate
+                satisfaction.
               </p>
             </div>
-            
+
             <div className="resource-category-card">
               <div className="category-icon-wrapper">
-                <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="category-icon-svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                   <line x1="8" y1="21" x2="16" y2="21"></line>
                   <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -15485,31 +20510,41 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
               </div>
               <h3>Technology in Healthcare Staffing</h3>
               <p>
-                Explore how AI, automation, and modern ATS platforms are reshaping 
-                the healthcare staffing landscape.
+                Explore how AI, automation, and modern ATS platforms are
+                reshaping the healthcare staffing landscape.
               </p>
             </div>
-            
+
             <div className="resource-category-card">
               <div className="category-icon-wrapper">
-                <svg className="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="category-icon-svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <line x1="12" y1="1" x2="12" y2="23"></line>
                   <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                 </svg>
               </div>
               <h3>Industry Trends & Market Insights</h3>
               <p>
-                Stay ahead with analysis of healthcare labor markets, regulatory changes, 
-                and emerging opportunities.
+                Stay ahead with analysis of healthcare labor markets, regulatory
+                changes, and emerging opportunities.
               </p>
             </div>
           </div>
-          
+
           <div className="newsletter-section">
             <h3>Stay Updated</h3>
             <p>Get the latest insights delivered to your inbox</p>
             <div className="newsletter-form">
-              <input type="email" placeholder="Enter your email" className="newsletter-input" />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="newsletter-input"
+              />
               <button className="newsletter-button">Subscribe</button>
             </div>
           </div>
@@ -15522,8 +20557,9 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
           <div className="vision-content">
             <h2>Experience Clarity in Every Click</h2>
             <p>
-              Join hundreds of healthcare staffing agencies who have transformed their 
-              recruitment process with Artemis. Faster placements, happier teams, better outcomes.
+              Join hundreds of healthcare staffing agencies who have transformed
+              their recruitment process with Artemis. Faster placements, happier
+              teams, better outcomes.
             </p>
             <a
               href="#demo"
@@ -15542,10 +20578,11 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
           <div className="section-header">
             <h2 className="section-title-main">Book a Demo</h2>
             <p className="section-subtitle-main">
-              See Artemis in action and discover how we can transform your staffing operations
+              See Artemis in action and discover how we can transform your
+              staffing operations
             </p>
           </div>
-          
+
           <div className="demo-layout">
             <div className="demo-form-container">
               <form onSubmit={submitDemo} className="demo-form">
@@ -15561,6 +20598,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                         setForm({ ...form, firstName: e.target.value })
                       }
                       placeholder="John"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div className="form-field">
@@ -15574,10 +20612,11 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                         setForm({ ...form, lastName: e.target.value })
                       }
                       placeholder="Doe"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
-                
+
                 <div className="form-row">
                   <div className="form-field">
                     <label htmlFor="email">Work Email *</label>
@@ -15588,7 +20627,8 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                       value={form.email}
                       onChange={handleEmailChange}
                       placeholder="john.doe@company.com"
-                      className={emailError ? 'input-error' : ''}
+                      className={emailError ? "input-error" : ""}
+                      disabled={isSubmitting}
                     />
                     {emailError && (
                       <span className="error-label">{emailError}</span>
@@ -15601,12 +20641,15 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                       id="phone"
                       required
                       value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, phone: e.target.value })
+                      }
                       placeholder="+1 (555) 123-4567"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
-                
+
                 <div className="form-field full-width">
                   <label htmlFor="company">Company *</label>
                   <input
@@ -15618,9 +20661,10 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                       setForm({ ...form, company: e.target.value })
                     }
                     placeholder="Your Company Name"
+                    disabled={isSubmitting}
                   />
                 </div>
-                
+
                 <div className="form-row">
                   <div className="form-field">
                     <label htmlFor="country">Country *</label>
@@ -15629,6 +20673,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                       required
                       value={form.country}
                       onChange={handleCountryChange}
+                      disabled={isSubmitting}
                     >
                       <option value="">Select Country</option>
                       {countries.map((country) => (
@@ -15638,7 +20683,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                       ))}
                     </select>
                   </div>
-                  
+
                   <div className="form-field">
                     <label htmlFor="state">State/Province *</label>
                     <select
@@ -15646,7 +20691,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                       required
                       value={form.state}
                       onChange={handleStateChange}
-                      disabled={!form.country || loadingStates}
+                      disabled={!form.country || loadingStates || isSubmitting}
                     >
                       <option value="">
                         {loadingStates ? "Loading..." : "Select State"}
@@ -15659,7 +20704,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     </select>
                   </div>
                 </div>
-                
+
                 <div className="form-field full-width">
                   <label htmlFor="city">City *</label>
                   <select
@@ -15667,7 +20712,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     required
                     value={form.city}
                     onChange={(e) => setForm({ ...form, city: e.target.value })}
-                    disabled={!form.state || loadingCities}
+                    disabled={!form.state || loadingCities || isSubmitting}
                   >
                     <option value="">
                       {loadingCities ? "Loading..." : "Select City"}
@@ -15679,14 +20724,17 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     ))}
                   </select>
                 </div>
-                
+
                 <div className="form-field full-width">
                   <label htmlFor="source">How did you hear about us? *</label>
                   <select
                     id="source"
                     required
                     value={form.source}
-                    onChange={(e) => setForm({ ...form, source: e.target.value })}
+                    onChange={(e) =>
+                      setForm({ ...form, source: e.target.value })
+                    }
+                    disabled={isSubmitting}
                   >
                     <option value="">Select one</option>
                     <option value="google">Google Search</option>
@@ -15698,31 +20746,57 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                     <option value="other">Other</option>
                   </select>
                 </div>
-                
-                <button type="submit" className="demo-submit-button">
-                  Request Demo
+
+                <button 
+                  type="submit" 
+                  className={`demo-submit-button ${isSubmitting ? 'submitting' : ''}`}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="button-spinner"></div>
+                      Scheduling...
+                    </>
+                  ) : (
+                    'Request Demo'
+                  )}
                 </button>
               </form>
             </div>
-            
+
             <div className="demo-info-container">
               <h3>What to Expect</h3>
               <ul className="expectations-list">
                 <li>
                   <div className="expectation-icon-wrapper">
-                    <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="expectation-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <circle cx="12" cy="12" r="10"></circle>
                       <path d="M12 6v6l4 2"></path>
                     </svg>
                   </div>
                   <div>
                     <strong>Personalized Walkthrough</strong>
-                    <p>See Artemis configured for your agency's specific workflows</p>
+                    <p>
+                      See Artemis configured for your agency's specific
+                      workflows
+                    </p>
                   </div>
                 </li>
                 <li>
                   <div className="expectation-icon-wrapper">
-                    <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="expectation-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
@@ -15734,18 +20808,32 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                 </li>
                 <li>
                   <div className="expectation-icon-wrapper">
-                    <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="expectation-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
                   </div>
                   <div>
                     <strong>Q&A Included</strong>
-                    <p>Ask anything about features, pricing, or implementation</p>
+                    <p>
+                      Ask anything about features, pricing, or implementation
+                    </p>
                   </div>
                 </li>
                 <li>
                   <div className="expectation-icon-wrapper">
-                    <svg className="expectation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      className="expectation-icon-svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <line x1="18" y1="20" x2="18" y2="10"></line>
                       <line x1="12" y1="20" x2="12" y2="4"></line>
                       <line x1="6" y1="20" x2="6" y2="14"></line>
@@ -15757,7 +20845,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
                   </div>
                 </li>
               </ul>
-              
+
               <div className="social-proof">
                 <p className="proof-label">Trusted by leading agencies</p>
                 <div className="proof-stats">
@@ -15775,24 +20863,45 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
         <div className="footer-content">
           <div className="footer-column">
             <h4>Artemis ATS</h4>
-            <p>AI-powered recruitment technology for healthcare staffing excellence.</p>
+            <p>
+              AI-powered recruitment technology for healthcare staffing
+              excellence.
+            </p>
             <div className="social-links">
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="Facebook">📘</a>
-              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="#" aria-label="LinkedIn">
+                💼
+              </a>
+              <a href="#" aria-label="Facebook">
+                📘
+              </a>
+              <a href="#" aria-label="Twitter">
+                🐦
+              </a>
             </div>
           </div>
-          
+
           <div className="footer-column">
             <h4>Quick Links</h4>
-            <a href="#home" onClick={handleScrollTo("#home")}>Home</a>
-            <a href="#about" onClick={handleScrollTo("#about")}>About</a>
-            <a href="#superpowers" onClick={handleScrollTo("#superpowers")}>Superpowers</a>
-            <a href="#pricing" onClick={handleScrollTo("#pricing")}>Pricing</a>
-            <a href="#integrations" onClick={handleScrollTo("#integrations")}>Integrations</a>
-            <a href="#resources" onClick={handleScrollTo("#resources")}>Resources</a>
+            <a href="#home" onClick={handleScrollTo("#home")}>
+              Home
+            </a>
+            <a href="#about" onClick={handleScrollTo("#about")}>
+              About
+            </a>
+            <a href="#superpowers" onClick={handleScrollTo("#superpowers")}>
+              Superpowers
+            </a>
+            <a href="#pricing" onClick={handleScrollTo("#pricing")}>
+              Pricing
+            </a>
+            <a href="#integrations" onClick={handleScrollTo("#integrations")}>
+              Integrations
+            </a>
+            <a href="#resources" onClick={handleScrollTo("#resources")}>
+              Resources
+            </a>
           </div>
-          
+
           <div className="footer-column">
             <h4>Contact</h4>
             <p>
@@ -15803,7 +20912,7 @@ const handleFeatureScroll = (direction: 'left' | 'right') => {
             <p>📧 info@artemisats.com</p>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Artemis. All rights reserved.</p>
         </div>
