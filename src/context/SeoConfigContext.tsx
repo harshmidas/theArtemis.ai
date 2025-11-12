@@ -20,8 +20,8 @@ export const SeoConfigProvider: React.FC<{ children: ReactNode }> = ({ children 
     const fetchConfig = async () => {
       try {
         const response = await axios.get<SeoWebsite[]>(
-          "http://192.168.1.42:9291/api/v1/seo-websites",
-          { headers: { "X-Tenant": "68cc764fbfc57730593b4a32" } }
+          "http://157.20.214.84:9292/api/v1/seo-websites",
+          { headers: { "X-Tenant": "68b20dd0fb42964f2328b424" } }
         );
         if (response.data && response.data.length > 0) {
           // console.log("Fetched SEO config:", response.data[0]);
